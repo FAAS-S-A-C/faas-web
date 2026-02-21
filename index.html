@@ -3,85 +3,132 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FAAS S.A.C. | Make the world a better place</title>
+<title>FAAS S.A.C. | Advisory Financiero Estratégico</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Inter',sans-serif;color:#111;line-height:1.7;}
+body{
+font-family:'Inter',sans-serif;
+color:#111;
+line-height:1.7;
+background:#fff;
+scroll-behavior:smooth;
+}
 .container{width:90%;max-width:1200px;margin:auto;}
 section{padding:110px 0;}
 h1,h2,h3{font-family:'Playfair Display',serif;}
-.section-title{text-align:center;font-size:36px;margin-bottom:60px;}
+.section-title{text-align:center;font-size:38px;margin-bottom:60px;}
 
-/* NAV */
-header{position:fixed;width:100%;background:#fff;border-bottom:1px solid #eee;z-index:999;}
-.navbar{display:flex;justify-content:space-between;align-items:center;padding:18px 0;}
-.nav-links{display:flex;gap:30px;}
-.nav-links a{text-decoration:none;color:#111;font-weight:500;font-size:14px;}
+/* HEADER DINÁMICO */
+header{
+position:fixed;
+width:100%;
+background:transparent;
+transition:0.3s;
+z-index:999;
+}
+header.scrolled{
+background:#fff;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 0;
+}
+.nav-links{
+display:flex;
+gap:30px;
+}
+.nav-links a{
+text-decoration:none;
+color:#111;
+font-weight:500;
+font-size:14px;
+transition:0.3s;
+}
 .nav-links a:hover{color:#0A1F44;}
 
 /* HERO */
 .hero{
 min-height:100vh;
-background:linear-gradient(rgba(10,31,68,0.90),rgba(10,31,68,0.90)),
+background:linear-gradient(rgba(10,31,68,0.92),rgba(10,31,68,0.92)),
 url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1600');
 background-size:cover;
 background-position:center;
 color:white;
 display:flex;
 align-items:center;
-margin-top:80px;
 }
 .hero-content{max-width:850px;}
-.hero h1{font-size:48px;margin-bottom:25px;}
+.hero h1{font-size:50px;margin-bottom:25px;}
 .hero p{font-size:20px;margin-bottom:35px;opacity:0.95;}
+
+.btn-primary, .btn-secondary{
+padding:14px 28px;
+border-radius:4px;
+text-decoration:none;
+font-weight:600;
+margin-right:15px;
+display:inline-block;
+transition:0.3s;
+}
 .btn-primary{
-background:white;color:#0A1F44;
-padding:14px 30px;border-radius:4px;
-text-decoration:none;font-weight:600;
+background:white;
+color:#0A1F44;
+}
+.btn-primary:hover{transform:translateY(-3px);}
+.btn-secondary{
+border:1px solid white;
+color:white;
+}
+.btn-secondary:hover{
+background:white;
+color:#0A1F44;
 }
 
-/* IKIGAI MEJORADO */
-.valores{text-align:center;}
+/* IKIGAI CORREGIDO */
+.valores{text-align:center;background:#f7f9fc;}
 .ikigai-container{
 position:relative;
-width:560px;
-height:560px;
+width:600px;
+height:600px;
 margin:80px auto;
 }
 
 .circle{
 position:absolute;
-width:300px;
-height:300px;
+width:320px;
+height:320px;
 border-radius:50%;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-padding:20px;
+padding:25px;
 font-weight:600;
 font-size:20px;
-color:#111;
 line-height:1.2;
+opacity:0.95;
+z-index:1;
 }
 
 .circle span{
-max-width:160px;
-display:block;
+max-width:200px;
 }
 
-.c1{background:#f4a261;top:0;left:130px;}
-.c2{background:#e76f51;top:130px;left:0;}
-.c3{background:#2a9d8f;top:130px;right:0;}
-.c4{background:#e9c46a;bottom:0;left:130px;}
+.c1{background:#f4a261;top:0;left:140px;}
+.c2{background:#e76f51;top:140px;left:0;}
+.c3{background:#2a9d8f;top:140px;right:0;}
+.c4{background:#e9c46a;bottom:0;left:140px;}
 
 .center-circle{
 position:absolute;
-width:230px;
-height:230px;
+width:200px;
+height:200px;
 border-radius:50%;
 background:#0A1F44;
 color:white;
@@ -91,10 +138,48 @@ justify-content:center;
 text-align:center;
 font-size:22px;
 font-weight:600;
-padding:20px;
 top:50%;
 left:50%;
 transform:translate(-50%,-50%);
+z-index:5;
+}
+
+/* FORMULARIO PREMIUM */
+.contacto-form{
+max-width:600px;
+margin:40px auto 0 auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+.contacto-form input,
+.contacto-form select{
+padding:14px;
+border:1px solid #ddd;
+border-radius:4px;
+font-size:14px;
+}
+.contacto-form button{
+padding:14px;
+background:#0A1F44;
+color:white;
+border:none;
+font-weight:600;
+cursor:pointer;
+border-radius:4px;
+transition:0.3s;
+}
+.contacto-form button:hover{
+transform:translateY(-3px);
+}
+
+/* FOOTER */
+footer{
+background:#111;
+color:#bbb;
+text-align:center;
+padding:40px 0;
+font-size:14px;
 }
 
 /* WHATSAPP */
@@ -111,16 +196,25 @@ font-weight:600;
 box-shadow:0 10px 30px rgba(0,0,0,0.2);
 transition:0.3s;
 }
-.whatsapp-btn:hover{
-transform:translateY(-3px);
+.whatsapp-btn:hover{transform:translateY(-3px);}
+
+/* ANIMACIONES */
+.fade-in{
+opacity:0;
+transform:translateY(30px);
+transition:all 0.8s ease;
+}
+.fade-in.visible{
+opacity:1;
+transform:translateY(0);
 }
 
-/* RESPONSIVE REFINADO */
+/* RESPONSIVE */
 @media(max-width:768px){
 
 .nav-links{display:none;}
 
-.hero h1{font-size:32px;}
+.hero h1{font-size:34px;}
 .hero p{font-size:17px;}
 
 .ikigai-container{
@@ -131,12 +225,7 @@ height:340px;
 .circle{
 width:190px;
 height:190px;
-font-size:15px;
-padding:15px;
-}
-
-.circle span{
-max-width:120px;
+font-size:14px;
 }
 
 .c1{top:0;left:75px;}
@@ -145,40 +234,36 @@ max-width:120px;
 .c4{bottom:0;left:75px;}
 
 .center-circle{
-width:150px;
-height:150px;
-font-size:15px;
+width:130px;
+height:130px;
+font-size:14px;
 }
-
 }
 </style>
 </head>
 <body>
 
-<header>
+<header id="header">
 <div class="container navbar">
 <img src="assets/logo.png" height="45">
 <div class="nav-links">
 <a href="#inicio">Inicio</a>
-<a href="#manifiesto">Manifiesto</a>
-<a href="#quienes">Quiénes Somos</a>
-<a href="#propuesta">Propuesta de Valor</a>
-<a href="#servicios">Servicios</a>
-<a href="#sectores">Sectores</a>
+<a href="#valores">Valores</a>
 <a href="#contacto">Contacto</a>
 </div>
 </div>
 </header>
 
 <section id="inicio" class="hero">
-<div class="container hero-content">
+<div class="container hero-content fade-in">
 <h1>FAAS S.A.C.</h1>
 <p>Asesoría financiera y tributaria independiente para organizaciones que buscan decisiones sólidas, control estratégico del riesgo y crecimiento sostenible.</p>
-<a href="#contacto" class="btn-primary">Solicitar Reunión Estratégica</a>
+<a href="#contacto" class="btn-primary">Agendar reunión estratégica</a>
+<a href="#contacto" class="btn-secondary">Solicitar diagnóstico preliminar</a>
 </div>
 </section>
 
-<section class="valores">
+<section id="valores" class="valores fade-in">
 <div class="container">
 <h2 class="section-title">Nuestros Valores</h2>
 
@@ -193,6 +278,32 @@ font-size:15px;
 </div>
 </section>
 
+<section id="contacto" class="fade-in">
+<div class="container">
+<h2 class="section-title">Transformemos su estructura financiera</h2>
+
+<form class="contacto-form">
+<input type="text" placeholder="Nombre completo" required>
+<input type="email" placeholder="Correo corporativo" required>
+<select required>
+<option value="">Tamaño de empresa</option>
+<option>Micro / Pequeña</option>
+<option>Mediana</option>
+<option>Corporativa</option>
+</select>
+<select required>
+<option value="">Principal desafío actual</option>
+<option>Optimización tributaria</option>
+<option>Orden contable</option>
+<option>Planeamiento financiero</option>
+<option>Reducción de contingencias</option>
+</select>
+<button type="submit">Solicitar reunión estratégica</button>
+</form>
+
+</div>
+</section>
+
 <footer>
 FAAS S.A.C. | RUC 20603167768 | Lima - Perú
 </footer>
@@ -200,6 +311,23 @@ FAAS S.A.C. | RUC 20603167768 | Lima - Perú
 <a href="https://wa.me/51991814230" target="_blank" class="whatsapp-btn">
 💬 Agendar reunión
 </a>
+
+<script>
+/* HEADER SCROLL */
+window.addEventListener("scroll", function(){
+document.getElementById("header").classList.toggle("scrolled", window.scrollY > 50);
+});
+
+/* ANIMACIÓN SCROLL */
+const observer = new IntersectionObserver(entries => {
+entries.forEach(entry => {
+if(entry.isIntersecting){
+entry.target.classList.add("visible");
+}
+});
+});
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
