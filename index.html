@@ -4,197 +4,348 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FAAS S.A.C. | Financial Accounting Advisory Services</title>
+<meta name="description" content="Auditoría Tributaria, Outsourcing Contable y Consultoría Estratégica para empresas y startups en Perú.">
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
-:root{
---azul:#0F2B5B;
---naranja:#F08A3C;
---blanco:#F5F6F8;
---gris:#1C1F26;
+/* ================= GLOBAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-margin:0;
-font-family:'Inter',sans-serif;
-background:var(--blanco);
-color:var(--gris);
+body {
+    font-family: 'Inter', sans-serif;
+    background: #ffffff;
+    color: #111;
+    line-height: 1.6;
 }
 
-header{
-position:fixed;
-top:0;
-width:100%;
-background:#ffffff;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:18px 60px;
-box-shadow:0 2px 15px rgba(0,0,0,0.05);
-z-index:1000;
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
 }
 
-.logo img{
-height:55px;
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
 }
 
-nav a{
-margin-left:30px;
-text-decoration:none;
-color:var(--azul);
-font-weight:500;
-font-size:14px;
-letter-spacing:1px;
-position:relative;
+section {
+    padding: 100px 0;
 }
 
-nav a:after{
-content:"";
-position:absolute;
-left:0;
-bottom:-6px;
-width:0;
-height:2px;
-background:var(--naranja);
-transition:0.3s;
+/* ================= HEADER ================= */
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: #ffffff;
+    border-bottom: 1px solid #eee;
+    z-index: 999;
 }
 
-nav a:hover:after{
-width:100%;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
 }
 
-.hero{
-padding:180px 60px 120px;
-background:var(--azul);
-color:white;
-text-align:center;
+.nav-links {
+    display: flex;
+    gap: 40px;
+    align-items: center;
 }
 
-.hero h1{
-font-family:'Playfair Display',serif;
-font-size:48px;
-margin:0;
+.nav-links a {
+    text-decoration: none;
+    color: #111;
+    font-weight: 500;
+    font-size: 14px;
+    transition: 0.3s;
 }
 
-.hero p{
-max-width:800px;
-margin:30px auto;
-line-height:1.7;
-color:#dcdcdc;
+.nav-links a:hover {
+    color: #0A1F44;
 }
 
-.btn{
-background:var(--naranja);
-color:white;
-padding:14px 30px;
-border-radius:30px;
-text-decoration:none;
-font-weight:600;
-transition:0.3s;
+.btn-primary {
+    background: #0A1F44;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
 }
 
-.btn:hover{
-background:#d9772f;
+.btn-primary:hover {
+    background: #142f66;
 }
 
-section{
-padding:100px 60px;
-max-width:1200px;
-margin:auto;
+/* ================= HERO ================= */
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(to right, #0A1F44 50%, #f7f9fc 50%);
+    display: flex;
+    align-items: center;
+    margin-top: 80px;
 }
 
-.section-dark{
-background:var(--azul);
-color:white;
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-footer{
-background:var(--gris);
-color:#bbb;
-padding:60px;
-text-align:center;
+.hero-text {
+    width: 50%;
+    color: white;
 }
 
-.social-icons{
-margin-top:15px;
+.hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
 }
 
-.social-icons a{
-margin:0 10px;
+.hero-text p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    opacity: 0.9;
 }
 
-.social-icons svg{
-width:18px;
-height:18px;
-fill:var(--naranja);
-transition:0.3s;
+.hero-buttons a {
+    margin-right: 20px;
 }
 
-.social-icons svg:hover{
-fill:white;
+.hero-right {
+    width: 45%;
+    padding: 40px;
+}
+
+.hero-right h2 {
+    color: #0A1F44;
+    margin-bottom: 20px;
+}
+
+.hero-right p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* ================= SERVICES ================= */
+
+.services {
+    background: #f7f9fc;
+    text-align: center;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.service-card {
+    background: white;
+    padding: 40px;
+    border-radius: 6px;
+    transition: 0.3s;
+    border: 1px solid #eee;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+/* ================= LEMA ================= */
+
+.lema {
+    background: #0A1F44;
+    color: white;
+    text-align: center;
+}
+
+.lema h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* ================= CTA ================= */
+
+.cta {
+    text-align: center;
+}
+
+.cta h2 {
+    margin-bottom: 20px;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #111;
+    color: #bbb;
+    padding: 60px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-content div {
+    margin-bottom: 20px;
+}
+
+.footer-content a {
+    color: #bbb;
+    text-decoration: none;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icons svg {
+    width: 20px;
+    height: 20px;
+    fill: #bbb;
+    transition: 0.3s;
+}
+
+.social-icons svg:hover {
+    fill: white;
+}
+
+/* ================= WHATSAPP ================= */
+
+.whatsapp {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #0A1F44;
+    color: white;
+    padding: 14px 18px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 14px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.whatsapp:hover {
+    background: #142f66;
 }
 
 </style>
 </head>
-
 <body>
 
 <header>
-<div class="logo">
-<img src="assets/logo.png" alt="FAAS Logo">
+<div class="container navbar">
+    <img src="/assets/logo.png" alt="FAAS Logo" height="45">
+    <div class="nav-links">
+        <a href="#">Nosotros</a>
+        <a href="#">Servicios</a>
+        <a href="#">Sectores</a>
+        <a href="#">Metodología</a>
+        <a href="#">Insights</a>
+        <a href="#" class="btn-primary">Solicitar Evaluación</a>
+    </div>
 </div>
-
-<nav>
-<a href="#">Inicio</a>
-<a href="#">Firma</a>
-<a href="#">Servicios</a>
-<a href="#">Sectores</a>
-<a href="#">Insights</a>
-<a href="#">Contacto</a>
-</nav>
 </header>
 
-<div class="hero">
-<h1>Make the world a better place.</h1>
-<p>
-Asesoría independiente y estratégica para respaldar decisiones gerenciales,
-reducir contingencias tributarias y generar valor financiero sostenible.
-</p>
-<a href="#" class="btn">Agenda una Reunión</a>
+<section class="hero">
+<div class="container hero-content">
+    <div class="hero-text">
+        <h1>Asesoría Estratégica Financiera y Tributaria</h1>
+        <p>Respaldamos decisiones gerenciales con información confiable, enfoque preventivo y control de riesgos.</p>
+        <div class="hero-buttons">
+            <a href="#" class="btn-primary">Evaluación Estratégica</a>
+        </div>
+    </div>
+    <div class="hero-right">
+        <h2>Make the world a better place</h2>
+        <p>En FAAS S.A.C. trabajamos de manera cercana con la gerencia para respaldar decisiones oportunas, bien sustentadas y alineadas a una estructura de costos que genere valor tangible.</p>
+    </div>
 </div>
-
-<section>
-<h2>Firma Boutique de Alto Nivel</h2>
-<p>
-Financial Accounting Advisory Services S.A.C. brinda Auditoría Tributaria,
-Outsourcing Contable y Consultoría Estratégica para Startups, empresas comerciales,
-industriales y de servicios.
-</p>
 </section>
 
-<section class="section-dark">
-<h2>Nuestro Enfoque</h2>
-<p>
-Comunicación continua, mejora permanente y anticipación de riesgos
-para fortalecer la posición competitiva de nuestros clientes.
-</p>
+<section class="services">
+<div class="container">
+    <h2>Nuestros Servicios</h2>
+    <div class="services-grid">
+        <div class="service-card">
+            <h3>Auditoría Tributaria</h3>
+            <p>Evaluación preventiva, revisión de contingencias y soporte ante SUNAT.</p>
+        </div>
+        <div class="service-card">
+            <h3>Outsourcing Integral</h3>
+            <p>Gestión contable, tributaria y laboral bajo estándares NIIF / IFRS.</p>
+        </div>
+        <div class="service-card">
+            <h3>Consultoría Administrativa</h3>
+            <p>Constitución de empresas, optimización de costos y mejora estructural.</p>
+        </div>
+    </div>
+</div>
+</section>
+
+<section class="lema">
+<div class="container">
+    <h2>Make the world a better place</h2>
+    <p>Construimos estructuras financieras sólidas que permiten a las empresas crecer con estabilidad y propósito.</p>
+</div>
+</section>
+
+<section class="cta">
+<div class="container">
+    <h2>Conversemos sobre la estructura financiera de su empresa</h2>
+    <a href="mailto:wilmer.torres@faas.com.pe" class="btn-primary">Contactar Ahora</a>
+</div>
 </section>
 
 <footer>
-© 2026 FAAS S.A.C. | Lima – Perú
+<div class="container footer-content">
+    <div>
+        <strong>FAAS S.A.C.</strong><br>
+        20603167768<br>
+        CAL.VALLADOLID NRO. 275 DPTO. 402<br>
+        ATE - LIMA - PERÚ
+    </div>
 
-<div class="social-icons">
+    <div>
+        <strong>Contacto</strong><br>
+        Wilmer Torres<br>
+        991 814 230<br>
+        wilmer.torres@faas.com.pe
+    </div>
 
-<a href="https://www.linkedin.com/company/faassac" target="_blank">
-<svg viewBox="0 0 24 24">
-<path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0zM7 8h4.8v2.2h.1c.7-1.2 2.4-2.5 4.9-2.5 5.2 0 6.2 3.4 6.2 7.8V24h-5v-7.1c0-1.7 0-3.9-2.4-3.9s-2.7 1.9-2.7 3.8V24H7z"/>
-</svg>
-</a>
-
+    <div>
+        <strong>Redes</strong>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/company/faassac" target="_blank">
+                <svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.48 1s2.5 1.12 2.5 2.5zM.48 8.98H4.5V24H.48V8.98zM8.98 8.98h3.84v2.06h.06c.54-1.02 1.86-2.1 3.84-2.1 4.1 0 4.86 2.7 4.86 6.22V24h-4.02v-7.98c0-1.9-.04-4.34-2.64-4.34-2.64 0-3.04 2.06-3.04 4.2V24H8.98V8.98z"/></svg>
+            </a>
+        </div>
+    </div>
 </div>
 </footer>
+
+<a class="whatsapp" href="https://wa.me/51991814230" target="_blank">WhatsApp</a>
 
 </body>
 </html>
