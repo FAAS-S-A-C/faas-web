@@ -3,145 +3,126 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FAAS S.A.C. | Asesoría Contable y Tributaria en Perú</title>
-<meta name="description" content="Asesoría contable, tributaria, laboral y auditoría tributaria en Perú. Cumplimiento SUNAT, NIIF, IFRS y consultoría administrativa.">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>FAAS S.A.C. | Financial Accounting Advisory Services</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Poppins',sans-serif;background:#0f172a;color:#1e293b;line-height:1.6;}
-a{text-decoration:none;}
+body {
+margin:0;
+font-family:'Inter', sans-serif;
+background:#0b0f19;
+color:#fff;
+scroll-behavior:smooth;
+}
 
-.container{max-width:1200px;margin:auto;padding:0 20px;}
-
-header{
-background:linear-gradient(135deg,#0f172a,#1e293b);
-color:white;
-padding:120px 20px;
+header {
+background:linear-gradient(135deg,#0b0f19,#121a2f);
+padding:100px 20px;
 text-align:center;
-position:relative;
-overflow:hidden;
 }
 
-header h1{
-font-size:42px;
-font-weight:700;
-animation:fadeDown 1s ease-out;
+header h1 {
+font-family:'Playfair Display', serif;
+font-size:48px;
+margin:0;
+letter-spacing:1px;
 }
 
-header p{
+header p {
 margin-top:20px;
 font-size:18px;
-opacity:0.9;
-animation:fadeUp 1.2s ease-out;
+max-width:800px;
+margin-left:auto;
+margin-right:auto;
+color:#cfcfcf;
 }
 
-.btn-primary{
+.btn-primary {
 display:inline-block;
 margin-top:30px;
 padding:14px 28px;
-background:#2563eb;
-color:white;
-border-radius:50px;
+background:#d4af37;
+color:#000;
 font-weight:600;
+text-decoration:none;
+border-radius:30px;
 transition:0.3s;
 }
 
-.btn-primary:hover{
-background:#1d4ed8;
-transform:translateY(-3px);
+.btn-primary:hover {
+background:#fff;
 }
 
-section{
-padding:100px 0;
-background:white;
+section {
+padding:80px 20px;
+max-width:1200px;
+margin:auto;
 }
 
-section.dark{
-background:#f1f5f9;
-}
-
-h2{
+h2 {
+font-family:'Playfair Display', serif;
+font-size:36px;
+margin-bottom:40px;
 text-align:center;
-font-size:32px;
-margin-bottom:50px;
-color:#0f172a;
 }
 
-.grid{
+.grid {
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:30px;
 }
 
-.card{
-background:white;
+.card {
+background:#121a2f;
 padding:30px;
-border-radius:15px;
-box-shadow:0 15px 35px rgba(0,0,0,0.08);
+border-radius:12px;
 transition:0.4s;
-opacity:0;
-transform:translateY(40px);
 }
 
-.card.show{
-opacity:1;
-transform:translateY(0);
+.card:hover {
+transform:translateY(-8px);
+background:#18223d;
 }
 
-.card:hover{
-transform:translateY(-10px);
-}
-
-.card h3{
+.card h3 {
+color:#d4af37;
 margin-bottom:15px;
-color:#1e3a8a;
 }
 
-.about p{
-max-width:900px;
-margin:20px auto;
-text-align:center;
+.values {
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+font-weight:500;
 }
 
-footer{
-background:#0f172a;
-color:white;
+footer {
+background:#121a2f;
 padding:60px 20px;
 text-align:center;
+font-size:14px;
+color:#aaa;
 }
 
-footer p{margin:6px 0;}
-
-.whatsapp{
+.whatsapp {
 position:fixed;
-bottom:25px;
-right:25px;
+bottom:20px;
+right:20px;
 background:#25D366;
-color:white;
-padding:16px 22px;
+color:#fff;
+padding:15px 18px;
 border-radius:50px;
-font-weight:600;
-box-shadow:0 10px 25px rgba(0,0,0,0.3);
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
 transition:0.3s;
-z-index:1000;
 }
 
-.whatsapp:hover{
-background:#1ebe5d;
-transform:scale(1.05);
-}
-
-/* Animaciones */
-@keyframes fadeDown{
-from{opacity:0;transform:translateY(-40px);}
-to{opacity:1;transform:translateY(0);}
-}
-
-@keyframes fadeUp{
-from{opacity:0;transform:translateY(40px);}
-to{opacity:1;transform:translateY(0);}
+.whatsapp:hover {
+background:#1ebe5b;
 }
 </style>
 </head>
@@ -149,85 +130,111 @@ to{opacity:1;transform:translateY(0);}
 <body>
 
 <header>
-<div class="container">
-<h1>FINANCIAL ACCOUNTING ADVISORY SERVICES S.A.C.</h1>
-<p>Asesoría Contable, Tributaria y Laboral con enfoque estratégico empresarial y cumplimiento SUNAT, NIIF e IFRS.</p>
-<a href="#contacto" class="btn-primary">Solicitar Diagnóstico Empresarial</a>
-</div>
+<h1 data-aos="fade-down">FAAS S.A.C.</h1>
+<p data-aos="fade-up">
+Make the world a better place.<br><br>
+En FAAS S.A.C. brindamos asesoría independiente y estratégica, trabajando de manera cercana con la gerencia y sus equipos para respaldar decisiones oportunas, bien sustentadas y alineadas a una estructura de costos que genere valor tangible.
+</p>
+<a href="#contacto" class="btn-primary" data-aos="zoom-in">Solicitar Consultoría</a>
 </header>
 
-<section class="about">
-<div class="container">
-<h2>Sobre FAAS</h2>
-<p>FAAS S.A.C. (RUC 20603167768) brinda soluciones integrales en asesoría contable, tributaria, laboral y consultoría administrativa. Nuestro enfoque está orientado a la prevención de contingencias fiscales, optimización financiera y fortalecimiento de la gestión empresarial.</p>
-<p>Trabajamos bajo estándares NIIF/IFRS y normativa SUNAT, garantizando cumplimiento, control y soporte estratégico para la gerencia.</p>
+<section>
+<h2 data-aos="fade-up">Qué Hacemos</h2>
+<p style="text-align:center; max-width:900px; margin:auto;" data-aos="fade-up">
+Nuestros clientes renuevan su confianza y fortalecen su posición competitiva. Contamos con experiencia sólida en Auditoría Tributaria, Outsourcing y asesoría a empresas, startups y organizaciones con presencia nacional e internacional.
+</p>
+</section>
+
+<section>
+<h2 data-aos="fade-up">Servicios Estratégicos</h2>
+<div class="grid">
+
+<div class="card" data-aos="fade-up">
+<h3>Asesoría Contable</h3>
+<p>Outsourcing contable bajo NIIF / IFRS. Estados financieros, control interno, reportes gerenciales y cumplimiento normativo.</p>
+</div>
+
+<div class="card" data-aos="fade-up">
+<h3>Asesoría Tributaria</h3>
+<p>Planeamiento fiscal estratégico, cumplimiento SUNAT, defensa ante fiscalizaciones y reducción de contingencias tributarias.</p>
+</div>
+
+<div class="card" data-aos="fade-up">
+<h3>Asesoría Laboral</h3>
+<p>Gestión de planillas, cumplimiento laboral, contratos, prevención de contingencias y optimización de costos laborales.</p>
+</div>
+
+<div class="card" data-aos="fade-up">
+<h3>Auditoría Tributaria</h3>
+<p>Revisión integral preventiva, identificación de riesgos fiscales, mejora de procesos y fortalecimiento del control tributario.</p>
+</div>
+
+<div class="card" data-aos="fade-up">
+<h3>Consultoría Administrativa</h3>
+<p>Constitución de empresas, estructura societaria, trámites administrativos y diseño de modelos de gestión eficientes.</p>
+</div>
+
 </div>
 </section>
 
-<section class="dark">
-<div class="container">
-<h2>Servicios Profesionales</h2>
-<div class="grid">
+<section>
+<h2 data-aos="fade-up">Sectores que Atendemos</h2>
+<p style="text-align:center;" data-aos="fade-up">
+Startups · Empresas Comerciales · Industriales · Empresas de Servicios
+</p>
+</section>
 
-<div class="card">
-<h3>Asesoría Contable</h3>
-<p>Registro contable bajo NIIF/IFRS, elaboración de estados financieros, reportes gerenciales y control interno para toma de decisiones estratégicas.</p>
-</div>
+<section>
+<h2 data-aos="fade-up">Nuestro Enfoque</h2>
+<p data-aos="fade-up">
+Priorizamos comunicación continua y mejora permanente. Integramos profesionales orientados por sector para responder con agilidad, optimizar recursos y reducir contingencias anticipando riesgos.
+</p>
+</section>
 
-<div class="card">
-<h3>Asesoría Tributaria</h3>
-<p>Determinación y declaración de impuestos, planeamiento tributario, atención de fiscalizaciones y cumplimiento integral ante SUNAT.</p>
-</div>
+<section>
+<h2 data-aos="fade-up">Nuestro Equipo</h2>
+<p data-aos="fade-up">
+La calidad y capacidad profesional del equipo asignado reflejan nuestro compromiso. Todos los profesionales comparten principios, estándares de calidad y metodologías comunes. Recogemos retroalimentación periódica para asegurar alineamiento estratégico.
+</p>
+</section>
 
-<div class="card">
-<h3>Asesoría Laboral</h3>
-<p>Gestión de planillas, beneficios sociales, cumplimiento normativo laboral y prevención de contingencias ante SUNAFIL.</p>
-</div>
-
-<div class="card">
-<h3>Auditoría Tributaria</h3>
-<p>Evaluación del cumplimiento fiscal, identificación de riesgos tributarios y preparación técnica ante procesos de fiscalización.</p>
-</div>
-
-<div class="card">
-<h3>Consultoría Administrativa</h3>
-<p>Constitución de empresas, trámites administrativos, mejora de procesos internos y fortalecimiento del control empresarial.</p>
-</div>
-
-</div>
+<section>
+<h2 data-aos="fade-up">Nuestros Valores</h2>
+<div class="values" data-aos="fade-up">
+<div>Pasión</div>
+<div>Vocación</div>
+<div>Integridad</div>
+<div>Respeto</div>
+<div>Confianza</div>
 </div>
 </section>
 
 <section id="contacto">
-<div class="container">
-<h2>Contacto</h2>
-<p style="text-align:center;"><strong>Wilmer Torres</strong></p>
-<p style="text-align:center;">Celular: 991814230</p>
-<p style="text-align:center;">Correo: wilmer.torres@faas.com.pe</p>
-<p style="text-align:center;">Dirección: CAL. VALLADOLID NRO. 275 DPTO. 402 URB. MAYORAZGO ET. TRES LIMA - LIMA - ATE</p>
-</div>
+<h2 data-aos="fade-up">Contacto</h2>
+<p style="text-align:center;" data-aos="fade-up">
+<strong>Wilmer Torres</strong><br>
+Celular: 991 814 230<br>
+Correo: wilmer.torres@faas.com.pe<br><br>
+RUC: 20603167768<br>
+FINANCIAL ACCOUNTING ADVISORY SERVICES S.A.C.<br>
+CAL. VALLADOLID NRO. 275 DPTO. 402 URB. MAYORAZGO ET. TRES<br>
+LIMA - LIMA - ATE
+</p>
 </section>
 
 <footer>
-<p>FINANCIAL ACCOUNTING ADVISORY SERVICES S.A.C.</p>
-<p>RUC: 20603167768</p>
-<p>© 2026 FAAS - Todos los derechos reservados</p>
+© 2026 FAAS S.A.C. – Financial Accounting Advisory Services S.A.C. | Todos los derechos reservados.
 </footer>
 
-<a class="whatsapp" href="https://wa.me/51991814230" target="_blank">
+<a href="https://wa.me/51991814230" class="whatsapp" target="_blank">
 WhatsApp
 </a>
 
 <script>
-const cards = document.querySelectorAll('.card');
-const observer = new IntersectionObserver(entries => {
-entries.forEach(entry => {
-if(entry.isIntersecting){
-entry.target.classList.add('show');
-}
+AOS.init({
+duration:1000,
+once:true
 });
-},{threshold:0.2});
-cards.forEach(card => observer.observe(card));
 </script>
 
 </body>
