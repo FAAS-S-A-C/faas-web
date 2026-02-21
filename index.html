@@ -4,42 +4,63 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FAAS S.A.C. | Financial Accounting Advisory Services</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://kit.fontawesome.com/yourkit.js" crossorigin="anonymous"></script>
 
 <style>
-body {
+body{
 margin:0;
-font-family:'Inter', sans-serif;
+font-family:'Inter',sans-serif;
 background:#0b0f19;
 color:#fff;
 scroll-behavior:smooth;
 }
 
-header {
-background:linear-gradient(135deg,#0b0f19,#121a2f);
-padding:100px 20px;
-text-align:center;
+.top-bar{
+position:absolute;
+top:20px;
+right:40px;
 }
 
-header h1 {
-font-family:'Playfair Display', serif;
+.top-bar a{
+color:#d4af37;
+margin-left:20px;
+font-size:18px;
+text-decoration:none;
+transition:0.3s;
+}
+
+.top-bar a:hover{
+color:#fff;
+}
+
+header{
+background:linear-gradient(135deg,#0b0f19,#121a2f);
+padding:120px 20px;
+text-align:center;
+position:relative;
+}
+
+header h1{
+font-family:'Playfair Display',serif;
 font-size:48px;
 margin:0;
-letter-spacing:1px;
 }
 
-header p {
+header p{
 margin-top:20px;
 font-size:18px;
-max-width:800px;
+max-width:850px;
 margin-left:auto;
 margin-right:auto;
 color:#cfcfcf;
+line-height:1.6;
 }
 
-.btn-primary {
+.btn-primary{
 display:inline-block;
 margin-top:30px;
 padding:14px 28px;
@@ -51,47 +72,47 @@ border-radius:30px;
 transition:0.3s;
 }
 
-.btn-primary:hover {
+.btn-primary:hover{
 background:#fff;
 }
 
-section {
+section{
 padding:80px 20px;
 max-width:1200px;
 margin:auto;
 }
 
-h2 {
-font-family:'Playfair Display', serif;
+h2{
+font-family:'Playfair Display',serif;
 font-size:36px;
 margin-bottom:40px;
 text-align:center;
 }
 
-.grid {
+.grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:30px;
 }
 
-.card {
+.card{
 background:#121a2f;
 padding:30px;
 border-radius:12px;
 transition:0.4s;
 }
 
-.card:hover {
+.card:hover{
 transform:translateY(-8px);
 background:#18223d;
 }
 
-.card h3 {
+.card h3{
 color:#d4af37;
 margin-bottom:15px;
 }
 
-.values {
+.values{
 display:flex;
 justify-content:center;
 gap:30px;
@@ -99,7 +120,7 @@ flex-wrap:wrap;
 font-weight:500;
 }
 
-footer {
+footer{
 background:#121a2f;
 padding:60px 20px;
 text-align:center;
@@ -107,7 +128,23 @@ font-size:14px;
 color:#aaa;
 }
 
-.whatsapp {
+.footer-social{
+margin-top:20px;
+}
+
+.footer-social a{
+color:#d4af37;
+margin:0 15px;
+font-size:20px;
+text-decoration:none;
+transition:0.3s;
+}
+
+.footer-social a:hover{
+color:#fff;
+}
+
+.whatsapp{
 position:fixed;
 bottom:20px;
 right:20px;
@@ -121,7 +158,7 @@ box-shadow:0 5px 15px rgba(0,0,0,0.3);
 transition:0.3s;
 }
 
-.whatsapp:hover {
+.whatsapp:hover{
 background:#1ebe5b;
 }
 </style>
@@ -129,21 +166,20 @@ background:#1ebe5b;
 
 <body>
 
+<div class="top-bar">
+<a href="https://www.linkedin.com/company/faassac" target="_blank">LinkedIn</a>
+<a href="https://www.instagram.com/faas_sac" target="_blank">Instagram</a>
+<a href="https://www.facebook.com/FAAS.SAC/" target="_blank">Facebook</a>
+</div>
+
 <header>
 <h1 data-aos="fade-down">FAAS S.A.C.</h1>
 <p data-aos="fade-up">
-Make the world a better place.<br><br>
-En FAAS S.A.C. brindamos asesoría independiente y estratégica, trabajando de manera cercana con la gerencia y sus equipos para respaldar decisiones oportunas, bien sustentadas y alineadas a una estructura de costos que genere valor tangible.
+<strong>Make the world a better place.</strong><br><br>
+Asesoría independiente y estratégica trabajando de manera cercana con la gerencia para respaldar decisiones sólidas, alineadas a una estructura de costos que genere valor tangible.
 </p>
 <a href="#contacto" class="btn-primary" data-aos="zoom-in">Solicitar Consultoría</a>
 </header>
-
-<section>
-<h2 data-aos="fade-up">Qué Hacemos</h2>
-<p style="text-align:center; max-width:900px; margin:auto;" data-aos="fade-up">
-Nuestros clientes renuevan su confianza y fortalecen su posición competitiva. Contamos con experiencia sólida en Auditoría Tributaria, Outsourcing y asesoría a empresas, startups y organizaciones con presencia nacional e internacional.
-</p>
-</section>
 
 <section>
 <h2 data-aos="fade-up">Servicios Estratégicos</h2>
@@ -151,67 +187,35 @@ Nuestros clientes renuevan su confianza y fortalecen su posición competitiva. C
 
 <div class="card" data-aos="fade-up">
 <h3>Asesoría Contable</h3>
-<p>Outsourcing contable bajo NIIF / IFRS. Estados financieros, control interno, reportes gerenciales y cumplimiento normativo.</p>
+<p>Outsourcing contable bajo NIIF / IFRS, estados financieros, control interno y reporting gerencial.</p>
 </div>
 
 <div class="card" data-aos="fade-up">
 <h3>Asesoría Tributaria</h3>
-<p>Planeamiento fiscal estratégico, cumplimiento SUNAT, defensa ante fiscalizaciones y reducción de contingencias tributarias.</p>
+<p>Planeamiento fiscal estratégico, cumplimiento SUNAT y defensa ante fiscalizaciones.</p>
 </div>
 
 <div class="card" data-aos="fade-up">
 <h3>Asesoría Laboral</h3>
-<p>Gestión de planillas, cumplimiento laboral, contratos, prevención de contingencias y optimización de costos laborales.</p>
+<p>Gestión integral laboral, prevención de contingencias y optimización de costos.</p>
 </div>
 
 <div class="card" data-aos="fade-up">
 <h3>Auditoría Tributaria</h3>
-<p>Revisión integral preventiva, identificación de riesgos fiscales, mejora de procesos y fortalecimiento del control tributario.</p>
+<p>Revisión preventiva, identificación de riesgos y fortalecimiento del control tributario.</p>
 </div>
 
 <div class="card" data-aos="fade-up">
 <h3>Consultoría Administrativa</h3>
-<p>Constitución de empresas, estructura societaria, trámites administrativos y diseño de modelos de gestión eficientes.</p>
+<p>Constitución de empresas, estructura societaria y diseño de modelos de gestión.</p>
 </div>
 
-</div>
-</section>
-
-<section>
-<h2 data-aos="fade-up">Sectores que Atendemos</h2>
-<p style="text-align:center;" data-aos="fade-up">
-Startups · Empresas Comerciales · Industriales · Empresas de Servicios
-</p>
-</section>
-
-<section>
-<h2 data-aos="fade-up">Nuestro Enfoque</h2>
-<p data-aos="fade-up">
-Priorizamos comunicación continua y mejora permanente. Integramos profesionales orientados por sector para responder con agilidad, optimizar recursos y reducir contingencias anticipando riesgos.
-</p>
-</section>
-
-<section>
-<h2 data-aos="fade-up">Nuestro Equipo</h2>
-<p data-aos="fade-up">
-La calidad y capacidad profesional del equipo asignado reflejan nuestro compromiso. Todos los profesionales comparten principios, estándares de calidad y metodologías comunes. Recogemos retroalimentación periódica para asegurar alineamiento estratégico.
-</p>
-</section>
-
-<section>
-<h2 data-aos="fade-up">Nuestros Valores</h2>
-<div class="values" data-aos="fade-up">
-<div>Pasión</div>
-<div>Vocación</div>
-<div>Integridad</div>
-<div>Respeto</div>
-<div>Confianza</div>
 </div>
 </section>
 
 <section id="contacto">
 <h2 data-aos="fade-up">Contacto</h2>
-<p style="text-align:center;" data-aos="fade-up">
+<p style="text-align:center;">
 <strong>Wilmer Torres</strong><br>
 Celular: 991 814 230<br>
 Correo: wilmer.torres@faas.com.pe<br><br>
@@ -223,7 +227,12 @@ LIMA - LIMA - ATE
 </section>
 
 <footer>
-© 2026 FAAS S.A.C. – Financial Accounting Advisory Services S.A.C. | Todos los derechos reservados.
+© 2026 FAAS S.A.C. – Financial Accounting Advisory Services S.A.C.
+<div class="footer-social">
+<a href="https://www.linkedin.com/company/faassac" target="_blank">LinkedIn</a>
+<a href="https://www.instagram.com/faas_sac" target="_blank">Instagram</a>
+<a href="https://www.facebook.com/FAAS.SAC/" target="_blank">Facebook</a>
+</div>
 </footer>
 
 <a href="https://wa.me/51991814230" class="whatsapp" target="_blank">
@@ -231,10 +240,7 @@ WhatsApp
 </a>
 
 <script>
-AOS.init({
-duration:1000,
-once:true
-});
+AOS.init({duration:1000,once:true});
 </script>
 
 </body>
