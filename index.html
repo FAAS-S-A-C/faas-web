@@ -17,7 +17,6 @@
 --faas-orange:#F28C4C;
 --faas-soft:#F4F7FB;
 --faas-dark:#0F172A;
---faas-gray:#6B7280;
 }
 
 html{scroll-behavior:smooth;}
@@ -28,12 +27,11 @@ body{
 font-family:'Inter',sans-serif;
 color:var(--faas-dark);
 line-height:1.7;
-background:white;
 }
 
 .container{
 width:90%;
-max-width:1100px;
+max-width:1150px;
 margin:auto;
 }
 
@@ -50,17 +48,21 @@ font-family:'Playfair Display',serif;
 text-align:center;
 font-size:42px;
 margin-bottom:60px;
-letter-spacing:-0.4px;
 }
 
-/* ================= NAV ================= */
+/* ================= HEADER ================= */
 
 header{
 position:fixed;
 width:100%;
-background:white;
-border-bottom:1px solid #eef2f7;
+background:transparent;
+transition:.35s;
 z-index:999;
+}
+
+header.scrolled{
+background:white;
+box-shadow:0 10px 30px rgba(0,0,0,.05);
 }
 
 .navbar{
@@ -79,7 +81,6 @@ align-items:center;
 .nav-links a{
 text-decoration:none;
 color:var(--faas-dark);
-font-weight:500;
 font-size:14px;
 position:relative;
 }
@@ -87,8 +88,8 @@ position:relative;
 .nav-links a::after{
 content:"";
 position:absolute;
-left:0;
 bottom:-6px;
+left:0;
 width:0%;
 height:2px;
 background:var(--faas-orange);
@@ -99,13 +100,7 @@ transition:.3s;
 width:100%;
 }
 
-.linkedin-icon svg{
-width:18px;height:18px;fill:#111;
-transition:.3s;
-}
-.linkedin-icon:hover svg{fill:#0A66C2;}
-
-/* ================= HERO ================= */
+/* ================= HERO ADVISORY ================= */
 
 .hero{
 min-height:100vh;
@@ -117,13 +112,18 @@ rgba(242,140,76,.18) 100%),
 url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1600');
 background-size:cover;
 background-position:center;
-color:white;
 display:flex;
 align-items:center;
 margin-top:80px;
+color:white;
 }
 
-.hero-content{max-width:750px;}
+.hero-grid{
+display:grid;
+grid-template-columns:1.1fr 0.9fr;
+gap:60px;
+align-items:center;
+}
 
 .hero h1{
 font-size:56px;
@@ -148,10 +148,33 @@ transition:.3s;
 
 .btn-primary:hover{
 transform:translateY(-2px);
-background:#e67936;
 }
 
-/* ================= SECTIONS ================= */
+/* PANEL ADVISORY */
+
+.advisory-panel{
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,.2);
+padding:40px;
+border-radius:8px;
+}
+
+.metric{
+margin-bottom:25px;
+}
+
+.metric h3{
+font-size:34px;
+color:white;
+}
+
+.metric span{
+font-size:14px;
+opacity:.85;
+}
+
+/* ================= SECCIONES ================= */
 
 .manifiesto{
 background:var(--faas-blue);
@@ -159,20 +182,14 @@ color:white;
 text-align:center;
 }
 
-.manifiesto p{
-max-width:900px;
-margin:0 auto 20px;
-font-size:18px;
-}
-
 .qs p{
 max-width:850px;
-margin:0 auto 20px;
+margin:auto;
 text-align:center;
 color:#444;
 }
 
-/* ================= CARDS ================= */
+/* CARDS */
 
 .propuesta{background:var(--faas-soft);}
 
@@ -189,7 +206,7 @@ background:white;
 padding:35px;
 border-radius:6px;
 border:1px solid #eef2f7;
-transition:.35s ease;
+transition:.35s;
 }
 
 .propuesta-card:hover,
@@ -217,12 +234,8 @@ border-radius:50%;
 display:flex;
 align-items:center;
 justify-content:center;
-text-align:center;
-padding:25px;
 font-weight:600;
-font-size:20px;
 opacity:.88;
-mix-blend-mode:multiply;
 }
 
 .c1{background:#f4a261;top:0;left:130px;}
@@ -234,43 +247,19 @@ mix-blend-mode:multiply;
 position:absolute;
 width:160px;
 height:160px;
-border-radius:50%;
 background:var(--faas-blue);
-color:white;
+border-radius:50%;
 display:flex;
 align-items:center;
 justify-content:center;
-font-size:20px;
+color:white;
 font-weight:600;
 top:50%;
 left:50%;
 transform:translate(-50%,-50%);
 border:10px solid white;
 box-shadow:0 25px 60px rgba(20,78,162,.35);
-z-index:10;
 }
-
-/* ================= SECTORES ================= */
-
-.sectores{background:var(--faas-soft);}
-
-.sectores-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:25px;
-}
-
-.sector-card{
-background:white;
-padding:25px;
-border:1px solid #eef2f7;
-border-radius:6px;
-text-align:center;
-}
-
-/* ================= CONTACTO ================= */
-
-.contacto{text-align:center;}
 
 /* ================= FOOTER ================= */
 
@@ -279,7 +268,6 @@ background:#111;
 color:#bbb;
 text-align:center;
 padding:45px 0;
-font-size:14px;
 }
 
 /* ================= WHATSAPP ================= */
@@ -294,19 +282,20 @@ padding:14px 20px;
 border-radius:50px;
 text-decoration:none;
 font-weight:600;
-box-shadow:0 10px 30px rgba(0,0,0,.2);
 }
 
 /* ================= RESPONSIVE ================= */
 
-@media(max-width:768px){
+@media(max-width:900px){
 
-.nav-links{display:none;}
+.hero-grid{
+grid-template-columns:1fr;
+}
 
-.hero h1{font-size:34px;}
-.hero p{font-size:17px;}
-
-.ikigai-container{width:340px;height:340px;}
+.ikigai-container{
+width:340px;
+height:340px;
+}
 
 .circle{
 width:190px;
@@ -323,8 +312,8 @@ font-size:14px;
 width:110px;
 height:110px;
 font-size:14px;
-border:6px solid white;
 }
+
 }
 
 </style>
@@ -332,7 +321,7 @@ border:6px solid white;
 
 <body>
 
-<header>
+<header id="header">
 <div class="container navbar">
 <img src="assets/logo.png" height="45">
 
@@ -344,102 +333,38 @@ border:6px solid white;
 <a href="#servicios">Servicios</a>
 <a href="#sectores">Sectores</a>
 <a href="#contacto">Contacto</a>
-
-<a href="https://www.linkedin.com/company/faassac" target="_blank" class="linkedin-icon">
-<svg viewBox="0 0 24 24">
-<path d="M20.447 20.452H17.21v-5.569c0-1.327-.027-3.036-1.851-3.036-1.853 0-2.136 1.445-2.136 2.939v5.666H9.082V9h3.112v1.561z"/>
-</svg>
-</a>
-
+<a href="https://www.linkedin.com/company/faassac" target="_blank">LinkedIn</a>
 </div>
 </div>
 </header>
 
+<!-- HERO ADVISORY -->
 <section id="inicio" class="hero">
-<div class="container hero-content">
+<div class="container hero-grid">
+
+<div>
 <h1>Asesoría Financiera y Tributaria con Enfoque Estratégico</h1>
-<p>Apoyamos a organizaciones en la toma de decisiones críticas mediante análisis financiero, cumplimiento tributario y visión estratégica orientada al crecimiento sostenible.</p>
+<p>Respaldamos decisiones empresariales mediante análisis financiero, cumplimiento tributario y visión estratégica orientada al crecimiento sostenible.</p>
 <a href="#contacto" class="btn-primary">Agendar reunión estratégica</a>
 </div>
-</section>
 
-<section id="manifiesto" class="manifiesto">
-<div class="container">
-<h2 class="section-title">Make the world a better place</h2>
-<p>Fortalecemos organizaciones mediante estructuras financieras sólidas, transparencia y visión estratégica que impulsen crecimiento sostenible y confianza empresarial.</p>
+<div class="advisory-panel">
+<div class="metric">
+<h3>Enfoque Preventivo</h3>
+<span>Identificación anticipada de riesgos financieros y tributarios.</span>
 </div>
-</section>
+<div class="metric">
+<h3>Visión Estratégica</h3>
+<span>Información financiera convertida en decisiones gerenciales.</span>
+</div>
+<div class="metric">
+<h3>Independencia</h3>
+<span>Criterio técnico alineado a mejores prácticas profesionales.</span>
+</div>
+</div>
 
-<section id="quienes" class="qs">
-<div class="container">
-<h2 class="section-title">Quiénes Somos</h2>
-<p>FAAS S.A.C. es una firma independiente especializada en asesoría financiera, tributaria y outsourcing empresarial, orientada a respaldar decisiones gerenciales mediante análisis técnico y comprensión integral del negocio.</p>
-</div>
-</section>
-
-<section id="propuesta" class="propuesta">
-<div class="container">
-<h2 class="section-title">Propuesta de Valor</h2>
-<div class="propuesta-grid">
-<div class="propuesta-card"><h3>Independencia y Objetividad</h3></div>
-<div class="propuesta-card"><h3>Enfoque Preventivo</h3></div>
-<div class="propuesta-card"><h3>Visión Estratégica</h3></div>
-<div class="propuesta-card"><h3>Acompañamiento Ejecutivo</h3></div>
-</div>
 </div>
 </section>
-
-<section class="valores">
-<div class="container">
-<h2 class="section-title">Nuestros Valores</h2>
-<div class="ikigai-container">
-<div class="circle c1">Vocación</div>
-<div class="circle c2">Pasión</div>
-<div class="circle c3">Respeto</div>
-<div class="circle c4">Confianza</div>
-<div class="center-circle">Integridad</div>
-</div>
-</div>
-</section>
-
-<section id="servicios">
-<div class="container">
-<h2 class="section-title">Servicios</h2>
-<div class="services-grid">
-<div class="service-card">Auditoría Tributaria</div>
-<div class="service-card">Outsourcing Integral</div>
-<div class="service-card">Asesoría Financiera y Tributaria</div>
-</div>
-</div>
-</section>
-
-<section id="sectores" class="sectores">
-<div class="container">
-<h2 class="section-title">Sectores</h2>
-<div class="sectores-grid">
-<div class="sector-card">Startups</div>
-<div class="sector-card">Empresas Comerciales</div>
-<div class="sector-card">Empresas Industriales</div>
-<div class="sector-card">Empresas de Servicios</div>
-</div>
-</div>
-</section>
-
-<section id="contacto" class="contacto">
-<div class="container">
-<h2 class="section-title">Contacto</h2>
-<p><strong>Wilmer Torres — Socio Director</strong></p>
-<p>+51 991 814 230<br>wilmer.torres@faas.com.pe</p>
-</div>
-</section>
-
-<footer>
-FAAS S.A.C. | Financial Accounting Advisory Services | Lima – Perú
-</footer>
-
-<a href="https://wa.me/51991814230" target="_blank" class="whatsapp-btn">
-💬 Agendar reunión
-</a>
 
 </body>
 </html>
