@@ -3,13 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>FAAS S.A.C. | Make the world a better place</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
+
+html{scroll-behavior:smooth;}
+
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:'Inter',sans-serif;color:#111;line-height:1.7;}
+
 .container{width:90%;max-width:1200px;margin:auto;}
 section{padding:110px 0;}
 h1,h2,h3{font-family:'Playfair Display',serif;}
@@ -23,58 +28,80 @@ background:#fff;
 border-bottom:1px solid #eee;
 z-index:999;
 }
+
 .navbar{
 display:flex;
 justify-content:space-between;
 align-items:center;
 padding:18px 0;
 }
+
 .nav-links{
 display:flex;
-gap:30px;
+gap:28px;
 align-items:center;
 }
+
 .nav-links a{
 text-decoration:none;
 color:#111;
 font-weight:500;
 font-size:14px;
-transition:0.3s;
+transition:.3s;
 }
+
 .nav-links a:hover{color:#0A1F44;}
 
 .linkedin-icon svg{
 width:18px;
 height:18px;
 fill:#111;
-transition:0.3s;
+transition:.3s;
 }
-.linkedin-icon:hover svg{
-fill:#0A66C2;
-}
+.linkedin-icon:hover svg{fill:#0A66C2;}
 
 /* HERO */
 .hero{
 min-height:100vh;
-background:linear-gradient(rgba(10,31,68,0.90),rgba(10,31,68,0.90)),
+background:linear-gradient(rgba(10,31,68,.9),rgba(10,31,68,.9)),
 url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1600');
 background-size:cover;
 background-position:center;
-color:white;
+color:#fff;
 display:flex;
 align-items:center;
 margin-top:80px;
 }
+
 .hero-content{max-width:850px;}
+
 .hero h1{font-size:48px;margin-bottom:25px;}
-.hero p{font-size:20px;margin-bottom:35px;opacity:0.95;}
+.hero p{font-size:20px;margin-bottom:35px;}
+
 .btn-primary{
-background:white;
+background:#fff;
 color:#0A1F44;
 padding:14px 30px;
 border-radius:4px;
 text-decoration:none;
 font-weight:600;
+}
+
+/* SECCIONES BASE */
+.manifiesto{background:#0A1F44;color:#fff;text-align:center;}
+.qs p{text-align:center;max-width:900px;margin:0 auto 20px;color:#444;}
+
+.propuesta{background:#f7f9fc;}
+.propuesta-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:35px;
+}
+.propuesta-card{
+background:#fff;
+padding:35px;
+border-radius:6px;
+border:1px solid #eee;
 }
 
 /* IKIGAI */
@@ -98,7 +125,6 @@ text-align:center;
 padding:25px;
 font-weight:600;
 font-size:20px;
-color:#111;
 }
 
 .c1{background:#f4a261;top:0;left:130px;}
@@ -106,27 +132,56 @@ color:#111;
 .c3{background:#2a9d8f;top:130px;right:0;}
 .c4{background:#e9c46a;bottom:0;left:130px;}
 
-/* Núcleo Integridad rediseñado */
 .center-circle{
 position:absolute;
 width:160px;
 height:160px;
 border-radius:50%;
 background:#0A1F44;
-color:white;
+color:#fff;
 display:flex;
 align-items:center;
 justify-content:center;
-text-align:center;
 font-size:20px;
 font-weight:600;
 top:50%;
 left:50%;
 transform:translate(-50%,-50%);
-z-index:10;
 border:8px solid #fff;
-box-shadow:0 15px 40px rgba(0,0,0,0.15);
+box-shadow:0 15px 40px rgba(0,0,0,.15);
+z-index:10;
 }
+
+/* SERVICIOS */
+.services-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:35px;
+}
+
+.service-card{
+border:1px solid #eee;
+padding:35px;
+border-radius:6px;
+}
+
+/* SECTORES */
+.sectores{background:#f7f9fc;}
+.sectores-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:25px;
+}
+.sector-card{
+background:#fff;
+padding:25px;
+border:1px solid #eee;
+border-radius:6px;
+text-align:center;
+}
+
+/* CONTACTO */
+.contacto{text-align:center;}
 
 /* FOOTER */
 footer{
@@ -143,12 +198,12 @@ position:fixed;
 bottom:25px;
 right:25px;
 background:#25D366;
-color:white;
+color:#fff;
 padding:14px 20px;
 border-radius:50px;
 text-decoration:none;
 font-weight:600;
-box-shadow:0 10px 30px rgba(0,0,0,0.2);
+box-shadow:0 10px 30px rgba(0,0,0,.2);
 }
 
 /* RESPONSIVE */
@@ -159,10 +214,7 @@ box-shadow:0 10px 30px rgba(0,0,0,0.2);
 .hero h1{font-size:32px;}
 .hero p{font-size:17px;}
 
-.ikigai-container{
-width:340px;
-height:340px;
-}
+.ikigai-container{width:340px;height:340px;}
 
 .circle{
 width:190px;
@@ -185,11 +237,13 @@ border:5px solid #fff;
 }
 </style>
 </head>
+
 <body>
 
 <header>
 <div class="container navbar">
 <img src="assets/logo.png" height="45">
+
 <div class="nav-links">
 <a href="#inicio">Inicio</a>
 <a href="#manifiesto">Manifiesto</a>
@@ -199,16 +253,49 @@ border:5px solid #fff;
 <a href="#sectores">Sectores</a>
 <a href="#contacto">Contacto</a>
 
-<!-- LinkedIn Oficial -->
-<a href="https://www.linkedin.com/company/faassac" target="_blank" class="linkedin-icon" aria-label="LinkedIn FAAS">
+<a href="https://www.linkedin.com/company/faassac" target="_blank" class="linkedin-icon">
 <svg viewBox="0 0 24 24">
-<path d="M20.447 20.452H17.21v-5.569c0-1.327-.027-3.036-1.851-3.036-1.853 0-2.136 1.445-2.136 2.939v5.666H9.082V9h3.112v1.561h.045c.434-.823 1.495-1.691 3.076-1.691 3.289 0 3.894 2.165 3.894 4.977v6.605zM5.337 7.433c-1.004 0-1.818-.815-1.818-1.818s.814-1.818 1.818-1.818 1.818.815 1.818 1.818-.814 1.818-1.818 1.818zM6.756 20.452H3.918V9h2.838v11.452z"/>
+<path d="M20.447 20.452H17.21v-5.569c0-1.327-.027-3.036-1.851-3.036-1.853 0-2.136 1.445-2.136 2.939v5.666H9.082V9h3.112v1.561h.045c.434-.823 1.495-1.691 3.076-1.691 3.289 0 3.894 2.165 3.894 4.977v6.605zM6.756 20.452H3.918V9h2.838z"/>
 </svg>
 </a>
 
 </div>
 </div>
 </header>
+
+<section id="inicio" class="hero">
+<div class="container hero-content">
+<h1>FAAS S.A.C.</h1>
+<p>Asesoría financiera y tributaria independiente para decisiones estratégicas y crecimiento sostenible.</p>
+<a href="#contacto" class="btn-primary">Solicitar Reunión Estratégica</a>
+</div>
+</section>
+
+<section id="manifiesto" class="manifiesto">
+<div class="container">
+<h2 class="section-title">Make the world a better place</h2>
+<p>Fortalecemos organizaciones mediante estructuras financieras sólidas, transparencia y visión estratégica.</p>
+</div>
+</section>
+
+<section id="quienes" class="qs">
+<div class="container">
+<h2 class="section-title">Quiénes Somos</h2>
+<p>Asesoría independiente orientada a respaldar decisiones gerenciales con análisis técnico y visión de largo plazo.</p>
+</div>
+</section>
+
+<section id="propuesta" class="propuesta">
+<div class="container">
+<h2 class="section-title">Propuesta de Valor</h2>
+<div class="propuesta-grid">
+<div class="propuesta-card"><h3>Independencia</h3></div>
+<div class="propuesta-card"><h3>Prevención</h3></div>
+<div class="propuesta-card"><h3>Visión Estratégica</h3></div>
+<div class="propuesta-card"><h3>Atención Boutique</h3></div>
+</div>
+</div>
+</section>
 
 <section class="valores">
 <div class="container">
@@ -220,6 +307,37 @@ border:5px solid #fff;
 <div class="circle c4">Confianza</div>
 <div class="center-circle">Integridad</div>
 </div>
+</div>
+</section>
+
+<section id="servicios">
+<div class="container">
+<h2 class="section-title">Servicios</h2>
+<div class="services-grid">
+<div class="service-card">Auditoría Tributaria</div>
+<div class="service-card">Outsourcing Integral</div>
+<div class="service-card">Consultoría Financiera</div>
+</div>
+</div>
+</section>
+
+<section id="sectores" class="sectores">
+<div class="container">
+<h2 class="section-title">Sectores</h2>
+<div class="sectores-grid">
+<div class="sector-card">Startups</div>
+<div class="sector-card">Empresas Comerciales</div>
+<div class="sector-card">Industriales</div>
+<div class="sector-card">Servicios</div>
+</div>
+</div>
+</section>
+
+<section id="contacto" class="contacto">
+<div class="container">
+<h2 class="section-title">Contacto</h2>
+<p><strong>Wilmer Torres — Socio Director</strong></p>
+<p>+51 991 814 230<br>wilmer.torres@faas.com.pe</p>
 </div>
 </section>
 
