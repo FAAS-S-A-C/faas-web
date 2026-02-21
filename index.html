@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FAAS S.A.C. | Financial Accounting Advisory Services</title>
+<title>FAAS S.A.C. | Make the world a better place</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
@@ -11,9 +11,9 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:'Inter',sans-serif;color:#111;line-height:1.7;}
 .container{width:90%;max-width:1200px;margin:auto;}
-section{padding:100px 0;}
+section{padding:110px 0;}
 h1,h2,h3{font-family:'Playfair Display',serif;}
-.section-title{text-align:center;font-size:36px;margin-bottom:50px;}
+.section-title{text-align:center;font-size:36px;margin-bottom:60px;}
 
 /* NAV */
 header{position:fixed;width:100%;background:#fff;border-bottom:1px solid #eee;z-index:999;}
@@ -24,8 +24,8 @@ header{position:fixed;width:100%;background:#fff;border-bottom:1px solid #eee;z-
 
 /* HERO */
 .hero{
-height:100vh;
-background:linear-gradient(rgba(10,31,68,0.88),rgba(10,31,68,0.88)),
+min-height:100vh;
+background:linear-gradient(rgba(10,31,68,0.90),rgba(10,31,68,0.90)),
 url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1600');
 background-size:cover;
 background-position:center;
@@ -34,23 +34,61 @@ display:flex;
 align-items:center;
 margin-top:80px;
 }
-.hero-content{max-width:800px;}
-.hero h1{font-size:52px;margin-bottom:20px;}
-.hero h2{font-size:22px;font-weight:400;margin-bottom:25px;opacity:0.9;}
-.hero p{margin-bottom:35px;font-size:18px;}
+.hero-content{max-width:850px;}
+.hero h1{font-size:48px;margin-bottom:25px;}
+.hero p{font-size:20px;margin-bottom:35px;opacity:0.95;}
 .btn-primary{
 background:white;color:#0A1F44;
-padding:14px 28px;border-radius:4px;
+padding:14px 30px;border-radius:4px;
 text-decoration:none;font-weight:600;
 }
 
+/* MANIFIESTO */
+.manifiesto{
+background:#0A1F44;
+color:white;
+text-align:center;
+}
+.manifiesto p{
+max-width:900px;
+margin:0 auto 20px auto;
+font-size:18px;
+opacity:0.95;
+}
+
 /* QUIENES SOMOS */
-.qs p{margin-bottom:20px;color:#444;max-width:950px;margin-left:auto;margin-right:auto;text-align:center;}
-.subsection{margin-top:50px;}
-.subsection h3{text-align:center;margin-bottom:20px;font-size:24px;}
+.qs p{
+margin-bottom:20px;
+color:#444;
+max-width:950px;
+margin-left:auto;
+margin-right:auto;
+text-align:center;
+}
+
+/* PROPUESTA DE VALOR */
+.propuesta{
+background:#f7f9fc;
+}
+.propuesta-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:35px;
+margin-top:40px;
+}
+.propuesta-card{
+background:white;
+padding:35px;
+border-radius:6px;
+border:1px solid #eee;
+}
+.propuesta-card h3{
+margin-bottom:15px;
+font-size:20px;
+}
 
 /* IKIGAI */
-.valores{background:#f7f9fc;text-align:center;}
+.valores{text-align:center;}
 .ikigai-container{position:relative;width:500px;height:500px;margin:60px auto;}
 .circle{
 position:absolute;width:260px;height:260px;border-radius:50%;
@@ -70,35 +108,67 @@ top:50%;left:50%;transform:translate(-50%,-50%);
 }
 
 /* SERVICIOS */
-.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;}
-.service-card{border:1px solid #eee;padding:35px;border-radius:6px;transition:0.3s;}
-.service-card:hover{box-shadow:0 10px 30px rgba(0,0,0,0.08);}
+.services-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:35px;
+}
+.service-card{
+border:1px solid #eee;
+padding:35px;
+border-radius:6px;
+transition:0.3s;
+}
+.service-card:hover{
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
 
 /* SECTORES */
 .sectores{background:#f7f9fc;}
-.sectores-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:25px;}
-.sector-card{background:white;padding:25px;border:1px solid #eee;border-radius:6px;text-align:center;}
+.sectores-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:25px;
+}
+.sector-card{
+background:white;
+padding:25px;
+border:1px solid #eee;
+border-radius:6px;
+text-align:center;
+}
 
 /* CONTACTO */
 .contacto{text-align:center;}
 
 /* FOOTER */
-footer{background:#111;color:#bbb;text-align:center;padding:40px 0;font-size:14px;}
+footer{
+background:#111;
+color:#bbb;
+text-align:center;
+padding:40px 0;
+font-size:14px;
+}
 
 /* WHATSAPP */
 .whatsapp-btn{
-position:fixed;bottom:25px;right:25px;
-background:#25D366;color:white;
-padding:14px 20px;border-radius:50px;
-text-decoration:none;font-weight:600;
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+color:white;
+padding:14px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
 box-shadow:0 10px 30px rgba(0,0,0,0.2);
 }
 
 /* RESPONSIVE */
 @media(max-width:768px){
 .nav-links{display:none;}
-.hero h1{font-size:34px;}
-.hero h2{font-size:18px;}
+.hero h1{font-size:32px;}
+.hero p{font-size:17px;}
 .ikigai-container{width:320px;height:320px;}
 .circle{width:170px;height:170px;font-size:14px;}
 .c1{top:0;left:75px;}
@@ -116,7 +186,9 @@ box-shadow:0 10px 30px rgba(0,0,0,0.2);
 <img src="assets/logo.png" height="45">
 <div class="nav-links">
 <a href="#inicio">Inicio</a>
+<a href="#manifiesto">Manifiesto</a>
 <a href="#quienes">Quiénes Somos</a>
+<a href="#propuesta">Propuesta de Valor</a>
 <a href="#servicios">Servicios</a>
 <a href="#sectores">Sectores</a>
 <a href="#contacto">Contacto</a>
@@ -127,34 +199,54 @@ box-shadow:0 10px 30px rgba(0,0,0,0.2);
 <section id="inicio" class="hero">
 <div class="container hero-content">
 <h1>FAAS S.A.C.</h1>
-<h2>Make the world a better place</h2>
-<p>Asesoría estratégica independiente para decisiones gerenciales sólidas y crecimiento sostenible.</p>
-<a href="#contacto" class="btn-primary">Solicitar Evaluación</a>
+<p>Asesoría financiera y tributaria independiente para organizaciones que buscan decisiones sólidas, control estratégico del riesgo y crecimiento sostenible.</p>
+<a href="#contacto" class="btn-primary">Solicitar Reunión Estratégica</a>
+</div>
+</section>
+
+<section id="manifiesto" class="manifiesto">
+<div class="container">
+<h2 class="section-title">Make the world a better place</h2>
+<p>Creemos que las organizaciones sólidas generan impacto positivo en la sociedad. Nuestra labor es fortalecer su estructura financiera y tributaria para que puedan crecer con transparencia, eficiencia y sostenibilidad.</p>
+<p>Trabajamos con rigor técnico, independencia y criterio estratégico, convencidos de que una gestión financiera responsable no solo mejora resultados, sino que construye confianza en el entorno empresarial.</p>
 </div>
 </section>
 
 <section id="quienes" class="qs">
 <div class="container">
 <h2 class="section-title">Quiénes Somos</h2>
+<p>Brindamos asesoría independiente y estratégica, trabajando de manera cercana con la gerencia y sus equipos para respaldar decisiones críticas con análisis sólido y visión de largo plazo.</p>
+<p>Nuestro acompañamiento permite optimizar estructuras de costos, reducir contingencias y fortalecer la posición competitiva de nuestros clientes en mercados nacionales e internacionales.</p>
+</div>
+</section>
 
-<p>En FAAS S.A.C. brindamos asesoría independiente y estratégica, trabajando de manera cercana con la gerencia y sus equipos para respaldar decisiones oportunas, bien sustentadas y alineadas a una estructura de costos que genere valor tangible para la organización.</p>
+<section id="propuesta" class="propuesta">
+<div class="container">
+<h2 class="section-title">Propuesta de Valor</h2>
 
-<p>Nuestros clientes renuevan su confianza en nosotros y avanzan en el fortalecimiento de su posición competitiva, consolidándose como referentes en sus respectivos mercados.</p>
+<div class="propuesta-grid">
 
-<p>Contamos con experiencia sólida en la prestación de servicios de Auditoría tributaria, Outsourcing y asesoría a empresas y Startups de diversos sectores con presencia en el mercado nacional e internacional.</p>
-
-<div class="subsection">
-<h3>Nuestro Enfoque</h3>
-<p>Nuestro enfoque prioriza la comunicación continua y la mejora permanente. Integramos profesionales de distintas especialidades en equipos orientados por sector, lo que nos permite responder con agilidad a los cambios del entorno, optimizar la asignación de recursos y atender las necesidades del cliente de manera eficiente.</p>
-<p>El proceso está diseñado para reducir contingencias, anticipar riesgos y resolver los asuntos conforme se presenten.</p>
+<div class="propuesta-card">
+<h3>Independencia y Objetividad</h3>
+<p>Emitimos criterio técnico sin conflictos de interés, priorizando la sostenibilidad financiera de la organización.</p>
 </div>
 
-<div class="subsection">
-<h3>Nuestro Equipo</h3>
-<p>La calidad y capacidad profesional del equipo asignado reflejan nuestro compromiso con la Compañía. Hemos conformado un equipo central con el conocimiento técnico y la experiencia necesaria para comprender su negocio y acompañarlos en la ejecución exitosa del proyecto.</p>
-<p>Todos los profesionales de FAAS S.A.C. comparten principios, estándares de calidad y metodologías de trabajo comunes. De manera periódica, recogeremos su retroalimentación para asegurar que nuestro desempeño se mantenga alineado con sus expectativas y objetivos.</p>
+<div class="propuesta-card">
+<h3>Enfoque Preventivo</h3>
+<p>Anticipamos riesgos tributarios y financieros antes de que se conviertan en contingencias críticas.</p>
 </div>
 
+<div class="propuesta-card">
+<h3>Visión Estratégica</h3>
+<p>No solo cumplimos obligaciones; fortalecemos estructuras para generar valor real y medible.</p>
+</div>
+
+<div class="propuesta-card">
+<h3>Atención Boutique</h3>
+<p>Intervención directa del liderazgo en cada proyecto, garantizando calidad técnica y cercanía ejecutiva.</p>
+</div>
+
+</div>
 </div>
 </section>
 
@@ -177,15 +269,15 @@ box-shadow:0 10px 30px rgba(0,0,0,0.2);
 <div class="services-grid">
 <div class="service-card">
 <h3>Auditoría Tributaria</h3>
-<p>Evaluación preventiva y gestión de contingencias fiscales.</p>
+<p>Diagnóstico integral y gestión estratégica del cumplimiento fiscal.</p>
 </div>
 <div class="service-card">
-<h3>Outsourcing</h3>
-<p>Gestión contable, tributaria y laboral bajo estándares técnicos sólidos.</p>
+<h3>Outsourcing Integral</h3>
+<p>Gestión contable, tributaria y laboral bajo estándares técnicos rigurosos.</p>
 </div>
 <div class="service-card">
-<h3>Asesoría Estratégica</h3>
-<p>Optimización financiera y soporte en toma de decisiones.</p>
+<h3>Consultoría Financiera</h3>
+<p>Optimización estructural y soporte en decisiones estratégicas.</p>
 </div>
 </div>
 </div>
@@ -195,10 +287,10 @@ box-shadow:0 10px 30px rgba(0,0,0,0.2);
 <div class="container">
 <h2 class="section-title">Sectores</h2>
 <div class="sectores-grid">
+<div class="sector-card">Startups</div>
 <div class="sector-card">Empresas Comerciales</div>
 <div class="sector-card">Empresas Industriales</div>
-<div class="sector-card">Startups</div>
-<div class="sector-card">Servicios Profesionales</div>
+<div class="sector-card">Empresas de Servicios</div>
 </div>
 </div>
 </section>
@@ -206,10 +298,8 @@ box-shadow:0 10px 30px rgba(0,0,0,0.2);
 <section id="contacto" class="contacto">
 <div class="container">
 <h2 class="section-title">Contacto</h2>
-<p>Coordinemos una reunión estratégica.</p>
-<p><strong>Wilmer Torres</strong></p>
-<p>📞 +51 991 814 230</p>
-<p>✉ wilmer.torres@faas.com.pe</p>
+<p><strong>Wilmer Torres</strong><br>Socio Director</p>
+<p>+51 991 814 230<br>wilmer.torres@faas.com.pe</p>
 </div>
 </section>
 
