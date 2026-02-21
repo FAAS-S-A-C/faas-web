@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FAAS S.A.C. | Financial Accounting Advisory Services</title>
+<title>FAAS S.A.C. | Financial Advisory</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
@@ -27,47 +27,10 @@ max-width:1200px;
 margin:auto;
 }
 
-h1,h2,h3{
-font-family:'Playfair Display',serif;
-font-weight:600;
-}
-
 section{padding:120px 0;}
 
-/* ================= HEADER ================= */
-
-header{
-position:fixed;
-width:100%;
-top:0;
-background:#ffffff;
-border-bottom:1px solid #eee;
-z-index:999;
-transition:0.3s;
-}
-
-.navbar{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 0;
-}
-
-.nav-links{
-display:flex;
-gap:40px;
-}
-
-.nav-links a{
-text-decoration:none;
-color:#111;
-font-size:14px;
-font-weight:500;
-transition:0.3s;
-}
-
-.nav-links a:hover{
-color:#0A1F44;
+h1,h2,h3{
+font-family:'Playfair Display',serif;
 }
 
 /* ================= HERO ================= */
@@ -81,7 +44,7 @@ background-position:center;
 color:white;
 display:flex;
 align-items:center;
-margin-top:80px;
+text-align:left;
 }
 
 .hero-content{
@@ -97,8 +60,8 @@ margin-bottom:30px;
 
 .hero p{
 font-size:20px;
-opacity:0.9;
 margin-bottom:40px;
+opacity:0.9;
 }
 
 .btn-primary{
@@ -115,168 +78,134 @@ transition:0.3s;
 background:#e6e6e6;
 }
 
-/* ================= ANIMATIONS ================= */
-
 @keyframes fadeUp{
 0%{transform:translateY(40px);opacity:0;}
 100%{transform:translateY(0);opacity:1;}
 }
 
-.fade-section{
-opacity:0;
-transform:translateY(40px);
-transition:all 1s ease;
-}
+/* ================= IKIGAI ================= */
 
-.fade-section.active{
-opacity:1;
-transform:translateY(0);
+.valores{
+text-align:center;
+background:#f8f9fb;
 }
-
-/* ================= NOSOTROS ================= */
 
 .section-title{
-text-align:center;
 font-size:38px;
 margin-bottom:60px;
 }
 
-.nosotros-content{
-max-width:900px;
-margin:auto;
-text-align:center;
-margin-bottom:80px;
-color:#444;
-}
-
-.nosotros-content p{
-margin-bottom:25px;
-}
-
-/* ================= VALORES CIRCULAR ================= */
-
-.valores{
-text-align:center;
-margin-top:40px;
+.ikigai-container{
 position:relative;
-height:400px;
+width:520px;
+height:520px;
+margin:80px auto;
+animation:rotateSlow 40s linear infinite;
+}
+
+@keyframes rotateSlow{
+0%{transform:rotate(0deg);}
+100%{transform:rotate(360deg);}
 }
 
 .circle{
-position:relative;
-width:300px;
-height:300px;
-margin:60px auto;
+position:absolute;
+width:280px;
+height:280px;
 border-radius:50%;
 display:flex;
 align-items:center;
 justify-content:center;
-background:#0A1F44;
-color:white;
 font-weight:600;
 font-size:20px;
+color:#111;
+opacity:0.85;
+cursor:pointer;
+transition:0.3s;
 }
 
-.valor{
+.circle:hover{
+transform:scale(1.05);
+}
+
+.c1{background:#f4a261;top:0;left:120px;}
+.c2{background:#e76f51;top:120px;left:0;}
+.c3{background:#2a9d8f;top:120px;right:0;}
+.c4{background:#e9c46a;bottom:0;left:120px;}
+
+.center-circle{
 position:absolute;
-background:#f7f9fc;
-padding:12px 20px;
-border-radius:30px;
-font-weight:500;
-box-shadow:0 8px 20px rgba(0,0,0,0.08);
-}
-
-.valor:nth-child(2){top:0;left:50%;transform:translate(-50%,0);}
-.valor:nth-child(3){top:50%;left:0;transform:translate(0,-50%);}
-.valor:nth-child(4){top:50%;right:0;transform:translate(0,-50%);}
-.valor:nth-child(5){bottom:0;left:50%;transform:translate(-50%,0);}
-
-/* ================= SERVICES ================= */
-
-.services{
-background:#f7f9fc;
-text-align:center;
-}
-
-.services-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:40px;
-margin-top:60px;
-}
-
-.service-card{
-background:white;
-padding:40px;
-border-radius:6px;
-border:1px solid #eee;
-transition:0.4s;
-}
-
-.service-card:hover{
-transform:translateY(-10px);
-box-shadow:0 15px 40px rgba(0,0,0,0.1);
-}
-
-/* ================= CLIENTES ================= */
-
-.clientes{
-text-align:center;
-}
-
-.clientes p{
-max-width:700px;
-margin:auto;
-color:#555;
-}
-
-/* ================= CTA ================= */
-
-.cta{
+width:210px;
+height:210px;
+border-radius:50%;
 background:#0A1F44;
 color:white;
-text-align:center;
-}
-
-.cta a{
-background:white;
-color:#0A1F44;
-padding:14px 30px;
-border-radius:4px;
-text-decoration:none;
-font-weight:500;
-}
-
-/* ================= FOOTER ================= */
-
-footer{
-background:#111;
-color:#bbb;
-padding:60px 0;
-font-size:14px;
-}
-
-.footer-content{
 display:flex;
-justify-content:space-between;
-flex-wrap:wrap;
+align-items:center;
+justify-content:center;
+font-size:22px;
+font-weight:600;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+animation:pulse 3s infinite;
+box-shadow:0 15px 40px rgba(0,0,0,0.2);
+}
+
+@keyframes pulse{
+0%{box-shadow:0 0 0 0 rgba(10,31,68,0.5);}
+70%{box-shadow:0 0 0 20px rgba(10,31,68,0);}
+100%{box-shadow:0 0 0 0 rgba(10,31,68,0);}
+}
+
+/* ================= TOOLTIP ================= */
+
+.circle::after{
+content:attr(data-tooltip);
+position:absolute;
+bottom:-50px;
+background:#111;
+color:white;
+padding:8px 14px;
+border-radius:6px;
+font-size:13px;
+opacity:0;
+white-space:nowrap;
+transition:0.3s;
+pointer-events:none;
+}
+
+.circle:hover::after{
+opacity:1;
+}
+
+/* ================= WHATSAPP ================= */
+
+.whatsapp-btn{
+position:fixed;
+bottom:30px;
+right:30px;
+background:#25D366;
+color:white;
+padding:14px 22px;
+border-radius:50px;
+display:flex;
+align-items:center;
+gap:10px;
+font-weight:600;
+text-decoration:none;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+transition:0.3s;
+z-index:1000;
+}
+
+.whatsapp-btn:hover{
+transform:scale(1.05);
 }
 
 </style>
 </head>
 <body>
-
-<header>
-<div class="container navbar">
-<img src="assets/logo.png" alt="FAAS Logo" height="45">
-<div class="nav-links">
-<a href="#nosotros">Nosotros</a>
-<a href="#servicios">Servicios</a>
-<a href="#clientes">Clientes</a>
-<a href="#contacto">Contacto</a>
-</div>
-</div>
-</header>
 
 <section class="hero">
 <div class="container hero-content">
@@ -286,93 +215,27 @@ flex-wrap:wrap;
 </div>
 </section>
 
-<section id="nosotros" class="fade-section">
+<section class="valores">
 <div class="container">
+<h2 class="section-title">Nuestros Valores</h2>
 
-<h2 class="section-title">Nosotros</h2>
+<div class="ikigai-container">
 
-<div class="nosotros-content">
-<p>En FAAS S.A.C. brindamos asesoría independiente y estratégica, trabajando de manera cercana con la gerencia y sus equipos para respaldar decisiones oportunas y alineadas a una estructura de costos que genere valor tangible.</p>
-<p>Nuestros clientes fortalecen su posición competitiva y se consolidan como referentes en sus mercados.</p>
-<p>Contamos con experiencia sólida en Auditoría Tributaria, Outsourcing y asesoría a empresas y Startups con presencia nacional e internacional.</p>
-</div>
+<div class="circle c1" data-tooltip="Compromiso genuino con el desarrollo empresarial.">Vocación</div>
+<div class="circle c2" data-tooltip="Energía y determinación en cada proyecto.">Pasión</div>
+<div class="circle c3" data-tooltip="Relaciones basadas en ética y profesionalismo.">Respeto</div>
+<div class="circle c4" data-tooltip="Construcción de relaciones sólidas y sostenibles.">Confianza</div>
 
-<div class="valores">
-<h3>Nuestros Valores</h3>
-
-<div class="circle">Integridad
-<div class="valor">Pasión</div>
-<div class="valor">Vocación</div>
-<div class="valor">Respeto</div>
-<div class="valor">Confianza</div>
-</div>
+<div class="center-circle">Integridad</div>
 
 </div>
 
 </div>
 </section>
 
-<section id="servicios" class="services fade-section">
-<div class="container">
-<h2 class="section-title">Servicios</h2>
-<div class="services-grid">
-<div class="service-card">
-<h3>Auditoría Tributaria</h3>
-<p>Evaluación preventiva y gestión de contingencias fiscales.</p>
-</div>
-<div class="service-card">
-<h3>Outsourcing Integral</h3>
-<p>Gestión contable, tributaria y laboral bajo estándares internacionales.</p>
-</div>
-<div class="service-card">
-<h3>Consultoría Administrativa</h3>
-<p>Optimización estructural y fortalecimiento corporativo.</p>
-</div>
-</div>
-</div>
-</section>
-
-<section id="clientes" class="clientes fade-section">
-<div class="container">
-<h2 class="section-title">Clientes</h2>
-<p>Empresas comerciales, industriales y startups confían en FAAS para estructurar su crecimiento con respaldo técnico y estratégico.</p>
-</div>
-</section>
-
-<section id="contacto" class="cta fade-section">
-<div class="container">
-<h2>Conversemos sobre la estructura financiera de su empresa</h2>
-<br>
-<a href="mailto:wilmer.torres@faas.com.pe">Contactar Ahora</a>
-</div>
-</section>
-
-<footer>
-<div class="container footer-content">
-<div>
-<strong>FAAS S.A.C.</strong><br>
-RUC: 20603167768<br>
-Lima - Perú
-</div>
-<div>
-Wilmer Torres<br>
-991 814 230<br>
-wilmer.torres@faas.com.pe
-</div>
-</div>
-</footer>
-
-<script>
-const sections=document.querySelectorAll('.fade-section');
-window.addEventListener('scroll',()=>{
-sections.forEach(section=>{
-const top=section.getBoundingClientRect().top;
-if(top<window.innerHeight-100){
-section.classList.add('active');
-}
-});
-});
-</script>
+<a href="https://wa.me/51991814230" target="_blank" class="whatsapp-btn">
+💬 Agendar reunión
+</a>
 
 </body>
 </html>
