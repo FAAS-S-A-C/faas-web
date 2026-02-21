@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FAAS S.A.C. | Financial Accounting Advisory Services</title>
-<meta name="description" content="Auditoría Tributaria, Outsourcing Contable y Consultoría Estratégica para empresas en Perú.">
+<meta name="description" content="Auditoría Tributaria, Outsourcing Contable y Consultoría Estratégica para empresas y startups en Perú.">
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
@@ -95,6 +95,8 @@ header {
     margin-bottom:35px;
 }
 
+/* ================= BUTTON ================= */
+
 .btn-primary {
     background:white;
     color:#0A1F44;
@@ -107,6 +109,77 @@ header {
 
 .btn-primary:hover {
     background:#e6e6e6;
+}
+
+/* ================= NOSOTROS ================= */
+
+.nosotros { background:#ffffff; }
+
+.section-title {
+    text-align:center;
+    margin-bottom:50px;
+    font-size:36px;
+}
+
+.nosotros-content {
+    max-width:900px;
+    margin:0 auto 60px auto;
+    text-align:center;
+    color:#444;
+}
+
+.nosotros-content p { margin-bottom:20px; }
+
+.nosotros-subsection {
+    max-width:900px;
+    margin:0 auto 60px auto;
+}
+
+.nosotros-subsection h3 {
+    margin-bottom:20px;
+    color:#0A1F44;
+}
+
+.nosotros-subsection p {
+    margin-bottom:15px;
+    color:#555;
+}
+
+/* ================= VALORES ================= */
+
+.valores {
+    text-align:center;
+    margin-top:40px;
+}
+
+.valores-grid {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    max-width:700px;
+    margin:40px auto 0 auto;
+    align-items:center;
+}
+
+.valor {
+    padding:25px;
+    border:1px solid #ddd;
+    border-radius:6px;
+    font-weight:500;
+    background:#f7f9fc;
+    transition:0.3s;
+}
+
+.valor:hover {
+    background:#0A1F44;
+    color:white;
+}
+
+.central {
+    background:#0A1F44;
+    color:white;
+    font-weight:600;
+    transform:scale(1.05);
 }
 
 /* ================= SERVICES ================= */
@@ -211,52 +284,91 @@ footer {
 </div>
 </section>
 
+<section id="nosotros" class="nosotros">
+<div class="container">
+
+<h2 class="section-title">Nosotros</h2>
+
+<div class="nosotros-content">
+<p>En FAAS S.A.C. brindamos asesoría independiente y estratégica, trabajando de manera cercana con la gerencia y sus equipos para respaldar decisiones oportunas, bien sustentadas y alineadas a una estructura de costos que genere valor tangible para la organización.</p>
+
+<p>Nuestros clientes renuevan su confianza en nosotros y avanzan en el fortalecimiento de su posición competitiva, consolidándose como referentes en sus respectivos mercados.</p>
+
+<p>Contamos con experiencia sólida en la prestación de servicios de Auditoría Tributaria, Outsourcing y asesoría a empresas y Startups de diversos sectores con presencia en el mercado nacional e internacional.</p>
+</div>
+
+<div class="nosotros-subsection">
+<h3>Nuestro Enfoque</h3>
+<p>Priorizamos la comunicación continua y la mejora permanente. Integramos profesionales de distintas especialidades en equipos orientados por sector, lo que nos permite responder con agilidad a los cambios del entorno, optimizar la asignación de recursos y atender las necesidades del cliente de manera eficiente.</p>
+<p>Nuestro proceso está diseñado para reducir contingencias, anticipar riesgos y resolver los asuntos conforme se presenten.</p>
+</div>
+
+<div class="nosotros-subsection">
+<h3>Nuestro Equipo</h3>
+<p>La calidad y capacidad profesional del equipo asignado reflejan nuestro compromiso con cada organización. Hemos conformado un equipo central con el conocimiento técnico y la experiencia necesaria para comprender su negocio y acompañarlo en la ejecución exitosa del proyecto.</p>
+<p>Todos los profesionales de FAAS S.A.C. comparten principios, estándares de calidad y metodologías de trabajo comunes. De manera periódica recogemos retroalimentación para asegurar que nuestro desempeño se mantenga alineado con sus expectativas y objetivos estratégicos.</p>
+</div>
+
+<div class="valores">
+<h3>Nuestros Valores</h3>
+<div class="valores-grid">
+<div class="valor">Pasión</div>
+<div class="valor">Vocación</div>
+<div class="valor central">Integridad</div>
+<div class="valor">Respeto</div>
+<div class="valor">Confianza</div>
+</div>
+</div>
+
+</div>
+</section>
+
 <section id="servicios" class="services">
 <div class="container">
-    <h2>Nuestros Servicios</h2>
-    <div class="services-grid">
-        <div class="service-card">
-            <h3>Auditoría Tributaria</h3>
-            <p>Evaluación preventiva, revisión de contingencias y soporte ante fiscalizaciones.</p>
-        </div>
-        <div class="service-card">
-            <h3>Outsourcing Integral</h3>
-            <p>Gestión contable, tributaria y laboral bajo estándares NIIF / IFRS.</p>
-        </div>
-        <div class="service-card">
-            <h3>Consultoría Administrativa</h3>
-            <p>Optimización de costos y mejora estructural empresarial.</p>
-        </div>
-    </div>
+<h2>Nuestros Servicios</h2>
+<div class="services-grid">
+<div class="service-card">
+<h3>Auditoría Tributaria</h3>
+<p>Evaluación preventiva, revisión de contingencias y soporte ante fiscalizaciones.</p>
+</div>
+<div class="service-card">
+<h3>Outsourcing Integral</h3>
+<p>Gestión contable, tributaria y laboral bajo estándares NIIF / IFRS.</p>
+</div>
+<div class="service-card">
+<h3>Consultoría Administrativa</h3>
+<p>Optimización de costos y mejora estructural empresarial.</p>
+</div>
+</div>
 </div>
 </section>
 
 <section id="clientes" class="clientes">
 <div class="container">
-    <h2>Clientes</h2>
-    <p>Empresas comerciales, industriales y startups confían en FAAS para estructurar su crecimiento con respaldo financiero y cumplimiento normativo.</p>
+<h2>Clientes</h2>
+<p>Empresas comerciales, industriales y startups confían en FAAS para estructurar su crecimiento con respaldo financiero y cumplimiento normativo.</p>
 </div>
 </section>
 
 <section id="contacto" class="cta">
 <div class="container">
-    <h2>Conversemos sobre la estructura financiera de su empresa</h2>
-    <a href="mailto:wilmer.torres@faas.com.pe">Contactar Ahora</a>
+<h2>Conversemos sobre la estructura financiera de su empresa</h2>
+<a href="mailto:wilmer.torres@faas.com.pe">Contactar Ahora</a>
 </div>
 </section>
 
 <footer>
 <div class="container footer-content">
-    <div>
-        <strong>FAAS S.A.C.</strong><br>
-        RUC: 20603167768<br>
-        ATE - LIMA - PERÚ
-    </div>
-    <div>
-        Wilmer Torres<br>
-        991 814 230<br>
-        wilmer.torres@faas.com.pe
-    </div>
+<div>
+<strong>FAAS S.A.C.</strong><br>
+RUC: 20603167768<br>
+ATE - LIMA - PERÚ
+</div>
+<div>
+Wilmer Torres<br>
+991 814 230<br>
+wilmer.torres@faas.com.pe
+</div>
 </div>
 </footer>
 
