@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FAAS S.A.C. | Financial Accounting Advisory Services</title>
-<meta name="description" content="Auditoría Tributaria, Outsourcing Contable y Consultoría Estratégica para empresas y startups en Perú.">
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
@@ -12,253 +11,256 @@
 
 /* ================= GLOBAL ================= */
 
-* { margin:0; padding:0; box-sizing:border-box; }
+*{margin:0;padding:0;box-sizing:border-box;}
 
-body {
-    font-family:'Inter', sans-serif;
-    background:#ffffff;
-    color:#111;
-    line-height:1.6;
+body{
+font-family:'Inter',sans-serif;
+background:#ffffff;
+color:#111;
+line-height:1.7;
+overflow-x:hidden;
 }
 
-.container {
-    width:90%;
-    max-width:1200px;
-    margin:auto;
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
 }
 
-h1,h2,h3 {
-    font-family:'Playfair Display', serif;
-    font-weight:600;
+h1,h2,h3{
+font-family:'Playfair Display',serif;
+font-weight:600;
 }
 
-section { padding:100px 0; }
+section{padding:120px 0;}
 
 /* ================= HEADER ================= */
 
-header {
-    position:fixed;
-    width:100%;
-    top:0;
-    background:#ffffff;
-    border-bottom:1px solid #eee;
-    z-index:999;
+header{
+position:fixed;
+width:100%;
+top:0;
+background:#ffffff;
+border-bottom:1px solid #eee;
+z-index:999;
+transition:0.3s;
 }
 
-.navbar {
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 0;
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 0;
 }
 
-.nav-links {
-    display:flex;
-    gap:40px;
+.nav-links{
+display:flex;
+gap:40px;
 }
 
-.nav-links a {
-    text-decoration:none;
-    color:#111;
-    font-weight:500;
-    font-size:14px;
-    transition:0.3s;
+.nav-links a{
+text-decoration:none;
+color:#111;
+font-size:14px;
+font-weight:500;
+transition:0.3s;
 }
 
-.nav-links a:hover {
-    color:#0A1F44;
+.nav-links a:hover{
+color:#0A1F44;
 }
 
 /* ================= HERO ================= */
 
-.hero {
-    height:100vh;
-    background:#0A1F44;
-    color:white;
-    display:flex;
-    align-items:center;
-    margin-top:80px;
+.hero{
+height:100vh;
+background:linear-gradient(rgba(10,31,68,0.85),rgba(10,31,68,0.85)),
+url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1600');
+background-size:cover;
+background-position:center;
+color:white;
+display:flex;
+align-items:center;
+margin-top:80px;
 }
 
-.hero-content {
-    max-width:750px;
+.hero-content{
+max-width:800px;
+animation:fadeUp 1.2s ease forwards;
+opacity:0;
 }
 
-.hero h1 {
-    font-size:52px;
-    margin-bottom:25px;
+.hero h1{
+font-size:58px;
+margin-bottom:30px;
 }
 
-.hero p {
-    font-size:18px;
-    opacity:0.9;
-    margin-bottom:35px;
+.hero p{
+font-size:20px;
+opacity:0.9;
+margin-bottom:40px;
 }
 
-/* ================= BUTTON ================= */
-
-.btn-primary {
-    background:white;
-    color:#0A1F44;
-    padding:12px 28px;
-    border-radius:4px;
-    text-decoration:none;
-    font-weight:500;
-    transition:0.3s;
+.btn-primary{
+background:white;
+color:#0A1F44;
+padding:14px 30px;
+border-radius:4px;
+text-decoration:none;
+font-weight:500;
+transition:0.3s;
 }
 
-.btn-primary:hover {
-    background:#e6e6e6;
+.btn-primary:hover{
+background:#e6e6e6;
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes fadeUp{
+0%{transform:translateY(40px);opacity:0;}
+100%{transform:translateY(0);opacity:1;}
+}
+
+.fade-section{
+opacity:0;
+transform:translateY(40px);
+transition:all 1s ease;
+}
+
+.fade-section.active{
+opacity:1;
+transform:translateY(0);
 }
 
 /* ================= NOSOTROS ================= */
 
-.nosotros { background:#ffffff; }
-
-.section-title {
-    text-align:center;
-    margin-bottom:50px;
-    font-size:36px;
+.section-title{
+text-align:center;
+font-size:38px;
+margin-bottom:60px;
 }
 
-.nosotros-content {
-    max-width:900px;
-    margin:0 auto 60px auto;
-    text-align:center;
-    color:#444;
+.nosotros-content{
+max-width:900px;
+margin:auto;
+text-align:center;
+margin-bottom:80px;
+color:#444;
 }
 
-.nosotros-content p { margin-bottom:20px; }
-
-.nosotros-subsection {
-    max-width:900px;
-    margin:0 auto 60px auto;
+.nosotros-content p{
+margin-bottom:25px;
 }
 
-.nosotros-subsection h3 {
-    margin-bottom:20px;
-    color:#0A1F44;
+/* ================= VALORES CIRCULAR ================= */
+
+.valores{
+text-align:center;
+margin-top:40px;
+position:relative;
+height:400px;
 }
 
-.nosotros-subsection p {
-    margin-bottom:15px;
-    color:#555;
+.circle{
+position:relative;
+width:300px;
+height:300px;
+margin:60px auto;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#0A1F44;
+color:white;
+font-weight:600;
+font-size:20px;
 }
 
-/* ================= VALORES ================= */
-
-.valores {
-    text-align:center;
-    margin-top:40px;
+.valor{
+position:absolute;
+background:#f7f9fc;
+padding:12px 20px;
+border-radius:30px;
+font-weight:500;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
 }
 
-.valores-grid {
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:30px;
-    max-width:700px;
-    margin:40px auto 0 auto;
-    align-items:center;
-}
-
-.valor {
-    padding:25px;
-    border:1px solid #ddd;
-    border-radius:6px;
-    font-weight:500;
-    background:#f7f9fc;
-    transition:0.3s;
-}
-
-.valor:hover {
-    background:#0A1F44;
-    color:white;
-}
-
-.central {
-    background:#0A1F44;
-    color:white;
-    font-weight:600;
-    transform:scale(1.05);
-}
+.valor:nth-child(2){top:0;left:50%;transform:translate(-50%,0);}
+.valor:nth-child(3){top:50%;left:0;transform:translate(0,-50%);}
+.valor:nth-child(4){top:50%;right:0;transform:translate(0,-50%);}
+.valor:nth-child(5){bottom:0;left:50%;transform:translate(-50%,0);}
 
 /* ================= SERVICES ================= */
 
-.services {
-    background:#f7f9fc;
-    text-align:center;
+.services{
+background:#f7f9fc;
+text-align:center;
 }
 
-.services h2 { margin-bottom:40px; }
-
-.services-grid {
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:40px;
+.services-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:40px;
+margin-top:60px;
 }
 
-.service-card {
-    background:white;
-    padding:40px;
-    border-radius:6px;
-    border:1px solid #eee;
-    transition:0.3s;
+.service-card{
+background:white;
+padding:40px;
+border-radius:6px;
+border:1px solid #eee;
+transition:0.4s;
 }
 
-.service-card:hover {
-    transform:translateY(-8px);
-    box-shadow:0 15px 40px rgba(0,0,0,0.08);
+.service-card:hover{
+transform:translateY(-10px);
+box-shadow:0 15px 40px rgba(0,0,0,0.1);
 }
 
 /* ================= CLIENTES ================= */
 
-.clientes {
-    text-align:center;
+.clientes{
+text-align:center;
 }
 
-.clientes h2 { margin-bottom:30px; }
-
-.clientes p {
-    max-width:700px;
-    margin:auto;
-    color:#555;
+.clientes p{
+max-width:700px;
+margin:auto;
+color:#555;
 }
 
 /* ================= CTA ================= */
 
-.cta {
-    background:#0A1F44;
-    color:white;
-    text-align:center;
+.cta{
+background:#0A1F44;
+color:white;
+text-align:center;
 }
 
-.cta h2 { margin-bottom:25px; }
-
-.cta a {
-    background:white;
-    color:#0A1F44;
-    padding:12px 28px;
-    border-radius:4px;
-    text-decoration:none;
-    font-weight:500;
+.cta a{
+background:white;
+color:#0A1F44;
+padding:14px 30px;
+border-radius:4px;
+text-decoration:none;
+font-weight:500;
 }
 
 /* ================= FOOTER ================= */
 
-footer {
-    background:#111;
-    color:#bbb;
-    padding:60px 0;
-    font-size:14px;
+footer{
+background:#111;
+color:#bbb;
+padding:60px 0;
+font-size:14px;
 }
 
-.footer-content {
-    display:flex;
-    justify-content:space-between;
-    flex-wrap:wrap;
+.footer-content{
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
 }
-
-.footer-content div { margin-bottom:20px; }
 
 </style>
 </head>
@@ -266,93 +268,81 @@ footer {
 
 <header>
 <div class="container navbar">
-    <img src="assets/logo.png" alt="FAAS Logo" height="45">
-    <div class="nav-links">
-        <a href="#nosotros">Nosotros</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#clientes">Clientes</a>
-        <a href="#contacto">Contacto</a>
-    </div>
+<img src="assets/logo.png" alt="FAAS Logo" height="45">
+<div class="nav-links">
+<a href="#nosotros">Nosotros</a>
+<a href="#servicios">Servicios</a>
+<a href="#clientes">Clientes</a>
+<a href="#contacto">Contacto</a>
+</div>
 </div>
 </header>
 
 <section class="hero">
 <div class="container hero-content">
-    <h1>Asesoría Estratégica Financiera y Tributaria</h1>
-    <p>Respaldamos decisiones gerenciales con información confiable, enfoque preventivo y control de riesgos empresariales.</p>
-    <a href="#contacto" class="btn-primary">Solicitar Evaluación</a>
+<h1>Estrategia Financiera con Visión Corporativa</h1>
+<p>Respaldamos decisiones gerenciales con estructura técnica, enfoque preventivo y control estratégico del riesgo empresarial.</p>
+<a href="#contacto" class="btn-primary">Solicitar Evaluación</a>
 </div>
 </section>
 
-<section id="nosotros" class="nosotros">
+<section id="nosotros" class="fade-section">
 <div class="container">
 
 <h2 class="section-title">Nosotros</h2>
 
 <div class="nosotros-content">
-<p>En FAAS S.A.C. brindamos asesoría independiente y estratégica, trabajando de manera cercana con la gerencia y sus equipos para respaldar decisiones oportunas, bien sustentadas y alineadas a una estructura de costos que genere valor tangible para la organización.</p>
-
-<p>Nuestros clientes renuevan su confianza en nosotros y avanzan en el fortalecimiento de su posición competitiva, consolidándose como referentes en sus respectivos mercados.</p>
-
-<p>Contamos con experiencia sólida en la prestación de servicios de Auditoría Tributaria, Outsourcing y asesoría a empresas y Startups de diversos sectores con presencia en el mercado nacional e internacional.</p>
-</div>
-
-<div class="nosotros-subsection">
-<h3>Nuestro Enfoque</h3>
-<p>Priorizamos la comunicación continua y la mejora permanente. Integramos profesionales de distintas especialidades en equipos orientados por sector, lo que nos permite responder con agilidad a los cambios del entorno, optimizar la asignación de recursos y atender las necesidades del cliente de manera eficiente.</p>
-<p>Nuestro proceso está diseñado para reducir contingencias, anticipar riesgos y resolver los asuntos conforme se presenten.</p>
-</div>
-
-<div class="nosotros-subsection">
-<h3>Nuestro Equipo</h3>
-<p>La calidad y capacidad profesional del equipo asignado reflejan nuestro compromiso con cada organización. Hemos conformado un equipo central con el conocimiento técnico y la experiencia necesaria para comprender su negocio y acompañarlo en la ejecución exitosa del proyecto.</p>
-<p>Todos los profesionales de FAAS S.A.C. comparten principios, estándares de calidad y metodologías de trabajo comunes. De manera periódica recogemos retroalimentación para asegurar que nuestro desempeño se mantenga alineado con sus expectativas y objetivos estratégicos.</p>
+<p>En FAAS S.A.C. brindamos asesoría independiente y estratégica, trabajando de manera cercana con la gerencia y sus equipos para respaldar decisiones oportunas y alineadas a una estructura de costos que genere valor tangible.</p>
+<p>Nuestros clientes fortalecen su posición competitiva y se consolidan como referentes en sus mercados.</p>
+<p>Contamos con experiencia sólida en Auditoría Tributaria, Outsourcing y asesoría a empresas y Startups con presencia nacional e internacional.</p>
 </div>
 
 <div class="valores">
 <h3>Nuestros Valores</h3>
-<div class="valores-grid">
+
+<div class="circle">Integridad
 <div class="valor">Pasión</div>
 <div class="valor">Vocación</div>
-<div class="valor central">Integridad</div>
 <div class="valor">Respeto</div>
 <div class="valor">Confianza</div>
 </div>
+
 </div>
 
 </div>
 </section>
 
-<section id="servicios" class="services">
+<section id="servicios" class="services fade-section">
 <div class="container">
-<h2>Nuestros Servicios</h2>
+<h2 class="section-title">Servicios</h2>
 <div class="services-grid">
 <div class="service-card">
 <h3>Auditoría Tributaria</h3>
-<p>Evaluación preventiva, revisión de contingencias y soporte ante fiscalizaciones.</p>
+<p>Evaluación preventiva y gestión de contingencias fiscales.</p>
 </div>
 <div class="service-card">
 <h3>Outsourcing Integral</h3>
-<p>Gestión contable, tributaria y laboral bajo estándares NIIF / IFRS.</p>
+<p>Gestión contable, tributaria y laboral bajo estándares internacionales.</p>
 </div>
 <div class="service-card">
 <h3>Consultoría Administrativa</h3>
-<p>Optimización de costos y mejora estructural empresarial.</p>
+<p>Optimización estructural y fortalecimiento corporativo.</p>
 </div>
 </div>
 </div>
 </section>
 
-<section id="clientes" class="clientes">
+<section id="clientes" class="clientes fade-section">
 <div class="container">
-<h2>Clientes</h2>
-<p>Empresas comerciales, industriales y startups confían en FAAS para estructurar su crecimiento con respaldo financiero y cumplimiento normativo.</p>
+<h2 class="section-title">Clientes</h2>
+<p>Empresas comerciales, industriales y startups confían en FAAS para estructurar su crecimiento con respaldo técnico y estratégico.</p>
 </div>
 </section>
 
-<section id="contacto" class="cta">
+<section id="contacto" class="cta fade-section">
 <div class="container">
 <h2>Conversemos sobre la estructura financiera de su empresa</h2>
+<br>
 <a href="mailto:wilmer.torres@faas.com.pe">Contactar Ahora</a>
 </div>
 </section>
@@ -362,7 +352,7 @@ footer {
 <div>
 <strong>FAAS S.A.C.</strong><br>
 RUC: 20603167768<br>
-ATE - LIMA - PERÚ
+Lima - Perú
 </div>
 <div>
 Wilmer Torres<br>
@@ -371,6 +361,18 @@ wilmer.torres@faas.com.pe
 </div>
 </div>
 </footer>
+
+<script>
+const sections=document.querySelectorAll('.fade-section');
+window.addEventListener('scroll',()=>{
+sections.forEach(section=>{
+const top=section.getBoundingClientRect().top;
+if(top<window.innerHeight-100){
+section.classList.add('active');
+}
+});
+});
+</script>
 
 </body>
 </html>
