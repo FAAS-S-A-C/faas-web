@@ -10,8 +10,7 @@
 
 <style>
 
-/* ================= BRAND SYSTEM ================= */
-
+/* ===== BRAND COLORS ===== */
 :root{
 --faas-blue:#144EA2;
 --faas-orange:#F28C4C;
@@ -20,7 +19,6 @@
 }
 
 html{scroll-behavior:smooth;}
-
 *{margin:0;padding:0;box-sizing:border-box;}
 
 body{
@@ -36,33 +34,26 @@ margin:auto;
 }
 
 section{
-padding:130px 0;
+padding:120px 0;
 border-bottom:1px solid #eef2f7;
 }
 
-h1,h2,h3{
-font-family:'Playfair Display',serif;
-}
+h1,h2,h3{font-family:'Playfair Display',serif;}
 
 .section-title{
 text-align:center;
-font-size:42px;
+font-size:40px;
 margin-bottom:60px;
 }
 
-/* ================= HEADER ================= */
+/* ===== HEADER ===== */
 
 header{
 position:fixed;
 width:100%;
-background:transparent;
-transition:.35s;
-z-index:999;
-}
-
-header.scrolled{
 background:white;
-box-shadow:0 10px 30px rgba(0,0,0,.05);
+box-shadow:0 5px 20px rgba(0,0,0,.05);
+z-index:999;
 }
 
 .navbar{
@@ -96,11 +87,9 @@ background:var(--faas-orange);
 transition:.3s;
 }
 
-.nav-links a:hover::after{
-width:100%;
-}
+.nav-links a:hover::after{width:100%;}
 
-/* ================= HERO ADVISORY ================= */
+/* ===== HERO ===== */
 
 .hero{
 min-height:100vh;
@@ -120,14 +109,13 @@ color:white;
 
 .hero-grid{
 display:grid;
-grid-template-columns:1.1fr 0.9fr;
+grid-template-columns:1.1fr .9fr;
 gap:60px;
 align-items:center;
 }
 
 .hero h1{
 font-size:56px;
-line-height:1.2;
 margin-bottom:25px;
 }
 
@@ -143,14 +131,9 @@ padding:14px 30px;
 border-radius:4px;
 text-decoration:none;
 font-weight:600;
-transition:.3s;
 }
 
-.btn-primary:hover{
-transform:translateY(-2px);
-}
-
-/* PANEL ADVISORY */
+/* Advisory panel */
 
 .advisory-panel{
 background:rgba(255,255,255,.08);
@@ -160,21 +143,13 @@ padding:40px;
 border-radius:8px;
 }
 
-.metric{
-margin-bottom:25px;
-}
+.metric{margin-bottom:25px;}
 
-.metric h3{
-font-size:34px;
-color:white;
-}
+.metric h3{color:white;font-size:26px;}
 
-.metric span{
-font-size:14px;
-opacity:.85;
-}
+.metric span{font-size:14px;opacity:.85;}
 
-/* ================= SECCIONES ================= */
+/* ===== SECTIONS ===== */
 
 .manifiesto{
 background:var(--faas-blue);
@@ -189,19 +164,17 @@ text-align:center;
 color:#444;
 }
 
-/* CARDS */
+/* Cards */
 
 .propuesta{background:var(--faas-soft);}
 
-.propuesta-grid,
-.services-grid{
+.grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:35px;
 }
 
-.propuesta-card,
-.service-card{
+.card{
 background:white;
 padding:35px;
 border-radius:6px;
@@ -209,59 +182,12 @@ border:1px solid #eef2f7;
 transition:.35s;
 }
 
-.propuesta-card:hover,
-.service-card:hover{
-transform:translateY(-10px);
-box-shadow:0 25px 50px rgba(20,78,162,.08);
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 45px rgba(20,78,162,.08);
 }
 
-/* ================= IKIGAI ================= */
-
-.valores{text-align:center;}
-
-.ikigai-container{
-position:relative;
-width:560px;
-height:560px;
-margin:80px auto;
-}
-
-.circle{
-position:absolute;
-width:300px;
-height:300px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-weight:600;
-opacity:.88;
-}
-
-.c1{background:#f4a261;top:0;left:130px;}
-.c2{background:#e76f51;top:130px;left:0;}
-.c3{background:#2a9d8f;top:130px;right:0;}
-.c4{background:#e9c46a;bottom:0;left:130px;}
-
-.center-circle{
-position:absolute;
-width:160px;
-height:160px;
-background:var(--faas-blue);
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-color:white;
-font-weight:600;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-border:10px solid white;
-box-shadow:0 25px 60px rgba(20,78,162,.35);
-}
-
-/* ================= FOOTER ================= */
+/* ===== FOOTER ===== */
 
 footer{
 background:#111;
@@ -270,7 +196,7 @@ text-align:center;
 padding:45px 0;
 }
 
-/* ================= WHATSAPP ================= */
+/* ===== WHATSAPP ===== */
 
 .whatsapp-btn{
 position:fixed;
@@ -282,38 +208,14 @@ padding:14px 20px;
 border-radius:50px;
 text-decoration:none;
 font-weight:600;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
 }
 
-/* ================= RESPONSIVE ================= */
+/* ===== RESPONSIVE ===== */
 
 @media(max-width:900px){
-
-.hero-grid{
-grid-template-columns:1fr;
-}
-
-.ikigai-container{
-width:340px;
-height:340px;
-}
-
-.circle{
-width:190px;
-height:190px;
-font-size:14px;
-}
-
-.c1{top:0;left:75px;}
-.c2{top:75px;left:0;}
-.c3{top:75px;right:0;}
-.c4{bottom:0;left:75px;}
-
-.center-circle{
-width:110px;
-height:110px;
-font-size:14px;
-}
-
+.hero-grid{grid-template-columns:1fr;}
+.hero h1{font-size:34px;}
 }
 
 </style>
@@ -321,7 +223,7 @@ font-size:14px;
 
 <body>
 
-<header id="header">
+<header>
 <div class="container navbar">
 <img src="assets/logo.png" height="45">
 
@@ -338,7 +240,7 @@ font-size:14px;
 </div>
 </header>
 
-<!-- HERO ADVISORY -->
+<!-- HERO -->
 <section id="inicio" class="hero">
 <div class="container hero-grid">
 
@@ -349,22 +251,79 @@ font-size:14px;
 </div>
 
 <div class="advisory-panel">
-<div class="metric">
-<h3>Enfoque Preventivo</h3>
-<span>Identificación anticipada de riesgos financieros y tributarios.</span>
-</div>
-<div class="metric">
-<h3>Visión Estratégica</h3>
-<span>Información financiera convertida en decisiones gerenciales.</span>
-</div>
-<div class="metric">
-<h3>Independencia</h3>
-<span>Criterio técnico alineado a mejores prácticas profesionales.</span>
-</div>
+<div class="metric"><h3>Enfoque Preventivo</h3><span>Identificación anticipada de riesgos.</span></div>
+<div class="metric"><h3>Visión Estratégica</h3><span>Información convertida en decisiones.</span></div>
+<div class="metric"><h3>Independencia</h3><span>Criterio técnico profesional.</span></div>
 </div>
 
 </div>
 </section>
+
+<section id="manifiesto" class="manifiesto">
+<div class="container">
+<h2 class="section-title">Make the world a better place</h2>
+<p>Fortalecemos organizaciones mediante estructuras financieras sólidas y decisiones estratégicas sostenibles.</p>
+</div>
+</section>
+
+<section id="quienes" class="qs">
+<div class="container">
+<h2 class="section-title">Quiénes Somos</h2>
+<p>FAAS S.A.C. es una firma especializada en asesoría financiera, tributaria y outsourcing empresarial orientada a respaldar decisiones gerenciales con análisis técnico y visión estratégica.</p>
+</div>
+</section>
+
+<section id="propuesta" class="propuesta">
+<div class="container">
+<h2 class="section-title">Propuesta de Valor</h2>
+<div class="grid">
+<div class="card"><h3>Independencia y Objetividad</h3></div>
+<div class="card"><h3>Enfoque Preventivo</h3></div>
+<div class="card"><h3>Visión Estratégica</h3></div>
+<div class="card"><h3>Acompañamiento Ejecutivo</h3></div>
+</div>
+</div>
+</section>
+
+<section id="servicios">
+<div class="container">
+<h2 class="section-title">Servicios</h2>
+<div class="grid">
+<div class="card">Auditoría Tributaria</div>
+<div class="card">Outsourcing Integral</div>
+<div class="card">Asesoría Financiera y Tributaria</div>
+</div>
+</div>
+</section>
+
+<section id="sectores" class="propuesta">
+<div class="container">
+<h2 class="section-title">Sectores</h2>
+<div class="grid">
+<div class="card">Startups</div>
+<div class="card">Empresas Comerciales</div>
+<div class="card">Empresas Industriales</div>
+<div class="card">Empresas de Servicios</div>
+</div>
+</div>
+</section>
+
+<section id="contacto">
+<div class="container" style="text-align:center;">
+<h2 class="section-title">Contacto</h2>
+<p><strong>Wilmer Torres — Socio Director</strong></p>
+<p>+51 991 814 230<br>wilmer.torres@faas.com.pe</p>
+</div>
+</section>
+
+<footer>
+FAAS S.A.C. | Financial Accounting Advisory Services | Lima – Perú
+</footer>
+
+<a href="https://wa.me/51991814230?text=Solicita%20información%20sobre%20los%20servicios%20de%20FAAS%20S.A.C." 
+target="_blank" class="whatsapp-btn">
+💬 Agendar reunión
+</a>
 
 </body>
 </html>
