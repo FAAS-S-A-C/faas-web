@@ -41,3 +41,29 @@ footer { padding: 40px 0; text-align: center; background: var(--faas-dark); colo
 
 /* WHATSAPP */
 .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25D366; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 2000; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+
+/* --- MEJORA DE TARJETAS DE SERVICIOS --- */
+.service-card { 
+    background: #ffffff; 
+    padding: 40px; 
+    border-radius: 20px; 
+    border: 1px solid rgba(20, 78, 162, 0.1); 
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); 
+    text-decoration: none; 
+    color: inherit; 
+    display: block;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    margin-bottom: 20px; /* Espacio entre tarjetas en móvil */
+}
+
+.service-card:hover { 
+    transform: translateY(-8px); 
+    border-color: var(--faas-orange);
+    box-shadow: 0 20px 40px rgba(20, 78, 162, 0.1); 
+}
+
+.service-card h3 {
+    color: var(--faas-blue);
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+}
