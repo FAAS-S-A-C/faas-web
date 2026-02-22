@@ -7,8 +7,6 @@
 
 <title>FAAS S.A.C. | Auditoría Tributaria y Outsourcing Contable en Perú</title>
 
-<meta name="description" content="FAAS S.A.C. brinda auditoría tributaria, outsourcing contable y asesoría financiera estratégica para empresas y startups en Perú.">
-
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
@@ -29,37 +27,34 @@ body{
 font-family:'Inter',sans-serif;
 color:var(--faas-dark);
 line-height:1.7;
+padding-top:80px;
 }
 
-.container{
-width:90%;
-max-width:1150px;
-margin:auto;
-}
-
+/* ===== FIX HEADER OVERLAP ===== */
 section{
-padding:110px 0;
-border-bottom:1px solid #eef2f7;
-}
-
-h1,h2,h3{
-font-family:'Playfair Display',serif;
-}
-
-.section-title{
-text-align:center;
-font-size:38px;
-margin-bottom:55px;
+scroll-margin-top:100px;
 }
 
 /* ================= HEADER ================= */
 
 header{
 position:fixed;
+top:0;
 width:100%;
-background:white;
-box-shadow:0 5px 20px rgba(0,0,0,.05);
 z-index:999;
+transition:all .35s ease;
+background:transparent;
+}
+
+header.scrolled{
+background:white;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.container{
+width:90%;
+max-width:1150px;
+margin:auto;
 }
 
 .navbar{
@@ -77,30 +72,30 @@ align-items:center;
 
 .nav-links a{
 text-decoration:none;
-color:var(--faas-dark);
+color:#fff;
 font-size:14px;
-position:relative;
-}
-
-.nav-links a::after{
-content:"";
-position:absolute;
-bottom:-6px;
-left:0;
-width:0%;
-height:2px;
-background:var(--faas-orange);
 transition:.3s;
 }
 
-.nav-links a:hover::after{width:100%;}
+header.scrolled .nav-links a{
+color:var(--faas-dark);
+}
 
-/* ===== MOBILE MENU ===== */
+.nav-links a:hover{
+color:var(--faas-orange);
+}
+
+/* MOBILE MENU */
 
 .menu-toggle{
 display:none;
 font-size:26px;
 cursor:pointer;
+color:white;
+}
+
+header.scrolled .menu-toggle{
+color:var(--faas-dark);
 }
 
 .mobile-menu{
@@ -136,7 +131,6 @@ background-size:cover;
 background-position:center;
 display:flex;
 align-items:center;
-margin-top:80px;
 color:white;
 }
 
@@ -147,15 +141,8 @@ gap:60px;
 align-items:center;
 }
 
-.hero h1{
-font-size:52px;
-margin-bottom:20px;
-}
-
-.hero p{
-font-size:19px;
-margin-bottom:25px;
-}
+.hero h1{font-size:52px;margin-bottom:20px;}
+.hero p{font-size:19px;margin-bottom:25px;}
 
 .btn-primary{
 background:var(--faas-orange);
@@ -179,21 +166,19 @@ border-radius:8px;
 .metric{margin-bottom:18px;}
 .metric h3{color:white;font-size:20px;}
 
-/* ================= QUIENES SOMOS ================= */
+/* ================= SECTIONS ================= */
 
-.qs-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:50px;
-align-items:center;
+section{
+padding:110px 0;
+border-bottom:1px solid #eef2f7;
 }
 
-.qs-grid img{
-width:100%;
-border-radius:8px;
+.section-title{
+text-align:center;
+font-size:38px;
+margin-bottom:55px;
+font-family:'Playfair Display',serif;
 }
-
-/* ================= CARDS ================= */
 
 .propuesta{background:var(--faas-soft);}
 
@@ -214,56 +199,6 @@ transition:.3s;
 .card:hover{
 transform:translateY(-6px);
 box-shadow:0 20px 40px rgba(20,78,162,.08);
-}
-
-/* ================= TRUST ================= */
-
-.trust{
-text-align:center;
-}
-
-.trust p{
-max-width:800px;
-margin:auto;
-color:#555;
-}
-
-/* ================= DIAGNOSTICO ================= */
-
-.diagnostico{
-background:var(--faas-soft);
-}
-
-.diagnostico-grid{
-display:grid;
-grid-template-columns:1.1fr .9fr;
-gap:60px;
-align-items:center;
-}
-
-.diagnostico img{
-width:100%;
-border-radius:8px;
-}
-
-.diagnostico p{
-margin-bottom:28px;
-}
-
-.diagnostico .btn-primary{
-margin-top:10px;
-}
-
-/* ================= CTA ================= */
-
-.cta{
-background:var(--faas-blue);
-color:white;
-text-align:center;
-}
-
-.cta h2{
-margin-bottom:20px;
 }
 
 /* ================= FOOTER ================= */
@@ -291,31 +226,23 @@ font-weight:600;
 box-shadow:0 10px 30px rgba(0,0,0,.2);
 }
 
-/* ================= RESPONSIVE ================= */
+/* ================= MOBILE ================= */
 
 @media(max-width:900px){
 
-.nav-links{display:none;}
 .menu-toggle{display:block;}
+.nav-links{display:none;}
 
-.hero{
-padding:60px 0;
-min-height:auto;
+.hero-grid{grid-template-columns:1fr;}
+
+section{
+scroll-margin-top:85px;
+padding:80px 0;
 }
-
-.hero-grid,
-.qs-grid,
-.diagnostico-grid{
-grid-template-columns:1fr;
-gap:30px;
-}
-
-.hero h1{font-size:30px;}
-.section-title{font-size:26px;}
-section{padding:80px 0;}
 
 .mobile-menu.active{right:0;}
 
+.hero h1{font-size:30px;}
 }
 
 </style>
@@ -323,10 +250,10 @@ section{padding:80px 0;}
 
 <body>
 
-<header>
+<header id="header">
 <div class="container navbar">
 
-<img src="assets/logo.png" height="42" alt="FAAS Logo">
+<img src="assets/logo.png" height="42">
 
 <div class="nav-links">
 <a href="#inicio">Inicio</a>
@@ -341,25 +268,13 @@ section{padding:80px 0;}
 </div>
 </header>
 
-<div id="mobileMenu" class="mobile-menu">
-<a href="#inicio" onclick="toggleMenu()">Inicio</a>
-<a href="#quienes" onclick="toggleMenu()">Quiénes Somos</a>
-<a href="#servicios" onclick="toggleMenu()">Servicios</a>
-<a href="#contacto" onclick="toggleMenu()">Contacto</a>
-</div>
-
 <!-- HERO -->
 <section id="inicio" class="hero">
 <div class="container hero-grid">
 
 <div>
 <h1>Asesoría Financiera y Tributaria con Enfoque Estratégico</h1>
-<p>Asesoramos startups, empresas comerciales, industriales y de servicios en decisiones financieras y tributarias sostenibles.</p>
-
-<a href="https://wa.me/51991814230?text=Hola,%20deseo%20agendar%20una%20reunión%20estratégica."
-class="btn-primary" target="_blank">
-Agendar reunión
-</a>
+<p>Respaldamos decisiones empresariales mediante análisis financiero y cumplimiento tributario sostenible.</p>
 </div>
 
 <div class="advisory-panel">
@@ -371,105 +286,29 @@ Agendar reunión
 </div>
 </section>
 
-<!-- QUIENES SOMOS -->
-<section id="quienes">
-<div class="container qs-grid">
-
-<div>
-<h2 class="section-title">Quiénes Somos</h2>
-<p>FAAS S.A.C. brinda asesoría financiera, tributaria y outsourcing empresarial orientado a respaldar decisiones gerenciales mediante análisis técnico y comprensión integral del negocio.</p>
-</div>
-
-<img loading="lazy"
-src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200"
-alt="Consultoría empresarial">
-
-</div>
-</section>
-
-<!-- TRUST -->
-<section class="trust">
-<div class="container">
-<h2 class="section-title">Confianza basada en experiencia</h2>
-<p>Empresas nacionales e internacionales confían en nuestro acompañamiento estratégico para fortalecer su estructura financiera y reducir riesgos tributarios.</p>
-</div>
-</section>
-
-<!-- SERVICIOS -->
-<section id="servicios" class="propuesta">
-<div class="container">
-<h2 class="section-title">Servicios</h2>
-
-<div class="grid">
-<a href="auditoria-tributaria.html" class="card">Auditoría Tributaria</a>
-<div class="card">Outsourcing Contable, Tributario y Laboral</div>
-<div class="card">Consultoría Financiera y Administrativa</div>
-</div>
-
-</div>
-</section>
-
-<!-- DIAGNOSTICO -->
-<section class="diagnostico">
-<div class="container diagnostico-grid">
-
-<div>
-<h2 class="section-title">Diagnóstico Inicial Estratégico</h2>
-<p>Evaluamos riesgos, oportunidades y estructura financiera para brindar una visión clara que facilite decisiones empresariales informadas.</p>
-
-<a class="btn-primary"
-href="https://wa.me/51991814230?text=Hola,%20deseo%20solicitar%20un%20diagnóstico%20estratégico."
-target="_blank">
-Solicitar diagnóstico
-</a>
-</div>
-
-<img loading="lazy"
-src="https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=1200"
-alt="Análisis financiero empresarial">
-
-</div>
-</section>
-
-<!-- CTA -->
-<section class="cta">
-<div class="container">
-<h2>¿Evaluamos la situación tributaria de su empresa?</h2>
-
-<a class="btn-primary"
-href="https://wa.me/51991814230?text=Hola,%20necesito%20evaluar%20la%20situación%20tributaria%20de%20mi%20empresa."
-target="_blank">
-Solicitar evaluación
-</a>
-
-</div>
-</section>
-
-<!-- CONTACTO -->
-<section id="contacto">
-<div class="container" style="text-align:center;">
-<h2 class="section-title">Contacto</h2>
-<p><strong>Wilmer Torres — Socio Director</strong></p>
-<p>+51 991 814 230<br>wilmer.torres@faas.com.pe</p>
-</div>
-</section>
-
 <footer>
-Todos los Derechos Reservados © <span id="year"></span> | Financial Accounting Advisory Services S.A.C. | Ate - Lima - Perú.
+© <span id="year"></span> FAAS S.A.C.
 </footer>
 
-<a href="https://wa.me/51991814230?text=Hola,%20necesito%20información%20sobre%20los%20servicios%20de%20FAAS."
-target="_blank" class="whatsapp-btn">
-💬 Agendar reunión
-</a>
-
 <script>
+
+/* HEADER INTELIGENTE */
+window.addEventListener("scroll", function(){
+const header=document.getElementById("header");
+if(window.scrollY>50){
+header.classList.add("scrolled");
+}else{
+header.classList.remove("scrolled");
+}
+});
+
 function toggleMenu(){
 document.getElementById("mobileMenu").classList.toggle("active");
 }
+
 document.getElementById("year").textContent=new Date().getFullYear();
+
 </script>
 
 </body>
 </html>
-
