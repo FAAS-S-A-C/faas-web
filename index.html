@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -13,85 +14,37 @@
 :root{
 --faas-blue:#144EA2;
 --faas-orange:#F28C4C;
---faas-soft:#F4F7FB;
 --faas-dark:#0F172A;
 }
 
 html{scroll-behavior:smooth;}
-*{margin:0;padding:0;box-sizing:border-box;}
-
 body{
 font-family:'Inter',sans-serif;
-color:var(--faas-dark);
+margin:0;
 padding-top:80px;
-line-height:1.7;
+color:var(--faas-dark);
 }
-
-section{scroll-margin-top:100px;padding:110px 0;}
 
 .container{width:90%;max-width:1150px;margin:auto;}
 
-header{
-position:fixed;
-top:0;width:100%;
-transition:.35s;
-z-index:999;
-background:transparent;
-}
-
-header.scrolled{
-background:white;
-box-shadow:0 5px 20px rgba(0,0,0,.08);
-}
-
-.navbar{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:16px 0;
-}
-
-.nav-links{display:flex;gap:25px;}
-.nav-links a{text-decoration:none;color:white;font-size:14px;}
-header.scrolled .nav-links a{color:var(--faas-dark);}
-
-.menu-toggle{display:none;font-size:26px;cursor:pointer;}
-
-.mobile-menu{
-position:fixed;
-top:0;right:-100%;
-width:75%;height:100vh;
-background:white;
-padding:80px 30px;
-transition:.4s;
-}
-
-.mobile-menu a{
-display:block;margin-bottom:20px;
-text-decoration:none;color:var(--faas-dark);
-}
+section{padding:110px 0;scroll-margin-top:100px;}
 
 .hero{
 min-height:100vh;
+display:flex;
+align-items:center;
+color:white;
 background:
 linear-gradient(rgba(20,78,162,.92),rgba(20,78,162,.92)),
 url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1600');
 background-size:cover;
-display:flex;
-align-items:center;
-color:white;
-}
-
-.hero h1{font-size:52px;margin-bottom:20px;}
-.btn-primary{
-background:var(--faas-orange);
-color:white;padding:14px 28px;
-text-decoration:none;border-radius:4px;
 }
 
 .section-title{
 font-family:'Playfair Display',serif;
-font-size:36px;text-align:center;margin-bottom:40px;
+font-size:36px;
+text-align:center;
+margin-bottom:40px;
 }
 
 .grid{
@@ -101,29 +54,30 @@ gap:30px;
 }
 
 .card{
-background:white;padding:30px;
-border-radius:6px;border:1px solid #eee;
+border:1px solid #eee;
+padding:30px;
+border-radius:6px;
+text-decoration:none;
+color:inherit;
 }
 
 footer{
-background:#111;color:#bbb;text-align:center;
-padding:40px 0;font-size:14px;
+background:#111;
+color:#bbb;
+text-align:center;
+padding:40px 0;
 }
 
 .whatsapp-btn{
 position:fixed;
-bottom:20px;right:20px;
-background:#25D366;color:white;
-padding:14px 18px;border-radius:50px;
-text-decoration:none;font-weight:600;
-}
-
-@media(max-width:900px){
-.nav-links{display:none;}
-.menu-toggle{display:block;color:white;}
-section{scroll-margin-top:85px;padding:80px 0;}
-.mobile-menu.active{right:0;}
-.hero h1{font-size:30px;}
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:14px 18px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
 }
 
 </style>
@@ -136,32 +90,34 @@ section{scroll-margin-top:85px;padding:80px 0;}
 <section id="inicio" class="hero">
 <div class="container">
 <h1>Asesoría Financiera y Tributaria Estratégica</h1>
-<a href="#contacto" class="btn-primary">Agendar reunión</a>
 </div>
 </section>
 
 <section id="quienes">
 <div class="container">
 <h2 class="section-title">Quiénes Somos</h2>
-<p>FAAS S.A.C. brinda asesoría financiera y tributaria independiente orientada a respaldar decisiones gerenciales mediante análisis técnico y comprensión integral del negocio.</p>
+<p>FAAS S.A.C. brinda asesoría financiera y tributaria independiente orientada a decisiones empresariales estratégicas.</p>
 </div>
 </section>
 
 <section id="servicios">
 <div class="container">
 <h2 class="section-title">Servicios</h2>
+
 <div class="grid">
 <a href="auditoria-tributaria.html" class="card">Auditoría Tributaria</a>
 <a href="asesoria-tributaria.html" class="card">Asesoría Tributaria Estratégica</a>
 </div>
+
 </div>
 </section>
 
 <section id="contacto">
 <div class="container" style="text-align:center;">
 <h2 class="section-title">Contacto</h2>
-<p><strong>Wilmer Torres — Socio Director</strong></p>
-<p>+51 991 814 230<br>wilmer.torres@faas.com.pe</p>
+<p><strong>Wilmer Torres</strong><br>
++51 991 814 230<br>
+wilmer.torres@faas.com.pe</p>
 </div>
 </section>
 
@@ -169,7 +125,7 @@ section{scroll-margin-top:85px;padding:80px 0;}
 © <span id="year"></span> Financial Accounting Advisory Services S.A.C.
 </footer>
 
-<a href="https://wa.me/51991814230?text=Hola,%20deseo%20información%20sobre%20los%20servicios%20de%20FAAS."
+<a href="https://wa.me/51991814230?text=Hola,%20deseo%20información%20sobre%20los%20servicios%20FAAS."
 class="whatsapp-btn" target="_blank">💬 Agendar reunión</a>
 
 <script>
@@ -185,8 +141,11 @@ initHeader();
 function initHeader(){
 window.addEventListener("scroll",()=>{
 const header=document.getElementById("header");
-if(window.scrollY>50){header.classList.add("scrolled")}
-else{header.classList.remove("scrolled")}
+if(window.scrollY>50){
+header.classList.add("scrolled");
+}else{
+header.classList.remove("scrolled");
+}
 });
 }
 
