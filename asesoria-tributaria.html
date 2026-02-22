@@ -5,35 +5,27 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Asesoría Tributaria Estratégica en Perú | FAAS S.A.C.</title>
-
-<meta name="description" content="Asesoría tributaria estratégica para empresas en Perú. Planificación fiscal, acompañamiento gerencial y optimización del cumplimiento tributario con enfoque preventivo.">
+<title>Asesoría Tributaria Estratégica | FAAS S.A.C.</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
-/* ================= BRAND ================= */
-
 :root{
 --faas-blue:#144EA2;
 --faas-orange:#F28C4C;
---faas-soft:#F4F7FB;
 --faas-dark:#0F172A;
 }
 
 html{scroll-behavior:smooth;}
-*{margin:0;padding:0;box-sizing:border-box;}
 
 body{
+margin:0;
 font-family:'Inter',sans-serif;
+padding-top:80px;
 color:var(--faas-dark);
 line-height:1.7;
-padding-top:80px;
 }
-
-/* FIX HEADER OVERLAP */
-section{scroll-margin-top:100px;}
 
 .container{
 width:90%;
@@ -41,75 +33,31 @@ max-width:1100px;
 margin:auto;
 }
 
-/* ================= HEADER ================= */
-
-header{
-position:fixed;
-top:0;
-width:100%;
-z-index:999;
-transition:.35s;
-background:transparent;
+section{
+padding:110px 0;
+scroll-margin-top:100px;
 }
 
-header.scrolled{
-background:white;
-box-shadow:0 5px 20px rgba(0,0,0,.08);
-}
-
-.navbar{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:16px 0;
-}
-
-.nav-links{
-display:flex;
-gap:25px;
-}
-
-.nav-links a{
-text-decoration:none;
-color:white;
-font-size:14px;
-}
-
-header.scrolled .nav-links a{
-color:var(--faas-dark);
-}
-
-.nav-links a:hover{color:var(--faas-orange);}
-
-/* ================= HERO ================= */
+/* HERO */
 
 .hero{
 min-height:75vh;
+display:flex;
+align-items:center;
+color:white;
 background:
 linear-gradient(rgba(20,78,162,.92),rgba(20,78,162,.92)),
 url("https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1600");
 background-size:cover;
-background-position:center;
-display:flex;
-align-items:center;
-color:white;
 }
 
 .hero h1{
+font-family:'Playfair Display',serif;
 font-size:46px;
 margin-bottom:20px;
 }
 
-.hero p{
-font-size:20px;
-max-width:720px;
-}
-
-/* ================= CONTENT ================= */
-
-section{
-padding:100px 0;
-}
+/* CONTENT */
 
 .section-title{
 font-family:'Playfair Display',serif;
@@ -117,43 +65,18 @@ font-size:36px;
 margin-bottom:25px;
 }
 
-.content-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:60px;
-align-items:center;
+.content{
+max-width:800px;
+margin:auto;
+text-align:center;
 }
 
-.content-grid img{
-width:100%;
-border-radius:8px;
-}
-
-/* ================= BENEFITS ================= */
-
-.benefits{background:var(--faas-soft);}
-
-.benefit-card{
-background:white;
-padding:26px;
-border-radius:6px;
-margin-bottom:18px;
-border:1px solid #eee;
-}
-
-/* ================= APPROACH ================= */
-
-.approach-step{
-margin-bottom:18px;
-}
-
-/* ================= CTA ================= */
+/* CTA */
 
 .cta{
 background:var(--faas-blue);
 color:white;
 text-align:center;
-padding:90px 0;
 }
 
 .btn-primary{
@@ -167,7 +90,7 @@ display:inline-block;
 margin-top:20px;
 }
 
-/* ================= FOOTER ================= */
+/* FOOTER */
 
 footer{
 background:#111;
@@ -177,7 +100,7 @@ padding:40px 0;
 font-size:14px;
 }
 
-/* ================= WHATSAPP ================= */
+/* WHATSAPP */
 
 .whatsapp-btn{
 position:fixed;
@@ -189,27 +112,14 @@ padding:14px 18px;
 border-radius:50px;
 text-decoration:none;
 font-weight:600;
-box-shadow:0 10px 30px rgba(0,0,0,.2);
 }
-
-/* ================= MOBILE ================= */
 
 @media(max-width:900px){
-
-.content-grid{
-grid-template-columns:1fr;
-gap:30px;
-}
-
-.hero h1{font-size:30px;}
-
 section{
-scroll-margin-top:85px;
 padding:80px 0;
+scroll-margin-top:85px;
 }
-
-.nav-links{display:none;}
-
+.hero h1{font-size:30px;}
 }
 
 </style>
@@ -217,97 +127,35 @@ padding:80px 0;
 
 <body>
 
-<header id="header">
-<div class="container navbar">
+<div id="header-placeholder"></div>
 
-<img src="assets/logo.png" height="42" alt="FAAS Logo">
-
-<div class="nav-links">
-<a href="index.html">Inicio</a>
-<a href="index.html#servicios">Servicios</a>
-<a href="index.html#contacto">Contacto</a>
-<a href="https://www.linkedin.com/company/faassac" target="_blank">LinkedIn</a>
-</div>
-
-</div>
-</header>
-
-<!-- HERO -->
 <section class="hero">
 <div class="container">
-
-<h1>Asesoría Tributaria Estratégica para la Toma de Decisiones Empresariales</h1>
-
-<p>
-Acompañamos a la gerencia en la interpretación tributaria del negocio,
-integrando cumplimiento fiscal, planificación y visión financiera para
-reducir riesgos y fortalecer la sostenibilidad empresarial.
-</p>
-
+<h1>Asesoría Tributaria Estratégica</h1>
+<p>Acompañamos decisiones empresariales mediante planificación fiscal, análisis técnico y visión preventiva.</p>
 </div>
 </section>
 
-<!-- CONTEXTO -->
 <section>
-<div class="container content-grid">
+<div class="container content">
 
-<div>
 <h2 class="section-title">Más allá del cumplimiento tributario</h2>
 
 <p>
-La gestión tributaria moderna no se limita a declarar impuestos.
-Las decisiones comerciales, financieras y operativas generan impactos fiscales
-que deben analizarse estratégicamente.
-</p>
-
-<p>
-Una asesoría tributaria permanente permite anticipar escenarios,
-optimizar estructuras y brindar seguridad a la dirección empresarial.
+La gestión tributaria moderna requiere análisis estratégico permanente.
+Nuestro servicio acompaña a la gerencia en la interpretación fiscal del negocio,
+anticipando riesgos y optimizando estructuras tributarias.
 </p>
 
 </div>
-
-<img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?q=80&w=1200">
-
-</div>
 </section>
 
-<!-- BENEFICIOS -->
-<section class="benefits">
-<div class="container">
-
-<h2 class="section-title">Valor para la organización</h2>
-
-<div class="benefit-card">✔ Interpretación tributaria alineada a decisiones gerenciales</div>
-<div class="benefit-card">✔ Planificación fiscal preventiva</div>
-<div class="benefit-card">✔ Acompañamiento ante consultas y fiscalizaciones SUNAT</div>
-<div class="benefit-card">✔ Optimización del riesgo tributario empresarial</div>
-
-</div>
-</section>
-
-<!-- ENFOQUE -->
-<section>
-<div class="container">
-
-<h2 class="section-title">Nuestro enfoque</h2>
-
-<div class="approach-step"><strong>1. Análisis del negocio:</strong> comprensión del modelo operativo y financiero.</div>
-<div class="approach-step"><strong>2. Evaluación tributaria:</strong> revisión normativa y riesgos asociados.</div>
-<div class="approach-step"><strong>3. Acompañamiento continuo:</strong> soporte estratégico para la gerencia.</div>
-
-</div>
-</section>
-
-<!-- CTA -->
 <section class="cta">
 <div class="container">
 
 <h2>Conversemos sobre la estrategia tributaria de su empresa</h2>
 
-<p>Evaluamos su situación actual y proponemos mejoras alineadas al crecimiento empresarial.</p>
-
-<a href="https://wa.me/51991814230?text=Hola,%20deseo%20información%20sobre%20Asesoría%20Tributaria%20Estratégica."
+<a href="https://wa.me/51991814230?text=Hola,%20deseo%20información%20sobre%20Asesoría%20Tributaria."
 class="btn-primary" target="_blank">
 Solicitar asesoría
 </a>
@@ -316,7 +164,7 @@ Solicitar asesoría
 </section>
 
 <footer>
-© <span id="year"></span> Financial Accounting Advisory Services S.A.C. | Lima - Perú
+© <span id="year"></span> Financial Accounting Advisory Services S.A.C.
 </footer>
 
 <a href="https://wa.me/51991814230?text=Hola,%20necesito%20información%20sobre%20Asesoría%20Tributaria."
@@ -326,7 +174,15 @@ target="_blank" class="whatsapp-btn">
 
 <script>
 
-window.addEventListener("scroll", function(){
+fetch("components/header.html")
+.then(r=>r.text())
+.then(data=>{
+document.getElementById("header-placeholder").innerHTML=data;
+initHeader();
+});
+
+function initHeader(){
+window.addEventListener("scroll",()=>{
 const header=document.getElementById("header");
 if(window.scrollY>50){
 header.classList.add("scrolled");
@@ -334,6 +190,11 @@ header.classList.add("scrolled");
 header.classList.remove("scrolled");
 }
 });
+}
+
+function toggleMenu(){
+document.getElementById("mobileMenu").classList.toggle("active");
+}
 
 document.getElementById("year").textContent=new Date().getFullYear();
 
