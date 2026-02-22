@@ -6,38 +6,75 @@
     <title>Auditoría Tributaria | FAAS S.A.C.</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        :root { --faas-blue: #144EA2; --faas-orange: #F28C4C; --faas-dark: #0F172A; }
-        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #333; }
-        header { padding: 20px 0; border-bottom: 1px solid #eee; }
-        .container { width: 90%; max-width: 800px; margin: auto; }
-        h1 { font-family: 'Playfair Display', serif; color: var(--faas-blue); font-size: 40px; margin: 40px 0; }
-        h2 { color: var(--faas-orange); margin-top: 30px; }
-        ul { margin: 20px 0; padding-left: 20px; }
-        li { margin-bottom: 10px; }
-        .cta { background: #f4f7fb; padding: 30px; border-radius: 10px; text-align: center; margin-top: 50px; }
-        .btn { padding: 12px 25px; background: var(--faas-orange); color: white; text-decoration: none; font-weight: 600; display: inline-block; margin-top: 20px; border-radius: 5px; }
+        :root { --faas-blue: #144EA2; --faas-orange: #F28C4C; --faas-soft: #F8FAFC; --faas-dark: #0F172A; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: var(--faas-dark); line-height: 1.7; background-color: #fff; }
+        .container { width: 90%; max-width: 900px; margin: auto; }
+        
+        /* HEADER REUTILIZADO */
+        header { background: white; padding: 15px 0; border-bottom: 1px solid #eef2f7; position: sticky; top: 0; z-index: 1000; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; }
+        .logo img { height: 40px; }
+        .back-link { text-decoration: none; color: var(--faas-blue); font-weight: 600; font-size: 14px; transition: 0.3s; }
+        .back-link:hover { color: var(--faas-orange); }
+
+        /* CONTENIDO PRINCIPAL */
+        .service-header { padding: 80px 0 40px; text-align: center; background: var(--faas-soft); margin-bottom: 60px; }
+        h1 { font-family: 'Playfair Display', serif; font-size: clamp(32px, 5vw, 48px); color: var(--faas-blue); margin-bottom: 15px; }
+        .subtitle { font-size: 18px; color: var(--faas-orange); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+
+        .service-body h2 { font-family: 'Playfair Display', serif; font-size: 28px; color: var(--faas-blue); margin: 40px 0 20px; }
+        .service-body p { font-size: 18px; color: #475569; margin-bottom: 20px; }
+        
+        /* LISTA ESTILIZADA */
+        .feature-list { list-style: none; margin: 30px 0; }
+        .feature-list li { position: relative; padding-left: 30px; margin-bottom: 15px; font-size: 17px; }
+        .feature-list li::before { content: "✓"; position: absolute; left: 0; color: var(--faas-orange); font-weight: bold; font-size: 20px; }
+
+        /* CUADRO DE CONTACTO INTERNO */
+        .cta-box { background: var(--faas-blue); color: white; padding: 50px; border-radius: 15px; text-align: center; margin: 60px 0; }
+        .cta-box h3 { font-family: 'Playfair Display', serif; font-size: 24px; margin-bottom: 15px; }
+        .btn-cta { display: inline-block; padding: 15px 35px; background: var(--faas-orange); color: white; text-decoration: none; border-radius: 5px; font-weight: 600; transition: 0.3s; margin-top: 20px; }
+        .btn-cta:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+
+        footer { padding: 40px 0; text-align: center; background: var(--faas-dark); color: rgba(255,255,255,0.6); font-size: 14px; }
     </style>
 </head>
 <body>
-    <header><div class="container" style="display:flex; justify-content:space-between; align-items:center;">
-        <a href="index.html"><img src="assets/logo.png" height="40"></a>
-        <a href="index.html" style="text-decoration:none; color:var(--faas-blue); font-weight:600;">← Volver</a>
-    </div></header>
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo"><img src="assets/logo.png" alt="FAAS Logo"></a>
+            <a href="index.html" class="back-link">← Volver al Inicio</a>
+        </div>
+    </header>
 
-    <main class="container">
-        <h1>Auditoría Tributaria</h1>
-        <p>Nuestro servicio de Auditoría Tributaria tiene un enfoque preventivo, diseñado para identificar contingencias antes de que se conviertan en problemas fiscales.</p>
+    <div class="service-header">
+        <div class="container">
+            <span class="subtitle">Especialidad Tributaria</span>
+            <h1>Auditoría Tributaria</h1>
+        </div>
+    </div>
+
+    <main class="container service-body">
+        <p>En FAAS S.A.C., entendemos que la gestión de impuestos no debe ser una preocupación, sino una estrategia de control. Nuestro servicio de Auditoría Tributaria tiene un enfoque preventivo, diseñado para identificar contingencias antes de que se conviertan en problemas fiscales ante SUNAT.</p>
+        
         <h2>¿Cómo protegemos tu empresa?</h2>
-        <ul>
-            <li>Revisión de cumplimiento normativo ante SUNAT.</li>
-            <li>Identificación temprana de riesgos y reparos tributarios.</li>
-            <li>Diagnóstico técnico de IGV e Impuesto a la Renta.</li>
-            <li>Acompañamiento profesional en fiscalizaciones.</li>
+        <ul class="feature-list">
+            <li><strong>Revisión de Cumplimiento:</strong> Verificamos la correcta determinación de tus impuestos según la normativa vigente.</li>
+            <li><strong>Identificación de Riesgos:</strong> Detectamos inconsistencias que podrían generar multas o reparos fiscales.</li>
+            <li><strong>Diagnóstico de Procedimientos:</strong> Evaluamos tus procesos internos para optimizar la carga tributaria legalmente.</li>
+            <li><strong>Acompañamiento Estratégico:</strong> Defensa técnica fundamentada durante procesos de fiscalización.</li>
         </ul>
-        <div class="cta">
-            <p>Asegura la salud fiscal de tu negocio hoy mismo.</p>
-            <a href="https://wa.me/51991814230?text=Hola,%20deseo%20información%20sobre%20Auditoría%20Tributaria" class="btn">Solicitar Diagnóstico</a>
+
+        <div class="cta-box">
+            <h3>¿Deseas asegurar la salud fiscal de tu negocio?</h3>
+            <p>Agenda una revisión preventiva con nuestros especialistas.</p>
+            <a href="https://wa.me/51991814230?text=Hola,%20deseo%20información%20sobre%20Auditoría%20Tributaria" class="btn-cta">Solicitar Diagnóstico</a>
         </div>
     </main>
+
+    <footer>
+        <p>© 2026 FAAS S.A.C. | "Make the Business World a Better Place"</p>
+    </footer>
 </body>
 </html>
