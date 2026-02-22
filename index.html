@@ -95,13 +95,9 @@ transition:.3s;
 
 .nav-links a:hover::after{width:100%;}
 
-/* ===== MOBILE MENU ===== */
+/* MOBILE MENU */
 
-.menu-toggle{
-display:none;
-font-size:26px;
-cursor:pointer;
-}
+.menu-toggle{display:none;font-size:26px;cursor:pointer;}
 
 .mobile-menu{
 position:fixed;
@@ -147,15 +143,8 @@ gap:60px;
 align-items:center;
 }
 
-.hero h1{
-font-size:52px;
-margin-bottom:20px;
-}
-
-.hero p{
-font-size:19px;
-margin-bottom:25px;
-}
+.hero h1{font-size:52px;margin-bottom:20px;}
+.hero p{font-size:19px;margin-bottom:25px;}
 
 .btn-primary{
 background:var(--faas-orange);
@@ -193,6 +182,67 @@ width:100%;
 border-radius:8px;
 }
 
+/* ================= TRUST ================= */
+
+.trust{text-align:center;}
+.trust p{max-width:800px;margin:auto;color:#555;}
+
+/* ================= IKIGAI ================= */
+
+.valores{text-align:center;background:white;}
+
+.ikigai-container{
+position:relative;
+width:520px;
+height:520px;
+margin:60px auto;
+}
+
+.circle{
+position:absolute;
+width:260px;
+height:260px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:600;
+font-size:18px;
+text-align:center;
+padding:20px;
+opacity:.9;
+}
+
+.c1{background:#f4a261; top:0; left:130px;}
+.c2{background:#e76f51; top:130px; left:0;}
+.c3{background:#2a9d8f; top:130px; right:0;}
+.c4{background:#e9c46a; bottom:0; left:130px;}
+
+.center-circle{
+position:absolute;
+width:170px;
+height:170px;
+border-radius:50%;
+background:var(--faas-blue);
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:600;
+font-size:20px;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+border:10px solid white;
+box-shadow:0 20px 50px rgba(20,78,162,.35);
+}
+
+.valores-texto{
+max-width:750px;
+margin:30px auto 0;
+color:#555;
+}
+
 /* ================= CARDS ================= */
 
 .propuesta{background:var(--faas-soft);}
@@ -216,23 +266,9 @@ transform:translateY(-6px);
 box-shadow:0 20px 40px rgba(20,78,162,.08);
 }
 
-/* ================= TRUST ================= */
-
-.trust{
-text-align:center;
-}
-
-.trust p{
-max-width:800px;
-margin:auto;
-color:#555;
-}
-
 /* ================= DIAGNOSTICO ================= */
 
-.diagnostico{
-background:var(--faas-soft);
-}
+.diagnostico{background:var(--faas-soft);}
 
 .diagnostico-grid{
 display:grid;
@@ -241,18 +277,9 @@ gap:60px;
 align-items:center;
 }
 
-.diagnostico img{
-width:100%;
-border-radius:8px;
-}
+.diagnostico img{width:100%;border-radius:8px;}
 
-.diagnostico p{
-margin-bottom:28px;
-}
-
-.diagnostico .btn-primary{
-margin-top:10px;
-}
+.diagnostico p{margin-bottom:28px;}
 
 /* ================= CTA ================= */
 
@@ -262,9 +289,7 @@ color:white;
 text-align:center;
 }
 
-.cta h2{
-margin-bottom:20px;
-}
+.cta h2{margin-bottom:20px;}
 
 /* ================= FOOTER ================= */
 
@@ -298,10 +323,7 @@ box-shadow:0 10px 30px rgba(0,0,0,.2);
 .nav-links{display:none;}
 .menu-toggle{display:block;}
 
-.hero{
-padding:60px 0;
-min-height:auto;
-}
+.hero{padding:60px 0;min-height:auto;}
 
 .hero-grid,
 .qs-grid,
@@ -315,6 +337,29 @@ gap:30px;
 section{padding:80px 0;}
 
 .mobile-menu.active{right:0;}
+
+.ikigai-container{
+width:320px;
+height:320px;
+}
+
+.circle{
+width:170px;
+height:170px;
+font-size:14px;
+}
+
+.c1{top:0;left:75px;}
+.c2{top:75px;left:0;}
+.c3{top:75px;right:0;}
+.c4{bottom:0;left:75px;}
+
+.center-circle{
+width:110px;
+height:110px;
+font-size:14px;
+border:6px solid white;
+}
 
 }
 
@@ -381,9 +426,7 @@ Agendar reunión
 </div>
 
 <img loading="lazy"
-src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200"
-alt="Consultoría empresarial">
-
+src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200">
 </div>
 </section>
 
@@ -395,53 +438,35 @@ alt="Consultoría empresarial">
 </div>
 </section>
 
+<!-- VALORES IKIGAI -->
+<section class="valores">
+<div class="container">
+<h2 class="section-title">Nuestros Valores</h2>
+
+<div class="ikigai-container">
+<div class="circle c1">Vocación</div>
+<div class="circle c2">Pasión</div>
+<div class="circle c3">Respeto</div>
+<div class="circle c4">Confianza</div>
+<div class="center-circle">Integridad</div>
+</div>
+
+<p class="valores-texto">
+Actuamos con independencia, criterio técnico y compromiso permanente con el crecimiento sostenible de nuestros clientes.
+</p>
+
+</div>
+</section>
+
 <!-- SERVICIOS -->
 <section id="servicios" class="propuesta">
 <div class="container">
 <h2 class="section-title">Servicios</h2>
-
 <div class="grid">
 <div class="card">Auditoría Tributaria</div>
 <div class="card">Outsourcing Contable, Tributario y Laboral</div>
 <div class="card">Consultoría Financiera y Administrativa</div>
 </div>
-
-</div>
-</section>
-
-<!-- DIAGNOSTICO -->
-<section class="diagnostico">
-<div class="container diagnostico-grid">
-
-<div>
-<h2 class="section-title">Diagnóstico Inicial Estratégico</h2>
-<p>Evaluamos riesgos, oportunidades y estructura financiera para brindar una visión clara que facilite decisiones empresariales informadas.</p>
-
-<a class="btn-primary"
-href="https://wa.me/51991814230?text=Hola,%20deseo%20solicitar%20un%20diagnóstico%20estratégico."
-target="_blank">
-Solicitar diagnóstico
-</a>
-</div>
-
-<img loading="lazy"
-src="https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=1200"
-alt="Análisis financiero empresarial">
-
-</div>
-</section>
-
-<!-- CTA -->
-<section class="cta">
-<div class="container">
-<h2>¿Evaluamos la situación tributaria de su empresa?</h2>
-
-<a class="btn-primary"
-href="https://wa.me/51991814230?text=Hola,%20necesito%20evaluar%20la%20situación%20tributaria%20de%20mi%20empresa."
-target="_blank">
-Solicitar evaluación
-</a>
-
 </div>
 </section>
 
