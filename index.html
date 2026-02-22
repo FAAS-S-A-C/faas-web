@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>FAAS S.A.C. | Financial Accounting Advisory Services</title>
+<title>FAAS S.A.C. | Auditoría Tributaria y Outsourcing Contable en Perú</title>
 
-<meta name="description" content="Auditoría tributaria, outsourcing contable y asesoría financiera estratégica para empresas y startups en Perú.">
+<meta name="description" content="FAAS S.A.C. brinda auditoría tributaria, outsourcing contable y asesoría financiera estratégica para empresas y startups en Perú.">
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
-/* ========= BRAND ========= */
+/* ================= BRAND ================= */
 
 :root{
 --faas-blue:#144EA2;
@@ -41,7 +42,9 @@ padding:110px 0;
 border-bottom:1px solid #eef2f7;
 }
 
-h1,h2,h3{font-family:'Playfair Display',serif;}
+h1,h2,h3{
+font-family:'Playfair Display',serif;
+}
 
 .section-title{
 text-align:center;
@@ -49,7 +52,7 @@ font-size:38px;
 margin-bottom:55px;
 }
 
-/* ========= HEADER ========= */
+/* ================= HEADER ================= */
 
 header{
 position:fixed;
@@ -89,11 +92,16 @@ height:2px;
 background:var(--faas-orange);
 transition:.3s;
 }
+
 .nav-links a:hover::after{width:100%;}
 
-/* MOBILE MENU */
+/* ===== MOBILE MENU ===== */
 
-.menu-toggle{display:none;font-size:26px;cursor:pointer;}
+.menu-toggle{
+display:none;
+font-size:26px;
+cursor:pointer;
+}
 
 .mobile-menu{
 position:fixed;
@@ -106,6 +114,7 @@ padding:80px 30px;
 transition:.4s;
 box-shadow:-10px 0 30px rgba(0,0,0,.1);
 }
+
 .mobile-menu a{
 display:block;
 margin-bottom:22px;
@@ -114,7 +123,7 @@ color:var(--faas-dark);
 font-size:18px;
 }
 
-/* ========= HERO ========= */
+/* ================= HERO ================= */
 
 .hero{
 min-height:100vh;
@@ -124,10 +133,11 @@ rgba(20,78,162,.95),
 rgba(20,78,162,.85)),
 url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1600');
 background-size:cover;
-color:white;
+background-position:center;
 display:flex;
 align-items:center;
 margin-top:80px;
+color:white;
 }
 
 .hero-grid{
@@ -137,8 +147,15 @@ gap:60px;
 align-items:center;
 }
 
-.hero h1{font-size:52px;margin-bottom:20px;}
-.hero p{font-size:19px;margin-bottom:25px;}
+.hero h1{
+font-size:52px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:19px;
+margin-bottom:25px;
+}
 
 .btn-primary{
 background:var(--faas-orange);
@@ -147,7 +164,10 @@ padding:14px 28px;
 border-radius:4px;
 text-decoration:none;
 font-weight:600;
+display:inline-block;
 }
+
+/* advisory panel */
 
 .advisory-panel{
 background:rgba(255,255,255,.08);
@@ -159,7 +179,7 @@ border-radius:8px;
 .metric{margin-bottom:18px;}
 .metric h3{color:white;font-size:20px;}
 
-/* ========= SECTIONS ========= */
+/* ================= QUIENES SOMOS ================= */
 
 .qs-grid{
 display:grid;
@@ -172,6 +192,8 @@ align-items:center;
 width:100%;
 border-radius:8px;
 }
+
+/* ================= CARDS ================= */
 
 .propuesta{background:var(--faas-soft);}
 
@@ -194,11 +216,10 @@ transform:translateY(-6px);
 box-shadow:0 20px 40px rgba(20,78,162,.08);
 }
 
-/* ========= TRUST ========= */
+/* ================= TRUST ================= */
 
 .trust{
 text-align:center;
-background:white;
 }
 
 .trust p{
@@ -207,9 +228,11 @@ margin:auto;
 color:#555;
 }
 
-/* ========= DIAGNOSTICO ========= */
+/* ================= DIAGNOSTICO ================= */
 
-.diagnostico{background:var(--faas-soft);}
+.diagnostico{
+background:var(--faas-soft);
+}
 
 .diagnostico-grid{
 display:grid;
@@ -223,7 +246,15 @@ width:100%;
 border-radius:8px;
 }
 
-/* ========= CTA ========= */
+.diagnostico p{
+margin-bottom:28px;
+}
+
+.diagnostico .btn-primary{
+margin-top:10px;
+}
+
+/* ================= CTA ================= */
 
 .cta{
 background:var(--faas-blue);
@@ -231,9 +262,11 @@ color:white;
 text-align:center;
 }
 
-.cta h2{margin-bottom:20px;}
+.cta h2{
+margin-bottom:20px;
+}
 
-/* ========= FOOTER ========= */
+/* ================= FOOTER ================= */
 
 footer{
 background:#111;
@@ -243,7 +276,7 @@ padding:45px 0;
 font-size:14px;
 }
 
-/* ========= WHATSAPP ========= */
+/* ================= WHATSAPP ================= */
 
 .whatsapp-btn{
 position:fixed;
@@ -258,14 +291,18 @@ font-weight:600;
 box-shadow:0 10px 30px rgba(0,0,0,.2);
 }
 
-/* ========= MOBILE ========= */
+/* ================= RESPONSIVE ================= */
 
 @media(max-width:900px){
 
 .nav-links{display:none;}
 .menu-toggle{display:block;}
 
-.hero{padding:60px 0;min-height:auto;}
+.hero{
+padding:60px 0;
+min-height:auto;
+}
+
 .hero-grid,
 .qs-grid,
 .diagnostico-grid{
@@ -278,6 +315,7 @@ gap:30px;
 section{padding:80px 0;}
 
 .mobile-menu.active{right:0;}
+
 }
 
 </style>
@@ -287,7 +325,8 @@ section{padding:80px 0;}
 
 <header>
 <div class="container navbar">
-<img src="assets/logo.png" height="42">
+
+<img src="assets/logo.png" height="42" alt="FAAS Logo">
 
 <div class="nav-links">
 <a href="#inicio">Inicio</a>
@@ -298,6 +337,7 @@ section{padding:80px 0;}
 </div>
 
 <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
 </div>
 </header>
 
@@ -314,9 +354,12 @@ section{padding:80px 0;}
 
 <div>
 <h1>Asesoría Financiera y Tributaria con Enfoque Estratégico</h1>
-<p>Asesoramos startups, empresas comerciales, industriales y de servicios en la toma de decisiones financieras y tributarias sostenibles.</p>
+<p>Asesoramos startups, empresas comerciales, industriales y de servicios en decisiones financieras y tributarias sostenibles.</p>
+
 <a href="https://wa.me/51991814230?text=Hola,%20deseo%20agendar%20una%20reunión%20estratégica."
-class="btn-primary">Agendar reunión</a>
+class="btn-primary" target="_blank">
+Agendar reunión
+</a>
 </div>
 
 <div class="advisory-panel">
@@ -337,7 +380,9 @@ class="btn-primary">Agendar reunión</a>
 <p>FAAS S.A.C. brinda asesoría financiera, tributaria y outsourcing empresarial orientado a respaldar decisiones gerenciales mediante análisis técnico y comprensión integral del negocio.</p>
 </div>
 
-<img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200">
+<img loading="lazy"
+src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200"
+alt="Consultoría empresarial">
 
 </div>
 </section>
@@ -354,11 +399,13 @@ class="btn-primary">Agendar reunión</a>
 <section id="servicios" class="propuesta">
 <div class="container">
 <h2 class="section-title">Servicios</h2>
+
 <div class="grid">
 <div class="card">Auditoría Tributaria</div>
 <div class="card">Outsourcing Contable, Tributario y Laboral</div>
 <div class="card">Consultoría Financiera y Administrativa</div>
 </div>
+
 </div>
 </section>
 
@@ -373,12 +420,13 @@ class="btn-primary">Agendar reunión</a>
 <a class="btn-primary"
 href="https://wa.me/51991814230?text=Hola,%20deseo%20solicitar%20un%20diagnóstico%20estratégico."
 target="_blank">
-  
 Solicitar diagnóstico
 </a>
 </div>
 
-<img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=1200">
+<img loading="lazy"
+src="https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=1200"
+alt="Análisis financiero empresarial">
 
 </div>
 </section>
@@ -387,9 +435,13 @@ Solicitar diagnóstico
 <section class="cta">
 <div class="container">
 <h2>¿Evaluamos la situación tributaria de su empresa?</h2>
+
 <a class="btn-primary"
 href="https://wa.me/51991814230?text=Hola,%20necesito%20evaluar%20la%20situación%20tributaria%20de%20mi%20empresa."
-target="_blank">Solicitar evaluación</a>
+target="_blank">
+Solicitar evaluación
+</a>
+
 </div>
 </section>
 
@@ -420,4 +472,3 @@ document.getElementById("year").textContent=new Date().getFullYear();
 
 </body>
 </html>
-
