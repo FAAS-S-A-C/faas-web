@@ -1,31 +1,21 @@
-Solid State by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+PROYECTO: Web Corporativa FAAS S.A.C.
+VERSION: 1.0.0
+AÑO: 2026
 
+DESCRIPCION:
+Repositorio de la plataforma web de FAAS S.A.C. (Lima, Perú). 
+Firma de consultoría contable, tributaria y laboral.
 
-After a somewhat extended break from HTML5 UP (to work on a secret-ish new project --
-more on that later!) I'm back with a brand new design: Solid State, a slick new multi-
-pager that combines some of the ideas I've played with over at Pixelarity with an "angular"
-sort of look. Hope you dig it :)
+ESTRUCTURA DE ARCHIVOS:
+- index.html: Portada y sección Nosotros.
+- auditoria-tributaria.html: Detalle de servicio tributario.
+- outsourcing-integral.html: Detalle de servicio contable/laboral.
+- consultoria-financiera.html: Detalle de servicio financiero.
+- style.css: Hoja de estilos centralizada.
+- assets/: Carpeta de recursos (Logotipo).
+- CNAME: Configuración de dominio personalizado.
 
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
-
-(* = not included)
-
-AJ
-aj@lkn.io | @ajlkn
-
-
-Credits:
-
-	Demo Images:
-		Unsplash (unsplash.com)
-
-	Icons:
-		Font Awesome (fontawesome.io)
-
-	Other:
-		jQuery (jquery.com)
-		Scrollex (github.com/ajlkn/jquery.scrollex)
-		Responsive Tools (github.com/ajlkn/responsive-tools)
+CONTACTO:
+WhatsApp: +51 991 814 230
+LinkedIn: FAAS SAC
+"Make the Business World a Better Place"
