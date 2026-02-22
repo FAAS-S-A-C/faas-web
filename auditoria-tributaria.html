@@ -7,13 +7,13 @@
 
 <title>Auditoría Tributaria en Perú | FAAS S.A.C.</title>
 
-<meta name="description" content="Servicio de Auditoría Tributaria preventiva en Perú. Identificación de contingencias fiscales, revisión SUNAT y optimización del cumplimiento tributario empresarial.">
+<meta name="description" content="Auditoría tributaria preventiva para empresas en Perú. Identificación de contingencias fiscales, revisión SUNAT y fortalecimiento del cumplimiento tributario.">
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
-/* ===== BRAND ===== */
+/* ================= BRAND ================= */
 
 :root{
 --faas-blue:#144EA2;
@@ -22,36 +22,41 @@
 --faas-dark:#0F172A;
 }
 
+html{scroll-behavior:smooth;}
 *{margin:0;padding:0;box-sizing:border-box;}
 
 body{
 font-family:'Inter',sans-serif;
 color:var(--faas-dark);
 line-height:1.7;
+padding-top:80px;
+}
+
+/* ===== FIX HEADER OVERLAP ===== */
+section{
+scroll-margin-top:100px;
+}
+
+/* ================= HEADER ================= */
+
+header{
+position:fixed;
+top:0;
+width:100%;
+z-index:999;
+transition:all .35s ease;
+background:transparent;
+}
+
+header.scrolled{
+background:white;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
 }
 
 .container{
 width:90%;
 max-width:1100px;
 margin:auto;
-}
-
-section{
-padding:100px 0;
-}
-
-h1,h2,h3{
-font-family:'Playfair Display',serif;
-}
-
-/* ===== HEADER ===== */
-
-header{
-position:fixed;
-width:100%;
-background:white;
-box-shadow:0 5px 20px rgba(0,0,0,.05);
-z-index:999;
 }
 
 .navbar{
@@ -61,27 +66,43 @@ align-items:center;
 padding:16px 0;
 }
 
-.nav-links a{
-margin-left:25px;
-text-decoration:none;
-color:var(--faas-dark);
-font-size:14px;
+.nav-links{
+display:flex;
+gap:25px;
+align-items:center;
 }
 
-/* ===== HERO ===== */
+.nav-links a{
+text-decoration:none;
+color:white;
+font-size:14px;
+transition:.3s;
+}
+
+header.scrolled .nav-links a{
+color:var(--faas-dark);
+}
+
+.nav-links a:hover{
+color:var(--faas-orange);
+}
+
+/* ================= HERO ================= */
 
 .hero{
-margin-top:80px;
+min-height:75vh;
 background:
 linear-gradient(rgba(20,78,162,.92),rgba(20,78,162,.92)),
 url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1600");
 background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
 color:white;
-padding:120px 0;
 }
 
 .hero h1{
-font-size:48px;
+font-size:46px;
 margin-bottom:20px;
 }
 
@@ -90,7 +111,17 @@ font-size:20px;
 max-width:700px;
 }
 
-/* ===== CONTENT ===== */
+/* ================= CONTENT ================= */
+
+section{
+padding:100px 0;
+}
+
+.section-title{
+font-family:'Playfair Display',serif;
+font-size:36px;
+margin-bottom:25px;
+}
 
 .content-grid{
 display:grid;
@@ -104,12 +135,7 @@ width:100%;
 border-radius:8px;
 }
 
-.section-title{
-font-size:36px;
-margin-bottom:25px;
-}
-
-/* ===== BENEFITS ===== */
+/* ================= BENEFITS ================= */
 
 .benefits{
 background:var(--faas-soft);
@@ -117,19 +143,19 @@ background:var(--faas-soft);
 
 .benefit-card{
 background:white;
-padding:28px;
+padding:26px;
 border-radius:6px;
-margin-bottom:20px;
+margin-bottom:18px;
 border:1px solid #eee;
 }
 
-/* ===== PROCESS ===== */
+/* ================= PROCESS ================= */
 
 .process-step{
-margin-bottom:20px;
+margin-bottom:16px;
 }
 
-/* ===== CTA ===== */
+/* ================= CTA ================= */
 
 .cta{
 background:var(--faas-blue);
@@ -149,48 +175,76 @@ display:inline-block;
 margin-top:20px;
 }
 
-/* ===== FOOTER ===== */
+/* ================= FOOTER ================= */
 
 footer{
 background:#111;
 color:#bbb;
 text-align:center;
 padding:40px 0;
+font-size:14px;
 }
 
-/* ===== MOBILE ===== */
+/* ================= WHATSAPP ================= */
+
+.whatsapp-btn{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:14px 18px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+/* ================= MOBILE ================= */
 
 @media(max-width:900px){
 
 .content-grid{
 grid-template-columns:1fr;
+gap:30px;
 }
 
 .hero h1{
 font-size:30px;
 }
 
+section{
+scroll-margin-top:85px;
+padding:80px 0;
+}
+
+.nav-links{
+display:none;
+}
+
 }
 
 </style>
-
 </head>
 
 <body>
 
-<header>
+<header id="header">
 <div class="container navbar">
-<img src="assets/logo.png" height="42">
+
+<img src="assets/logo.png" height="42" alt="FAAS Logo">
 
 <div class="nav-links">
 <a href="index.html">Inicio</a>
 <a href="index.html#servicios">Servicios</a>
 <a href="index.html#contacto">Contacto</a>
+<a href="https://www.linkedin.com/company/faassac" target="_blank">LinkedIn</a>
 </div>
+
 </div>
 </header>
 
-<!-- HERO SEO -->
+<!-- HERO -->
 <section class="hero">
 <div class="container">
 
@@ -212,20 +266,19 @@ preparamos a su empresa ante fiscalizaciones SUNAT mediante un enfoque técnico 
 <h2 class="section-title">¿Por qué realizar una auditoría tributaria?</h2>
 
 <p>
-Muchas empresas presentan riesgos fiscales sin detectarlo oportunamente.
-Errores en la determinación de impuestos, criterios contables incorrectos o
-procesos internos deficientes pueden generar contingencias económicas relevantes
-ante una fiscalización.
+Las organizaciones pueden mantener riesgos fiscales ocultos derivados de criterios
+tributarios incorrectos, procesos contables deficientes o interpretaciones normativas
+no alineadas con la legislación vigente.
 </p>
 
 <p>
-Una auditoría tributaria preventiva permite anticipar riesgos y tomar decisiones
-correctivas antes de que se conviertan en sanciones o ajustes tributarios.
+Una auditoría tributaria preventiva permite identificar estas situaciones de forma
+anticipada y adoptar medidas correctivas antes de eventuales fiscalizaciones.
 </p>
 
 </div>
 
-<img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=1200">
+<img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=1200" alt="Auditoría financiera">
 
 </div>
 </section>
@@ -238,7 +291,7 @@ correctivas antes de que se conviertan en sanciones o ajustes tributarios.
 
 <div class="benefit-card">✔ Identificación temprana de contingencias tributarias</div>
 <div class="benefit-card">✔ Preparación ante fiscalizaciones SUNAT</div>
-<div class="benefit-card">✔ Mejora del control interno tributario</div>
+<div class="benefit-card">✔ Fortalecimiento del control interno tributario</div>
 <div class="benefit-card">✔ Reducción de riesgos financieros y sanciones</div>
 
 </div>
@@ -250,9 +303,9 @@ correctivas antes de que se conviertan en sanciones o ajustes tributarios.
 
 <h2 class="section-title">Nuestro enfoque de trabajo</h2>
 
-<div class="process-step"><strong>1. Diagnóstico inicial</strong> — evaluación preliminar de riesgos fiscales.</div>
-<div class="process-step"><strong>2. Revisión técnica</strong> — análisis documental y validación tributaria.</div>
-<div class="process-step"><strong>3. Informe ejecutivo</strong> — hallazgos, riesgos y recomendaciones estratégicas.</div>
+<div class="process-step"><strong>1. Diagnóstico inicial:</strong> evaluación preliminar del cumplimiento fiscal.</div>
+<div class="process-step"><strong>2. Revisión técnica:</strong> análisis documental y validación tributaria integral.</div>
+<div class="process-step"><strong>3. Informe ejecutivo:</strong> hallazgos, riesgos identificados y recomendaciones estratégicas.</div>
 
 </div>
 </section>
@@ -274,11 +327,28 @@ Solicitar evaluación
 </section>
 
 <footer>
-© <span id="year"></span> FAAS S.A.C. | Auditoría Tributaria y Consultoría Empresarial
+© <span id="year"></span> Financial Accounting Advisory Services S.A.C. | Lima - Perú
 </footer>
 
+<a href="https://wa.me/51991814230?text=Hola,%20necesito%20información%20sobre%20Auditoría%20Tributaria."
+target="_blank" class="whatsapp-btn">
+💬 Agendar reunión
+</a>
+
 <script>
+
+/* HEADER INTELIGENTE */
+window.addEventListener("scroll", function(){
+const header=document.getElementById("header");
+if(window.scrollY>50){
+header.classList.add("scrolled");
+}else{
+header.classList.remove("scrolled");
+}
+});
+
 document.getElementById("year").textContent=new Date().getFullYear();
+
 </script>
 
 </body>
