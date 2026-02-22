@@ -1,0 +1,43 @@
+/* VARIABLES DE MARCA */
+:root {
+    --faas-blue: #144EA2;
+    --faas-orange: #F28C4C;
+    --faas-soft: #F8FAFC;
+    --faas-dark: #0F172A;
+    --white: #ffffff;
+    --text-gray: #475569;
+}
+
+/* RESET GENERAL */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; color: var(--faas-dark); line-height: 1.6; overflow-x: hidden; }
+.container { width: 90%; max-width: 1200px; margin: auto; }
+h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+/* HEADER & NAV */
+header { position: fixed; width: 100%; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); z-index: 1000; box-shadow: 0 2px 15px rgba(0,0,0,0.05); }
+.navbar { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; }
+.logo img { height: 45px; display: block; }
+.nav-links { display: flex; gap: 30px; align-items: center; }
+.nav-links a { text-decoration: none; color: var(--faas-dark); font-size: 14px; font-weight: 500; transition: 0.3s; }
+.nav-links a:hover { color: var(--faas-orange); }
+
+/* SECCIONES INTERNAS */
+.service-header { padding: 120px 0 60px; text-align: center; background: var(--faas-soft); }
+.subtitle { color: var(--faas-orange); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; font-size: 14px; }
+.service-body { padding: 60px 0; max-width: 800px; }
+.feature-list { list-style: none; margin: 30px 0; }
+.feature-list li { position: relative; padding-left: 30px; margin-bottom: 15px; }
+.feature-list li::before { content: "✓"; position: absolute; left: 0; color: var(--faas-orange); font-weight: bold; }
+
+/* BOTONES */
+.btn { padding: 15px 35px; border-radius: 5px; text-decoration: none; font-weight: 600; transition: 0.3s; display: inline-block; cursor: pointer; }
+.btn-primary { background: var(--faas-orange); color: white; border: none; }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(242, 140, 76, 0.3); }
+
+/* FOOTER */
+footer { padding: 40px 0; text-align: center; background: var(--faas-dark); color: rgba(255,255,255,0.7); font-size: 14px; }
+
+/* WHATSAPP */
+.whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25D366; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 2000; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
