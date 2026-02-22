@@ -3,28 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAAS S.A.C. | Auditoría y Outsourcing en Perú</title>
+    <title>FAAS S.A.C. | Consultoría Contable, Tributaria y Laboral</title>
+    <meta name="description" content="FAAS S.A.C. brinda auditoría tributaria, outsourcing contable y asesoría financiera estratégica con integridad y pasión.">
+
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
+
     <style>
-        .hero { min-height: 90vh; background: linear-gradient(rgba(15,23,42,0.8), rgba(15,23,42,0.8)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600') center/cover; display: flex; align-items: center; color: white; }
-        .section-title { text-align: center; font-size: 36px; margin-bottom: 50px; color: var(--faas-blue); }
-        .ikigai-wrapper { position: relative; width: 100%; max-width: 450px; height: 450px; margin: 0 auto; }
-        .v-circle { position: absolute; width: 200px; height: 200px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; mix-blend-mode: multiply; transition: 0.3s; text-align: center; padding: 20px; }
+        /* Estilos específicos para componentes de la Home que no se repiten en internas */
+        .hero { 
+            min-height: 90vh; 
+            background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), 
+            url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600') center/cover; 
+            display: flex; align-items: center; color: var(--white); padding-top: 80px; 
+        }
+        .hero h1 { font-size: clamp(32px, 6vw, 56px); margin-bottom: 20px; color: var(--white); }
+        .hero p { font-size: clamp(16px, 3vw, 20px); margin-bottom: 30px; opacity: 0.9; }
+
+        .section-title { text-align: center; font-size: clamp(28px, 5vw, 40px); margin-bottom: 50px; color: var(--faas-blue); }
+
+        /* IKIGAI DIAGRAM */
+        .ikigai-wrapper { position: relative; width: 100%; max-width: 500px; height: 500px; margin: 0 auto; }
+        .v-circle { 
+            position: absolute; width: 220px; height: 220px; border-radius: 50%; 
+            display: flex; align-items: center; justify-content: center; 
+            color: white; font-weight: 600; mix-blend-mode: multiply; 
+            transition: 0.3s; text-align: center; padding: 25px; font-size: 18px; 
+        }
+        .v-circle:hover { transform: scale(1.05); z-index: 10; mix-blend-mode: normal; }
         .v1 { background: #144EA2; top: 0; left: 50%; transform: translateX(-50%); } 
         .v2 { background: #F28C4C; bottom: 0; left: 50%; transform: translateX(-50%); } 
         .v3 { background: #2DD4BF; left: 0; top: 50%; transform: translateY(-50%); } 
         .v4 { background: #FBBF24; right: 0; top: 50%; transform: translateY(-50%); } 
-        .center-val { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 120px; height: 120px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--faas-blue); font-weight: 700; border: 4px solid var(--faas-blue); z-index: 10; }
-        .grid-services { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 50px; }
-        .card { background: white; padding: 40px; border-radius: 12px; border: 1px solid #e2e8f0; text-decoration: none; color: inherit; transition: 0.3s; }
-        .card:hover { transform: translateY(-10px); border-color: var(--faas-orange); }
+        .center-val { 
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); 
+            width: 130px; height: 130px; background: white; border-radius: 50%; 
+            display: flex; align-items: center; justify-content: center; 
+            font-weight: 700; color: var(--faas-blue); 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); z-index: 5; 
+            border: 4px solid var(--faas-blue); text-transform: uppercase; 
+        }
+
+        /* SERVICIOS CARDS */
+        .grid-services { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .service-card { 
+            background: white; padding: 40px; border-radius: 12px; border: 1px solid #e2e8f0; 
+            transition: 0.3s; text-decoration: none; color: inherit; display: block; 
+        }
+        .service-card:hover { border-color: var(--faas-blue); transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .service-card h3 { margin-bottom: 15px; color: var(--faas-blue); font-size: 22px; }
+
+        @media (max-width: 768px) {
+            .ikigai-wrapper { width: 320px; height: 320px; }
+            .v-circle { width: 145px; height: 145px; font-size: 14px; }
+            .center-val { width: 90px; height: 90px; font-size: 13px; }
+        }
     </style>
 </head>
 <body>
+
     <header>
         <div class="container navbar">
-            <a href="index.html" class="logo"><img src="assets/logo.png" alt="FAAS Logo"></a>
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="FAAS S.A.C. Logo">
+            </a>
             <nav class="nav-links">
                 <a href="#inicio">Inicio</a>
                 <a href="#nosotros">Nosotros</a>
@@ -36,53 +79,75 @@
 
     <section id="inicio" class="hero">
         <div class="container">
-            <h1 style="font-size: 50px; max-width: 800px;">Asesoría que impulsa el Crecimiento Sostenible</h1>
-            <p style="font-size: 20px; margin: 20px 0 40px; opacity: 0.9;">Estrategia fiscal y operativa con integridad y pasión.</p>
-            <a href="https://wa.me/51991814230?text=Hola,%20deseo%20agendar%20una%20reunión." class="btn btn-primary">Agendar Consultoría</a>
+            <div class="hero-content">
+                <h1>Asesoría que impulsa el Crecimiento Sostenible</h1>
+                <p>Especialistas en Auditoría Tributaria, Outsourcing Contable y Laboral para empresas que buscan solidez y cumplimiento ético.</p>
+                <a href="https://wa.me/51991814230?text=Hola,%20deseo%20agendar%20una%20reunión%20estratégica." class="btn btn-primary" target="_blank">Agendar reunión estratégica</a>
+            </div>
         </div>
     </section>
 
-    <section id="nosotros" style="background: var(--faas-soft);">
+    <section id="nosotros" style="background-color: var(--faas-soft); padding: 100px 0;">
         <div class="container">
             <h2 class="section-title">Nuestra Identidad</h2>
+            
             <div class="ikigai-wrapper">
-                <div class="v-circle v1">VOCACIÓN</div>
-                <div class="v-circle v2">PASIÓN</div>
-                <div class="v-circle v3">RESPETO</div>
-                <div class="v-circle v4">CONFIANZA</div>
+                <div class="v-circle v1">VOCACIÓN <br> de Servicio</div>
+                <div class="v-circle v2">PASIÓN <br> por la Excelencia</div>
+                <div class="v-circle v3">RESPETO <br> y Ética</div>
+                <div class="v-circle v4">CONFIANZA <br> Absoluta</div>
                 <div class="center-val">INTEGRIDAD</div>
             </div>
-            <div style="text-align:center; margin-top:60px;">
-                <h3 style="color:var(--faas-orange); margin-bottom:15px; font-style:italic;">"Make the Business World a Better Place"</h3>
-                <p style="max-width:800px; margin:auto;">Creemos que fortalecer a las empresas es nuestra forma de mejorar el mundo.</p>
+
+            <div style="text-align:center; margin-top:60px; max-width: 850px; margin-left: auto; margin-right: auto;">
+                <h3 style="color:var(--faas-orange); margin-bottom:25px; font-style:italic; font-size: 28px;">
+                    "Make the Business World a Better Place"
+                </h3>
+                <p style="font-size: 18px; color: var(--faas-dark); line-height: 1.8;">
+                    Somos una firma guiada por la <strong>integridad y el respeto</strong>. Nuestra vocación es brindar soluciones contables, tributarias y laborales que generen <strong>confianza absoluta</strong>. Trabajamos con pasión para asegurar que el crecimiento de nuestros clientes sea sólido y ético, porque creemos que fortalecer a las empresas es nuestra forma de hacer del mundo un lugar mejor.
+                </p>
             </div>
         </div>
     </section>
 
-    <section id="servicios">
+    <section id="servicios" style="padding: 100px 0;">
         <div class="container">
             <h2 class="section-title">Servicios Especializados</h2>
             <div class="grid-services">
-                <a href="auditoria-tributaria.html" class="card">
+                <a href="auditoria-tributaria.html" class="service-card">
                     <h3>Auditoría Tributaria</h3>
-                    <p>Enfoque preventivo ante SUNAT.</p>
-                    <span style="color:var(--faas-orange); font-weight:600; display:block; margin-top:15px;">Ver detalles →</span>
+                    <p>Enfoque preventivo para mitigar riesgos y asegurar el cumplimiento normativo ante SUNAT.</p>
+                    <span style="color:var(--faas-orange); font-weight:600; display:inline-block; margin-top:15px;">Ver detalles →</span>
                 </a>
-                <a href="outsourcing-integral.html" class="card">
+                
+                <a href="outsourcing-integral.html" class="service-card">
                     <h3>Outsourcing Integral</h3>
-                    <p>Contabilidad y planillas en manos expertas.</p>
-                    <span style="color:var(--faas-orange); font-weight:600; display:block; margin-top:15px;">Ver detalles →</span>
+                    <p>Gestión contable, tributaria y laboral delegada en expertos para que te enfoques en tu core business.</p>
+                    <span style="color:var(--faas-orange); font-weight:600; display:inline-block; margin-top:15px;">Ver detalles →</span>
                 </a>
-                <a href="consultoria-financiera.html" class="card">
+                
+                <a href="consultoria-financiera.html" class="service-card">
                     <h3>Consultoría Financiera</h3>
-                    <p>Decisiones basadas en datos estratégicos.</p>
-                    <span style="color:var(--faas-orange); font-weight:600; display:block; margin-top:15px;">Ver detalles →</span>
+                    <p>Análisis estratégico de estados financieros para una toma de decisiones informada y rentable.</p>
+                    <span style="color:var(--faas-orange); font-weight:600; display:inline-block; margin-top:15px;">Ver detalles →</span>
                 </a>
             </div>
         </div>
     </section>
 
-    <footer><p>© 2026 FAAS S.A.C. | Financial Accounting Advisory Services</p></footer>
-    <a href="https://wa.me/51991814230" class="whatsapp-float"><svg fill="white" width="30" height="30" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72.938 3.659 1.434 5.628 1.434h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
+    <footer>
+        <div class="container">
+            <p>© <span id="year"></span> FAAS S.A.C. | Financial Accounting Advisory Services. Lima, Perú.</p>
+            <p style="font-size: 12px; margin-top: 10px; opacity: 0.6;">"Make the Business World a Better Place"</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/51991814230?text=Hola,%20necesito%20información%20sobre%20los%20servicios%20de%20FAAS." class="whatsapp-float" target="_blank">
+        <svg fill="white" width="35" height="35" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72.938 3.659 1.434 5.628 1.434h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    </a>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
