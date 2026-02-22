@@ -4,13 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>FAAS S.A.C. | Make the world a better place</title>
+<title>FAAS S.A.C. | Financial Accounting Advisory Services</title>
+
+<meta name="description" content="Auditoría tributaria, outsourcing contable y asesoría financiera estratégica para empresas y startups en Perú.">
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
-/* ================= BRAND ================= */
+/* ========= BRAND ========= */
 
 :root{
 --faas-blue:#144EA2;
@@ -28,8 +30,6 @@ color:var(--faas-dark);
 line-height:1.7;
 }
 
-/* ================= LAYOUT ================= */
-
 .container{
 width:90%;
 max-width:1150px;
@@ -37,21 +37,19 @@ margin:auto;
 }
 
 section{
-padding:120px 0;
+padding:110px 0;
 border-bottom:1px solid #eef2f7;
 }
 
-h1,h2,h3{
-font-family:'Playfair Display',serif;
-}
+h1,h2,h3{font-family:'Playfair Display',serif;}
 
 .section-title{
 text-align:center;
-font-size:40px;
-margin-bottom:60px;
+font-size:38px;
+margin-bottom:55px;
 }
 
-/* ================= HEADER ================= */
+/* ========= HEADER ========= */
 
 header{
 position:fixed;
@@ -70,7 +68,7 @@ padding:16px 0;
 
 .nav-links{
 display:flex;
-gap:28px;
+gap:26px;
 align-items:center;
 }
 
@@ -91,18 +89,11 @@ height:2px;
 background:var(--faas-orange);
 transition:.3s;
 }
+.nav-links a:hover::after{width:100%;}
 
-.nav-links a:hover::after{
-width:100%;
-}
+/* MOBILE MENU */
 
-/* ===== MOBILE MENU ===== */
-
-.menu-toggle{
-display:none;
-font-size:26px;
-cursor:pointer;
-}
+.menu-toggle{display:none;font-size:26px;cursor:pointer;}
 
 .mobile-menu{
 position:fixed;
@@ -115,31 +106,28 @@ padding:80px 30px;
 transition:.4s;
 box-shadow:-10px 0 30px rgba(0,0,0,.1);
 }
-
 .mobile-menu a{
 display:block;
-margin-bottom:25px;
+margin-bottom:22px;
 text-decoration:none;
 color:var(--faas-dark);
 font-size:18px;
 }
 
-/* ================= HERO ================= */
+/* ========= HERO ========= */
 
 .hero{
 min-height:100vh;
 background:
 linear-gradient(115deg,
-rgba(20,78,162,.95) 20%,
-rgba(20,78,162,.85) 60%,
-rgba(242,140,76,.18) 100%),
+rgba(20,78,162,.95),
+rgba(20,78,162,.85)),
 url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1600');
 background-size:cover;
-background-position:center;
+color:white;
 display:flex;
 align-items:center;
 margin-top:80px;
-color:white;
 }
 
 .hero-grid{
@@ -149,52 +137,40 @@ gap:60px;
 align-items:center;
 }
 
-.hero h1{
-font-size:56px;
-margin-bottom:25px;
-}
-
-.hero p{
-font-size:20px;
-margin-bottom:35px;
-}
+.hero h1{font-size:52px;margin-bottom:20px;}
+.hero p{font-size:19px;margin-bottom:25px;}
 
 .btn-primary{
 background:var(--faas-orange);
 color:white;
-padding:14px 30px;
+padding:14px 28px;
 border-radius:4px;
 text-decoration:none;
 font-weight:600;
 }
 
-/* advisory panel */
-
 .advisory-panel{
 background:rgba(255,255,255,.08);
 backdrop-filter:blur(10px);
-border:1px solid rgba(255,255,255,.2);
 padding:35px;
 border-radius:8px;
 }
 
-.metric{margin-bottom:20px;}
-.metric h3{color:white;font-size:22px;}
-.metric span{font-size:14px;opacity:.85;}
+.metric{margin-bottom:18px;}
+.metric h3{color:white;font-size:20px;}
 
-/* ================= SECTIONS ================= */
+/* ========= SECTIONS ========= */
 
-.manifiesto{
-background:var(--faas-blue);
-color:white;
-text-align:center;
+.qs-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
 }
 
-.qs p{
-max-width:850px;
-margin:auto;
-text-align:center;
-color:#444;
+.qs-grid img{
+width:100%;
+border-radius:8px;
 }
 
 .propuesta{background:var(--faas-soft);}
@@ -202,7 +178,7 @@ color:#444;
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:35px;
+gap:30px;
 }
 
 .card{
@@ -218,7 +194,46 @@ transform:translateY(-6px);
 box-shadow:0 20px 40px rgba(20,78,162,.08);
 }
 
-/* ================= FOOTER ================= */
+/* ========= TRUST ========= */
+
+.trust{
+text-align:center;
+background:white;
+}
+
+.trust p{
+max-width:800px;
+margin:auto;
+color:#555;
+}
+
+/* ========= DIAGNOSTICO ========= */
+
+.diagnostico{background:var(--faas-soft);}
+
+.diagnostico-grid{
+display:grid;
+grid-template-columns:1.1fr .9fr;
+gap:60px;
+align-items:center;
+}
+
+.diagnostico img{
+width:100%;
+border-radius:8px;
+}
+
+/* ========= CTA ========= */
+
+.cta{
+background:var(--faas-blue);
+color:white;
+text-align:center;
+}
+
+.cta h2{margin-bottom:20px;}
+
+/* ========= FOOTER ========= */
 
 footer{
 background:#111;
@@ -228,7 +243,7 @@ padding:45px 0;
 font-size:14px;
 }
 
-/* ================= WHATSAPP ================= */
+/* ========= WHATSAPP ========= */
 
 .whatsapp-btn{
 position:fixed;
@@ -243,44 +258,26 @@ font-weight:600;
 box-shadow:0 10px 30px rgba(0,0,0,.2);
 }
 
-/* ================= MOBILE ================= */
+/* ========= MOBILE ========= */
 
 @media(max-width:900px){
 
 .nav-links{display:none;}
 .menu-toggle{display:block;}
 
-.hero{
-padding:60px 0;
-min-height:auto;
-}
-
-.hero-grid{
+.hero{padding:60px 0;min-height:auto;}
+.hero-grid,
+.qs-grid,
+.diagnostico-grid{
 grid-template-columns:1fr;
-gap:35px;
+gap:30px;
 }
 
-.hero h1{
-font-size:30px;
-}
+.hero h1{font-size:30px;}
+.section-title{font-size:26px;}
+section{padding:80px 0;}
 
-.hero p{
-font-size:16px;
-}
-
-.section-title{
-font-size:28px;
-margin-bottom:35px;
-}
-
-section{
-padding:80px 0;
-}
-
-.mobile-menu.active{
-right:0;
-}
-
+.mobile-menu.active{right:0;}
 }
 
 </style>
@@ -290,35 +287,25 @@ right:0;
 
 <header>
 <div class="container navbar">
-
 <img src="assets/logo.png" height="42">
 
 <div class="nav-links">
 <a href="#inicio">Inicio</a>
-<a href="#manifiesto">Manifiesto</a>
 <a href="#quienes">Quiénes Somos</a>
-<a href="#propuesta">Propuesta de Valor</a>
 <a href="#servicios">Servicios</a>
-<a href="#sectores">Sectores</a>
 <a href="#contacto">Contacto</a>
 <a href="https://www.linkedin.com/company/faassac" target="_blank">LinkedIn</a>
 </div>
 
 <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
 </div>
 </header>
 
-<!-- MOBILE MENU -->
 <div id="mobileMenu" class="mobile-menu">
 <a href="#inicio" onclick="toggleMenu()">Inicio</a>
-<a href="#manifiesto" onclick="toggleMenu()">Manifiesto</a>
 <a href="#quienes" onclick="toggleMenu()">Quiénes Somos</a>
-<a href="#propuesta" onclick="toggleMenu()">Propuesta de Valor</a>
 <a href="#servicios" onclick="toggleMenu()">Servicios</a>
-<a href="#sectores" onclick="toggleMenu()">Sectores</a>
 <a href="#contacto" onclick="toggleMenu()">Contacto</a>
-<a href="https://www.linkedin.com/company/faassac" target="_blank">LinkedIn</a>
 </div>
 
 <!-- HERO -->
@@ -327,72 +314,89 @@ right:0;
 
 <div>
 <h1>Asesoría Financiera y Tributaria con Enfoque Estratégico</h1>
-<p>Respaldamos decisiones empresariales mediante análisis financiero, cumplimiento tributario y visión estratégica orientada al crecimiento sostenible.</p>
-<a href="#contacto" class="btn-primary">Agendar reunión estratégica</a>
+<p>Asesoramos startups, empresas comerciales, industriales y de servicios en la toma de decisiones financieras y tributarias sostenibles.</p>
+<a href="https://wa.me/51991814230?text=Hola,%20deseo%20agendar%20una%20reunión%20estratégica."
+class="btn-primary">Agendar reunión</a>
 </div>
 
 <div class="advisory-panel">
-<div class="metric"><h3>Enfoque Preventivo</h3><span>Identificación anticipada de riesgos.</span></div>
-<div class="metric"><h3>Visión Estratégica</h3><span>Información convertida en decisiones.</span></div>
-<div class="metric"><h3>Independencia</h3><span>Criterio técnico profesional.</span></div>
+<div class="metric"><h3>Enfoque Preventivo</h3></div>
+<div class="metric"><h3>Visión Estratégica</h3></div>
+<div class="metric"><h3>Independencia Profesional</h3></div>
 </div>
 
 </div>
 </section>
 
-<section id="manifiesto" class="manifiesto">
-<div class="container">
-<h2 class="section-title">"Make the world a better place"</h2>
-<p>Fortalecemos organizaciones mediante estructuras financieras sólidas y decisiones estratégicas sostenibles.</p>
-</div>
-</section>
+<!-- QUIENES SOMOS -->
+<section id="quienes">
+<div class="container qs-grid">
 
-<section id="quienes" class="qs">
-<div class="container">
+<div>
 <h2 class="section-title">Quiénes Somos</h2>
-<p>FAAS S.A.C. brinda asesoría financiera y tributaria independiente orientada a respaldar decisiones gerenciales mediante análisis técnico y comprensión integral del negocio.</p>
+<p>FAAS S.A.C. brinda asesoría financiera, tributaria y outsourcing empresarial orientado a respaldar decisiones gerenciales mediante análisis técnico y comprensión integral del negocio.</p>
+</div>
+
+<img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200">
+
 </div>
 </section>
 
-<section id="propuesta" class="propuesta">
+<!-- TRUST -->
+<section class="trust">
 <div class="container">
-<h2 class="section-title">Propuesta de Valor</h2>
-<div class="grid">
-<div class="card">Independencia y Objetividad</div>
-<div class="card">Enfoque Preventivo</div>
-<div class="card">Visión Estratégica</div>
-<div class="card">Acompañamiento Ejecutivo</div>
-</div>
+<h2 class="section-title">Confianza basada en experiencia</h2>
+<p>Empresas nacionales e internacionales confían en nuestro acompañamiento estratégico para fortalecer su estructura financiera y reducir riesgos tributarios.</p>
 </div>
 </section>
 
-<section id="servicios">
+<!-- SERVICIOS -->
+<section id="servicios" class="propuesta">
 <div class="container">
 <h2 class="section-title">Servicios</h2>
 <div class="grid">
 <div class="card">Auditoría Tributaria</div>
-<div class="card">Outsourcing Integral</div>
-<div class="card">Asesoría Financiera y Tributaria</div>
+<div class="card">Outsourcing Contable, Tributario y Laboral</div>
+<div class="card">Consultoría Financiera y Administrativa</div>
 </div>
 </div>
 </section>
 
-<section id="sectores" class="propuesta">
+<!-- DIAGNOSTICO -->
+<section class="diagnostico">
+<div class="container diagnostico-grid">
+
+<div>
+<h2 class="section-title">Diagnóstico Inicial Estratégico</h2>
+<p>Evaluamos riesgos, oportunidades y estructura financiera para brindar una visión clara que facilite decisiones empresariales informadas.</p>
+
+<a class="btn-primary"
+href="https://wa.me/51991814230?text=Hola,%20deseo%20solicitar%20un%20diagnóstico%20estratégico."
+target="_blank">
+Solicitar diagnóstico
+</a>
+</div>
+
+<img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=1200">
+
+</div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
 <div class="container">
-<h2 class="section-title">Sectores</h2>
-<div class="grid">
-<div class="card">Startups</div>
-<div class="card">Empresas Comerciales</div>
-<div class="card">Empresas Industriales</div>
-<div class="card">Empresas de Servicios</div>
-</div>
+<h2>¿Evaluamos la situación tributaria de su empresa?</h2>
+<a class="btn-primary"
+href="https://wa.me/51991814230?text=Hola,%20necesito%20evaluar%20la%20situación%20tributaria%20de%20mi%20empresa."
+target="_blank">Solicitar evaluación</a>
 </div>
 </section>
 
+<!-- CONTACTO -->
 <section id="contacto">
 <div class="container" style="text-align:center;">
 <h2 class="section-title">Contacto</h2>
-<p><strong>Wilmer Torres - Socio Director</strong></p>
+<p><strong>Wilmer Torres — Socio Director</strong></p>
 <p>+51 991 814 230<br>wilmer.torres@faas.com.pe</p>
 </div>
 </section>
@@ -401,7 +405,7 @@ right:0;
 Todos los Derechos Reservados © <span id="year"></span> | Financial Accounting Advisory Services S.A.C. | Ate - Lima - Perú.
 </footer>
 
-<a href="https://wa.me/51991814230?text=Hola,%20necesito%20mayor%20información%20sobre%20los%20servicios%20de%20FAAS%20S.A.C."
+<a href="https://wa.me/51991814230?text=Hola,%20necesito%20información%20sobre%20los%20servicios%20de%20FAAS."
 target="_blank" class="whatsapp-btn">
 💬 Agendar reunión
 </a>
@@ -410,10 +414,8 @@ target="_blank" class="whatsapp-btn">
 function toggleMenu(){
 document.getElementById("mobileMenu").classList.toggle("active");
 }
-
-document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("year").textContent=new Date().getFullYear();
 </script>
 
 </body>
 </html>
-
