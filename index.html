@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>FAAS S.A.C. | Auditoría Tributaria y Outsourcing Contable en Perú</title>
+<title>FAAS S.A.C.</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-
-/* ================= BRAND ================= */
 
 :root{
 --faas-blue:#144EA2;
@@ -26,35 +23,25 @@ html{scroll-behavior:smooth;}
 body{
 font-family:'Inter',sans-serif;
 color:var(--faas-dark);
-line-height:1.7;
 padding-top:80px;
+line-height:1.7;
 }
 
-/* ===== FIX HEADER OVERLAP ===== */
-section{
-scroll-margin-top:100px;
-}
+section{scroll-margin-top:100px;padding:110px 0;}
 
-/* ================= HEADER ================= */
+.container{width:90%;max-width:1150px;margin:auto;}
 
 header{
 position:fixed;
-top:0;
-width:100%;
+top:0;width:100%;
+transition:.35s;
 z-index:999;
-transition:all .35s ease;
 background:transparent;
 }
 
 header.scrolled{
 background:white;
 box-shadow:0 5px 20px rgba(0,0,0,.08);
-}
-
-.container{
-width:90%;
-max-width:1150px;
-margin:auto;
 }
 
 .navbar{
@@ -64,123 +51,48 @@ align-items:center;
 padding:16px 0;
 }
 
-.nav-links{
-display:flex;
-gap:26px;
-align-items:center;
-}
+.nav-links{display:flex;gap:25px;}
+.nav-links a{text-decoration:none;color:white;font-size:14px;}
+header.scrolled .nav-links a{color:var(--faas-dark);}
 
-.nav-links a{
-text-decoration:none;
-color:#fff;
-font-size:14px;
-transition:.3s;
-}
-
-header.scrolled .nav-links a{
-color:var(--faas-dark);
-}
-
-.nav-links a:hover{
-color:var(--faas-orange);
-}
-
-/* MOBILE MENU */
-
-.menu-toggle{
-display:none;
-font-size:26px;
-cursor:pointer;
-color:white;
-}
-
-header.scrolled .menu-toggle{
-color:var(--faas-dark);
-}
+.menu-toggle{display:none;font-size:26px;cursor:pointer;}
 
 .mobile-menu{
 position:fixed;
-top:0;
-right:-100%;
-width:75%;
-height:100vh;
+top:0;right:-100%;
+width:75%;height:100vh;
 background:white;
 padding:80px 30px;
 transition:.4s;
-box-shadow:-10px 0 30px rgba(0,0,0,.1);
 }
 
 .mobile-menu a{
-display:block;
-margin-bottom:22px;
-text-decoration:none;
-color:var(--faas-dark);
-font-size:18px;
+display:block;margin-bottom:20px;
+text-decoration:none;color:var(--faas-dark);
 }
-
-/* ================= HERO ================= */
 
 .hero{
 min-height:100vh;
 background:
-linear-gradient(115deg,
-rgba(20,78,162,.95),
-rgba(20,78,162,.85)),
+linear-gradient(rgba(20,78,162,.92),rgba(20,78,162,.92)),
 url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1600');
 background-size:cover;
-background-position:center;
 display:flex;
 align-items:center;
 color:white;
 }
 
-.hero-grid{
-display:grid;
-grid-template-columns:1.1fr .9fr;
-gap:60px;
-align-items:center;
-}
-
 .hero h1{font-size:52px;margin-bottom:20px;}
-.hero p{font-size:19px;margin-bottom:25px;}
-
 .btn-primary{
 background:var(--faas-orange);
-color:white;
-padding:14px 28px;
-border-radius:4px;
-text-decoration:none;
-font-weight:600;
-display:inline-block;
-}
-
-/* advisory panel */
-
-.advisory-panel{
-background:rgba(255,255,255,.08);
-backdrop-filter:blur(10px);
-padding:35px;
-border-radius:8px;
-}
-
-.metric{margin-bottom:18px;}
-.metric h3{color:white;font-size:20px;}
-
-/* ================= SECTIONS ================= */
-
-section{
-padding:110px 0;
-border-bottom:1px solid #eef2f7;
+color:white;padding:14px 28px;
+text-decoration:none;border-radius:4px;
 }
 
 .section-title{
-text-align:center;
-font-size:38px;
-margin-bottom:55px;
 font-family:'Playfair Display',serif;
+font-size:36px;text-align:center;margin-bottom:40px;
 }
-
-.propuesta{background:var(--faas-soft);}
 
 .grid{
 display:grid;
@@ -189,59 +101,28 @@ gap:30px;
 }
 
 .card{
-background:white;
-padding:30px;
-border-radius:6px;
-border:1px solid #eef2f7;
-transition:.3s;
+background:white;padding:30px;
+border-radius:6px;border:1px solid #eee;
 }
-
-.card:hover{
-transform:translateY(-6px);
-box-shadow:0 20px 40px rgba(20,78,162,.08);
-}
-
-/* ================= FOOTER ================= */
 
 footer{
-background:#111;
-color:#bbb;
-text-align:center;
-padding:45px 0;
-font-size:14px;
+background:#111;color:#bbb;text-align:center;
+padding:40px 0;font-size:14px;
 }
-
-/* ================= WHATSAPP ================= */
 
 .whatsapp-btn{
 position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:14px 18px;
-border-radius:50px;
-text-decoration:none;
-font-weight:600;
-box-shadow:0 10px 30px rgba(0,0,0,.2);
+bottom:20px;right:20px;
+background:#25D366;color:white;
+padding:14px 18px;border-radius:50px;
+text-decoration:none;font-weight:600;
 }
-
-/* ================= MOBILE ================= */
 
 @media(max-width:900px){
-
-.menu-toggle{display:block;}
 .nav-links{display:none;}
-
-.hero-grid{grid-template-columns:1fr;}
-
-section{
-scroll-margin-top:85px;
-padding:80px 0;
-}
-
+.menu-toggle{display:block;color:white;}
+section{scroll-margin-top:85px;padding:80px 0;}
 .mobile-menu.active{right:0;}
-
 .hero h1{font-size:30px;}
 }
 
@@ -250,57 +131,64 @@ padding:80px 0;
 
 <body>
 
-<header id="header">
-<div class="container navbar">
+<div id="header-placeholder"></div>
 
-<img src="assets/logo.png" height="42">
-
-<div class="nav-links">
-<a href="#inicio">Inicio</a>
-<a href="#quienes">Quiénes Somos</a>
-<a href="#servicios">Servicios</a>
-<a href="#contacto">Contacto</a>
-<a href="https://www.linkedin.com/company/faassac" target="_blank">LinkedIn</a>
-</div>
-
-<div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
-</div>
-</header>
-
-<!-- HERO -->
 <section id="inicio" class="hero">
-<div class="container hero-grid">
-
-<div>
-<h1>Asesoría Financiera y Tributaria con Enfoque Estratégico</h1>
-<p>Respaldamos decisiones empresariales mediante análisis financiero y cumplimiento tributario sostenible.</p>
+<div class="container">
+<h1>Asesoría Financiera y Tributaria Estratégica</h1>
+<a href="#contacto" class="btn-primary">Agendar reunión</a>
 </div>
+</section>
 
-<div class="advisory-panel">
-<div class="metric"><h3>Enfoque Preventivo</h3></div>
-<div class="metric"><h3>Visión Estratégica</h3></div>
-<div class="metric"><h3>Independencia Profesional</h3></div>
+<section id="quienes">
+<div class="container">
+<h2 class="section-title">Quiénes Somos</h2>
+<p>FAAS S.A.C. brinda asesoría financiera y tributaria independiente orientada a respaldar decisiones gerenciales mediante análisis técnico y comprensión integral del negocio.</p>
 </div>
+</section>
 
+<section id="servicios">
+<div class="container">
+<h2 class="section-title">Servicios</h2>
+<div class="grid">
+<a href="auditoria-tributaria.html" class="card">Auditoría Tributaria</a>
+<a href="asesoria-tributaria.html" class="card">Asesoría Tributaria Estratégica</a>
+</div>
+</div>
+</section>
+
+<section id="contacto">
+<div class="container" style="text-align:center;">
+<h2 class="section-title">Contacto</h2>
+<p><strong>Wilmer Torres — Socio Director</strong></p>
+<p>+51 991 814 230<br>wilmer.torres@faas.com.pe</p>
 </div>
 </section>
 
 <footer>
-© <span id="year"></span> FAAS S.A.C.
+© <span id="year"></span> Financial Accounting Advisory Services S.A.C.
 </footer>
+
+<a href="https://wa.me/51991814230?text=Hola,%20deseo%20información%20sobre%20los%20servicios%20de%20FAAS."
+class="whatsapp-btn" target="_blank">💬 Agendar reunión</a>
 
 <script>
 
-/* HEADER INTELIGENTE */
-window.addEventListener("scroll", function(){
-const header=document.getElementById("header");
-if(window.scrollY>50){
-header.classList.add("scrolled");
-}else{
-header.classList.remove("scrolled");
-}
+/* HEADER GLOBAL */
+fetch("components/header.html")
+.then(r=>r.text())
+.then(data=>{
+document.getElementById("header-placeholder").innerHTML=data;
+initHeader();
 });
+
+function initHeader(){
+window.addEventListener("scroll",()=>{
+const header=document.getElementById("header");
+if(window.scrollY>50){header.classList.add("scrolled")}
+else{header.classList.remove("scrolled")}
+});
+}
 
 function toggleMenu(){
 document.getElementById("mobileMenu").classList.toggle("active");
