@@ -70,12 +70,17 @@
             <a href="index.html" class="logo">
                 <img src="assets/logo.png" alt="FAAS S.A.C. Logo">
             </a>
-            <nav class="nav-links">
+            <nav class="nav-links" id="navLinks">
                 <a href="#inicio">Inicio</a>
                 <a href="#nosotros">Nosotros</a>
                 <a href="#servicios">Servicios</a>
                 <a href="https://www.linkedin.com/company/faassac" target="_blank">LinkedIn</a>
             </nav>
+
+            <!-- Botón hamburguesa: solo visible en pantallas móviles (ver media query en style.css) -->
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </header>
 
@@ -149,10 +154,22 @@
     </a>
 
     <script>
+        // Menú hamburguesa: alterna la clase "active" que desliza el nav en móvil (ver @media en style.css)
+        const navToggle = document.getElementById("navToggle");
+        const navLinks = document.getElementById("navLinks");
+
+        navToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+            const expanded = navLinks.classList.contains("active");
+            navToggle.setAttribute("aria-expanded", expanded); // accesibilidad (lectores de pantalla)
+        });
+
+        // Cierra el menú automáticamente al seleccionar una opción (evita que quede abierto tras navegar)
+        document.querySelectorAll(".nav-links a").forEach(link => {
+            link.addEventListener("click", () => navLinks.classList.remove("active"));
+        });
+
         document.getElementById("year").textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
-
-
-
