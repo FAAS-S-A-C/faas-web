@@ -17,7 +17,7 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; }
 
 /* HEADER & NAV */
 header { position: fixed; width: 100%; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); z-index: 1000; box-shadow: 0 2px 15px rgba(0,0,0,0.05); }
-.navbar { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; }
+.navbar { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; position: relative; }
 .logo img { height: 45px; display: block; }
 .nav-links { display: flex; gap: 30px; align-items: center; }
 .nav-links a { text-decoration: none; color: var(--faas-dark); font-size: 14px; font-weight: 500; transition: 0.3s; }
@@ -66,4 +66,50 @@ footer { padding: 40px 0; text-align: center; background: var(--faas-dark); colo
     color: var(--faas-blue);
     margin-bottom: 15px;
     font-family: 'Playfair Display', serif;
+}
+
+/* --- MENÚ RESPONSIVO (HAMBURGUESA) --- */
+/* Botón oculto por defecto: en escritorio se muestra el menú horizontal normal */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1100;
+}
+.nav-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: var(--faas-dark);
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    .nav-toggle { display: flex; } /* Aparece el botón hamburguesa */
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: var(--white);
+        flex-direction: column;
+        width: 220px;
+        padding: 20px;
+        gap: 18px;
+        box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+        border-radius: 0 0 0 10px;
+        transform: translateX(100%); /* Oculto fuera de pantalla por defecto */
+        transition: transform 0.3s ease;
+    }
+
+    .nav-links.active {
+        transform: translateX(0); /* Se desliza hacia adentro al activarse */
+    }
 }
